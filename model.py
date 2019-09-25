@@ -103,6 +103,8 @@ class VAE(nn.Module):
 
     def decode(self, z):
 
+        device = z.device
+
         # get initial states for conductor lstm
 
         t = self.fc_2(z)
@@ -118,7 +120,7 @@ class VAE(nn.Module):
 
         # get embeddings from conductor
 
-        conductor_input = torch.zeros(size=(self.batch_size, self.u, lstm_conductor_input_size))
+        conductor_input = torch.zeros(size=(self.batch_size, self.u, lstm_conductor_input_size), device=device)
 
         embeddings, _ = self.lstm_conductor(conductor_input, (h, c))
         # embeddings = embeddings.permute(1, 0, 2)
@@ -127,7 +129,7 @@ class VAE(nn.Module):
         # decode embeddings
 
         outputs = []
-        previous = torch.zeros((self.batch_size, self.input_size))
+        previous = torch.zeros((self.batch_size, self.input_size), device=device)
 
         for emb in embeddings:
             l2_out = self.l2_decode(emb, previous)
