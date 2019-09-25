@@ -52,7 +52,7 @@ import data
 # PARAMETERS FROM GOOGLE PAPER:
 batch_size = 512
 learning_rate = 0.001      # gets annealed to 0.00001
-exp_decay_rate = 0.9999
+#exp_decay_rate = 0.9999
 beta = 0.2                 # gets annealed for 2 bars, but is 0.25 for 16 bars
 
 verbose = False
@@ -255,9 +255,11 @@ def get_checkpoint(dset_name, location):
 def training(num_epochs, batch_size, bars, pianoroll, verbose, save_location, resume=False):
 
     def loss_func(x_hat, x, mean, std_deviation, beta):
-        bce = F.binary_cross_entropy(x_hat, x)
+        bce = F.binary_cross_entropy(x_hat, x, reduction='sum')
+        bce = bce / (batch_size * bars)
         kl = -0.5 * torch.sum(1 + torch.log(std_deviation ** 2) - mean ** 2 - std_deviation ** 2)
-        loss = (bce + beta * kl) / (batch_size * bars)       # regularized to compare between different batch sizes and sequence lengths
+        kl = kl / batch_size
+        loss = bce + beta * kl
 
         if verbose:
             print("\t\tCross Entropy: \t{}\n\t\tKL-Divergence: \t{}\n\t\tFinal Loss: \t{}".format(bce, kl, loss))
@@ -268,10 +270,17 @@ def training(num_epochs, batch_size, bars, pianoroll, verbose, save_location, re
         # TODO currently vae does not use teacher forcing during evaluation, try both options?
         vae.eval()
         total_loss = 0
+        i = 0
+
         for batch in eval_loader:
+            i += 1
+            if verbose:
+                print("\tbatch " + str(i) + ":")
+            batch = batch.to(device)
             vae_output, mu, log_var = vae(batch)
             loss = criterion(vae_output, batch, mu, log_var, beta)
             total_loss += loss.item()
+
         vae.train()
         return total_loss
 
@@ -307,7 +316,6 @@ def training(num_epochs, batch_size, bars, pianoroll, verbose, save_location, re
         optimizer.load_state_dict(checkpoint[prefix + 'optim_state_dict'])
     criterion = loss_func
 
-
     for epoch in range(resume_epoch, num_epochs):
         if verbose:
             print("\n\n\n\nSTARTING EPOCH " + str(epoch) + "\n")
@@ -336,15 +344,21 @@ def training(num_epochs, batch_size, bars, pianoroll, verbose, save_location, re
 
             total_loss += loss.item()
 
+        if verbose:
+            print("\n\n\nEvaluation of epoch " + str(epoch) + "\n")
+
+        eval_loss = evaluate()
         print("EPOCH " + str(epoch))
         print("\ttraining loss: \t\t" + str(total_loss))
-        eval_loss = evaluate()
         loss_list.append((total_loss, eval_loss))
         print("\tevaluation loss: \t" + str(eval_loss) + "\n")
         best = False
         if eval_loss <= min_eval_loss:
             min_eval_loss = eval_loss
             best = True
+
+        if verbose:
+            print(("\n\tsaving checkpoint.."))
         save(vae, optimizer, loss_list, epoch+1, str(train_set), best, save_location)
 
 
