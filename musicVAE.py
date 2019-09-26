@@ -45,6 +45,7 @@ import argparse
 # from schema import Schema, And, Use, Optional
 import matplotlib.pyplot as plt
 import sys
+from _datetime import datetime
 import model
 import data
 
@@ -268,8 +269,9 @@ def training(num_epochs, batch_size, bars, pianoroll, verbose, save_location, re
 
     def evaluate():
         # TODO currently vae does not use teacher forcing during evaluation, try both options?
+
         vae.eval()
-        total_loss = 0
+        avg_loss = 0
         i = 0
 
         for batch in eval_loader:
@@ -279,10 +281,10 @@ def training(num_epochs, batch_size, bars, pianoroll, verbose, save_location, re
             batch = batch.to(device)
             vae_output, mu, log_var = vae(batch)
             loss = criterion(vae_output, batch, mu, log_var, beta)
-            total_loss += loss.item()
-
+            avg_loss += loss.item()
+        avg_loss = avg_loss / (len(eval_set) / batch_size)
         vae.train()
-        return total_loss
+        return avg_loss
 
 
     train_set = data.FinalDataset('train', bars, stride=1, pianoroll=pianoroll)
@@ -319,8 +321,8 @@ def training(num_epochs, batch_size, bars, pianoroll, verbose, save_location, re
     for epoch in range(resume_epoch, num_epochs):
         if verbose:
             print("\n\n\n\nSTARTING EPOCH " + str(epoch) + "\n")
-        total_loss = 0
-        total_correct = 0
+        avg_loss = 0
+        avg_correct = 0
         i = 0
 
         for batch in train_loader:
@@ -342,15 +344,20 @@ def training(num_epochs, batch_size, bars, pianoroll, verbose, save_location, re
             loss.backward()
             optimizer.step()
 
-            total_loss += loss.item()
+            avg_loss += loss.item()
 
         if verbose:
             print("\n\n\nEvaluation of epoch " + str(epoch) + "\n")
 
+        avg_loss = avg_loss / (len(train_set) / batch_size)
         eval_loss = evaluate()
-        print("EPOCH " + str(epoch))
-        print("\ttraining loss: \t\t" + str(total_loss))
-        loss_list.append((total_loss, eval_loss))
+        timestamp = datetime.now()
+        timestamp = "{}.{}.  -  {}:{}".format(timestamp.day, timestamp.month, timestamp.hour, timestamp.minute)
+
+
+        print("EPOCH " + str(epoch) + "\t\t(finished at:   " + timestamp + ")")
+        print("\ttraining loss: \t\t" + str(avg_loss))
+        loss_list.append((avg_loss, eval_loss))
         print("\tevaluation loss: \t" + str(eval_loss) + "\n")
         best = False
         if eval_loss <= min_eval_loss:
