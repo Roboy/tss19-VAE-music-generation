@@ -193,6 +193,7 @@ def create_final_dataset(split, bars=2, stride=1, pianoroll=False):
                 if pianoroll:
                     transposed_performance = ppr.binarize(transposed_performance)
                     transposed_performance = transposed_performance.pianoroll
+                    transposed_performance = transposed_performance[21:109]
                 else:
                     transposed_performance = transposed_performance.pianoroll
                     transposed_performance = pianoroll_to_monophonic_repr(transposed_performance)
