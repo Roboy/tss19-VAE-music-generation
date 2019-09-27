@@ -92,6 +92,9 @@ def _parse_show_datasets(args):
 def _parse_generate_dataset(args):
     data.create_final_dataset(args.split, args.bars, args.stride, args.pianoroll)
 
+def _parse_delete_dataset(args):
+    data.delete_dataset(args.split, args.bars, args.stride, args.pianoroll)
+
 def main():
 
     # arguments = docopt(__doc__, options_first=True)
@@ -224,6 +227,51 @@ def main():
     # )
 
     generate_dataset_parser.set_defaults(func=_parse_generate_dataset)
+
+
+
+    # delete-dataset parser
+
+    delete_dataset_parser = subparsers.add_parser('delete-dataset')
+
+    delete_dataset_parser.add_argument(
+        "split",
+        help="can be one of the following: train, test or validation"
+    )
+
+    delete_dataset_parser.add_argument(
+        "bars",
+        type=int,
+        help='length of the sequences in the resulting dataset in bars'
+    )
+
+    delete_dataset_parser.add_argument(
+        "stride",
+        type=int,
+        help="stride in bars (how big are the steps with which a full performance from the Maestro Dataset gets stepped over)"
+    )
+
+    delete_dataset_parser.add_argument(
+        '-p', '--pianoroll',
+        action='store_true',
+        help='use a pianoroll representation instead of the default monophonic representation'
+    )
+
+    # delete_dataset_parser.add_argument(
+    #     '-d', '--dataset_location',
+    #     help='path to the .h5 file storing the dataset',
+    #     required=False,
+    #     default='Data/FinalDataset/final_dataset.h5'
+    # )
+    #
+    # delete_dataset_parser.add_argument(
+    #     '-m', '--maestro_location',
+    #     help='path to the root folder of the Maestro Dataset',
+    #     required=False,
+    #     default='Data/FinalDataset/final_dataset.h5'
+    # )
+
+    delete_dataset_parser.set_defaults(func=_parse_delete_dataset)
 
 
     args = parser.parse_args()

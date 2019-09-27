@@ -10,13 +10,14 @@ import sys
 import h5py
 
 
-finalDataset_path = 'Data/FinalDataset/final_dataset.h5'
+finalDataset_path = '/home/micaltu/tss19-VAE-music-generation/Data/FinalDataset/final_dataset.h5'
 
 # maestro_csv_path = "/home/micalt/PycharmProjects/Test2/Data/maestro-v2.0.0/maestro-v2.0.0.csv"
 # maestro_root_dir = "/home/micalt/PycharmProjects/Test2/Data/maestro-v2.0.0"
 
-maestro_csv_path = "/home/micalt/PycharmProjects/Test2/Data/maestro-v2.0.0/maestro-v2.0.0.csv"
-maestro_root_dir = "/home/micalt/PycharmProjects/Test2/Data/maestro-v2.0.0"
+maestro_root_dir = "/home/micaltu/tss19-VAE-music-generation/Data/maestro-v2.0.0"
+maestro_csv_path = maestro_root_dir + "/maestro-v2.0.0.csv"
+
 
 calculate_correct_tempo = True
 false_tempo = 120           # the tempo assigned to every one of the midi files
@@ -38,6 +39,16 @@ def get_available_datasets(show_size):
                 out.append(size)
 
     return out
+
+
+def delete_dataset(split, bars, stride, pianoroll):
+    dset_name = get_dataset_name(split, bars, stride, pianoroll)
+    with h5py.File(finalDataset_path, 'a') as f:
+        if dset_name in f.keys():
+            del f[dset_name]
+            print("deleted dataset " + dset_name)
+        else:
+            print("dataset " + dset_name + " does not exist")
 
 '''
 about Maestro Dataset:
@@ -168,11 +179,11 @@ def create_final_dataset(split, bars=2, stride=1, pianoroll=False):
 
         c = 0
         for performance in maestro:
+
             c += 1
             print("\nperformance " + str(c) + " with " + str(performance.pianoroll.shape[0] // 16) + " bars")
 
             discarded = 0
-
             snippet_list = []
 
             # transpose performance
@@ -214,7 +225,9 @@ def create_final_dataset(split, bars=2, stride=1, pianoroll=False):
             if len(snippet_list) > 120000:
                 del snippet_list[120000:]
                 print("throwing away some snippets for memory reasons, had " + len(snippet_list) + " snippets")
-
+            if not snippet_list:
+                print("\tdiscarded all " + str(discarded) + "snippets")
+                continue
             performance_snippets = np.stack(snippet_list, axis=0)
 
             if dset_name not in f.keys():
@@ -226,6 +239,9 @@ def create_final_dataset(split, bars=2, stride=1, pianoroll=False):
 
             print("\tDiscarded " + str(discarded) + " snippets and kept " + str(performance_snippets.shape[0]))
             del performance_snippets
+
+        if dset_name not in f.keys():
+            print("Dataset would be empty and is not generated. Maybe there are too many long pauses in the data which cause snippets to get discarded.")
 
 
 def pianoroll_to_monophonic_repr(pianoroll):
