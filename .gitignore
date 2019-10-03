@@ -1,6 +1,7 @@
 __pycache__
 Data/
 Models/
+Sampled/
 venv/
 .idea/
 .directory

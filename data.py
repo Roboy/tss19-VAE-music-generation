@@ -193,7 +193,7 @@ def create_final_dataset(split, bars=2, stride=1, pianoroll=False):
                 if pianoroll:
                     transposed_performance = ppr.binarize(transposed_performance)
                     transposed_performance = transposed_performance.pianoroll
-                    transposed_performance = transposed_performance[21:109]
+                    transposed_performance = transposed_performance[:, 21:109]      # using only pitches that exist on a piano keyboard ( [21, 108] )
                 else:
                     transposed_performance = transposed_performance.pianoroll
                     transposed_performance = pianoroll_to_monophonic_repr(transposed_performance)
@@ -307,6 +307,22 @@ def monophonic_repr_to_pianoroll(monophonic_repr):
 
     pianoroll = np.stack(pianoroll, axis=0)  # converting list to ndarray
     return pianoroll
+
+
+def pianoroll_to_midi(snippet, filename="Sampled/sample.midi"):
+    snippet = np.asarray(snippet, dtype=np.uint8)
+    snippet = snippet * 127  # sets velocity of notes from 1 to 127 (max MIDI velocity)
+
+    if snippet.shape[1] == 88:
+        lower_notes = np.zeros((snippet.shape[0], 21), dtype=np.uint8)
+        higher_notes = np.zeros((snippet.shape[0], 19), dtype=np.uint8)
+        snippet = np.concatenate((lower_notes, snippet, higher_notes), axis=1)
+
+    snippet = ppr.Track(pianoroll=snippet)
+    snippet = ppr.Multitrack(tracks=[snippet], tempo=120, beat_resolution=4)
+    ppr.write(snippet, "/home/micaltu/tss19-VAE-music-generation/" + filename)
+
+
 
 
 

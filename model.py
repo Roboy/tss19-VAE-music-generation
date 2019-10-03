@@ -7,6 +7,8 @@ import torch.nn.functional as F
 import random
 import data
 
+input_size = 90
+
 lstm_1_hidden_size = 2048
 lstm_1_layers = 2
 latent_dimension = 512
@@ -25,13 +27,13 @@ class VAE(nn.Module):
             self.scheduled_sampling_ratio = 0
             self.ground_truth = None
 
-        self.batch_size = None
+        self.pianoroll = pianoroll
+        self.batch_size = 1     # gets overwritten in forward, but is used when any function except forward() is called, e.g. sample()
         self.seq_len = bars * 4 * data.resolution_per_beat
         self.u = bars       # amount of subsequences that conductor layer creates
-        self.input_size = 127 if pianoroll else 90
 
         # encoder
-        self.lstm_1 = nn.LSTM(input_size=self.input_size, hidden_size=lstm_1_hidden_size, num_layers=lstm_1_layers, bidirectional=True, batch_first=True)
+        self.lstm_1 = nn.LSTM(input_size=input_size, hidden_size=lstm_1_hidden_size, num_layers=lstm_1_layers, bidirectional=True, batch_first=True)
         self.fc_mean = nn.Linear(in_features=lstm_1_hidden_size*2, out_features=latent_dimension)
         self.fc_std_deviation = nn.Linear(in_features=lstm_1_hidden_size*2, out_features=latent_dimension)
 
@@ -44,9 +46,9 @@ class VAE(nn.Module):
             # second level decoder
 
         self.fc_3 = nn.Linear(in_features=lstm_conductor_hidden_size, out_features=lstm_l2_decoder_hidden_size*4)   # output is used to initialize h and c for both layers of the l2 lstm
-        self.lstm_l2_decoder_cell_1 = nn.LSTMCell(input_size=lstm_conductor_hidden_size+self.input_size, hidden_size=lstm_l2_decoder_hidden_size)
+        self.lstm_l2_decoder_cell_1 = nn.LSTMCell(input_size=lstm_conductor_hidden_size+input_size, hidden_size=lstm_l2_decoder_hidden_size)
         self.lstm_l2_decoder_cell_2 = nn.LSTMCell(input_size=lstm_l2_decoder_hidden_size, hidden_size=lstm_l2_decoder_hidden_size)
-        self.fc_4 = nn.Linear(in_features=lstm_l2_decoder_hidden_size, out_features=self.input_size)
+        self.fc_4 = nn.Linear(in_features=lstm_l2_decoder_hidden_size, out_features=input_size)
 
 
     def encode(self, t):
@@ -129,7 +131,7 @@ class VAE(nn.Module):
         # decode embeddings
 
         outputs = []
-        previous = torch.zeros((self.batch_size, self.input_size), device=device)
+        previous = torch.zeros((self.batch_size, input_size), device=device)
 
         for emb in embeddings:
             l2_out = self.l2_decode(emb, previous)
@@ -152,6 +154,23 @@ class VAE(nn.Module):
             self.ground_truth = None        # not necessary, but ensures that the old ground truth cant accidentally be reused in the next step
             self.counter = 0
         return out, z_mean, z_std_deviation
+
+
+    def sample(self, z=None):   # always returns a pianoroll representation
+        if z is None:
+            z = torch.randn((1, latent_dimension), requires_grad=False)
+
+        sample = self.decode(z)
+        sample = sample.squeeze()
+        sample = sample.argmax(dim=1)
+        num_classes = 88 if self.pianoroll else 90
+        sample = F.one_hot(sample, num_classes)
+
+        if not self.pianoroll:
+            sample = data.monophonic_repr_to_pianoroll(sample)
+
+        return sample
+
 
     def set_ground_truth(self, ground_truth):
         self.ground_truth = ground_truth

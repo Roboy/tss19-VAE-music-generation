@@ -95,6 +95,57 @@ def _parse_generate_dataset(args):
 def _parse_delete_dataset(args):
     data.delete_dataset(args.split, args.bars, args.stride, args.pianoroll)
 
+def _parse_sample(args):
+    vae = get_trained_vae(args.bars, args.pianoroll, args.verbose)
+
+    sample = vae.sample()
+    data.pianoroll_to_midi(sample, args.save_location)
+
+    # z = torch.randn((1, model.latent_dimension), requires_grad=False)
+    # sample = vae.decode(z)
+    # sample = sample.squeeze()
+    # sample = sample.argmax(dim=1)
+    # num_classes = 88 if args.pianoroll else 90
+    # sample = F.one_hot(sample, num_classes)
+    # sample = data.monophonic_repr_to_pianoroll(sample)
+    # data.pianoroll_to_midi(sample)
+
+def _parse_interpolate(args):
+    vae = get_trained_vae(args.bars, args.pianoroll, args.verbose)
+    z = torch.randn((1, model.latent_dimension), requires_grad=False)
+    z_end = torch.randn((1, model.latent_dimension), requires_grad=False)
+    step_vector = (z_end - z) / args.steps
+    for i in range(args.steps+1):
+        z = z + step_vector
+        sample = vae.sample(z)
+        filename = args.save_location + "/interpolate_" + str(i) + ".midi"
+        data.pianoroll_to_midi(sample, filename)
+
+
+def get_trained_vae(bars, pianoroll=False, verbose=False):
+    vae = model.VAE(bars, pianoroll)
+    vae.eval()
+
+    location = "/home/micaltu/tss19-VAE-music-generation/Models/Final"
+    dset_name = str(bars) + "bars_3stride_after_epoch_19"  # TODO change name to someting like xbars_final in the end
+    if pianoroll:
+        dset_name = "pianoroll_" + dset_name
+
+    checkpoint = get_checkpoint(dset_name, location)
+    if verbose:
+        print("loaded Checkpoint")
+
+    prefix = "last_"
+    vae.load_state_dict(checkpoint[prefix + 'vae_state_dict'])
+
+    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    vae.to(device)
+    if verbose:
+        print("using device " + str(device) + "\n")
+
+    return vae
+
+
 def main():
 
     # arguments = docopt(__doc__, options_first=True)
@@ -274,6 +325,78 @@ def main():
     delete_dataset_parser.set_defaults(func=_parse_delete_dataset)
 
 
+
+    # sample parser
+
+    sample_parser = subparsers.add_parser('sample')
+
+    sample_parser.add_argument(
+        'bars',
+        type=int,
+        help='length of the generated sequences in bars'
+    )
+
+    sample_parser.add_argument(
+        '-p', '--pianoroll',
+        action='store_true',
+        help='use a model trained on pianoroll representation instead of the default monophonic one'
+    )
+
+    sample_parser.add_argument(
+        '-v', '--verbose',
+        action='store_true',
+        help='get more information during the sampling process'
+    )
+
+    sample_parser.add_argument(
+        '-s', '--save_location',
+        help='path to where the MIDI file will be saved (path has to include filename, default is "Sampled/sample.midi"',
+        required=False,
+        default='Sampled/sample.midi'
+    )
+
+    sample_parser.set_defaults(func=_parse_sample)
+
+
+
+    # interpolate parser
+
+    interpolate_parser = subparsers.add_parser('interpolate')
+
+    interpolate_parser.add_argument(
+        "bars",
+        type=int,
+        help='length of the generated sequences in bars'
+    )
+
+    interpolate_parser.add_argument(
+        "steps",
+        type=int,
+        help="amount of steps used in the interpolation"
+    )
+
+    interpolate_parser.add_argument(
+        '-s', '--save_location',
+        help='directory to store the interpolations in. Default directory is Sampled',
+        required=False,
+        default='Sampled'
+    )
+
+    interpolate_parser.add_argument(
+        '-p', '--pianoroll',
+        action='store_true',
+        help='use a model trained on pianoroll representation instead of the default monophonic one'
+    )
+
+    interpolate_parser.add_argument(
+        '-v', '--verbose',
+        action='store_true',
+        help='get more information during the interpolation process'
+    )
+
+    interpolate_parser.set_defaults(func=_parse_interpolate)
+
+
     args = parser.parse_args()
     args.func(args)
 
@@ -296,7 +419,7 @@ def get_checkpoint(dset_name, location):
     try:
         checkpoint = torch.load(path, map_location="cpu")
     except:
-         raise FileNotFoundError("Could not find a previosuly saved checkpoint to resume training from.")
+         raise FileNotFoundError("Could not find a previosuly saved checkpoint.")
     return checkpoint
 
 
