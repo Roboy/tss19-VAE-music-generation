@@ -122,6 +122,27 @@ def _parse_interpolate(args):
         data.pianoroll_to_midi(sample, filename)
 
 
+def _parse_reconstruct(bars=2, pianoroll=False, save_location="Sampled", i=1, verbose=True):
+    vae= get_trained_vae(bars, pianoroll, verbose)
+    ds = data.FinalDataset('train', bars=bars, pianoroll=pianoroll)
+    snippet_before = ds.__getitem__(i)
+    snippet_after, _, _ = vae(snippet_before.unsqueeze(dim=0))
+
+    # for k in range(5):
+    #     snippet_after, _, _ = vae(snippet_after)
+
+    snippet_before = data.monophonic_repr_to_pianoroll(snippet_before)
+    filename = save_location + "/reconstruct_before_" + str(i) + ".midi"
+    data.pianoroll_to_midi(snippet_before, filename)
+
+    snippet_after = data.model_output_to_pianoroll(snippet_after, pianoroll)
+    filename = save_location + "/reconstruct_after_" + str(i) + ".midi"
+    data.pianoroll_to_midi(snippet_after, filename)
+
+
+
+
+
 def get_trained_vae(bars, pianoroll=False, verbose=False):
     vae = model.VAE(bars, pianoroll)
     vae.eval()
@@ -458,9 +479,9 @@ def training(num_epochs, batch_size, bars, pianoroll, verbose, save_location, re
         return avg_loss
 
 
-    train_set = data.FinalDataset('train', bars, stride=1, pianoroll=pianoroll)
+    train_set = data.FinalDataset('train', bars, stride=3, pianoroll=pianoroll)
     train_loader = torch.utils.data.DataLoader(train_set, batch_size=batch_size)
-    eval_set = data.FinalDataset('validation', bars, stride=1, pianoroll=pianoroll)
+    eval_set = data.FinalDataset('validation', bars, stride=3, pianoroll=pianoroll)
     eval_loader = torch.utils.data.DataLoader(eval_set, batch_size=batch_size)
 
     loss_list = []
@@ -488,6 +509,11 @@ def training(num_epochs, batch_size, bars, pianoroll, verbose, save_location, re
     if resume:
         optimizer.load_state_dict(checkpoint[prefix + 'optim_state_dict'])
     criterion = loss_func
+
+    #compute initial evaluation loss before training
+    if not resume:
+        initial_loss = evaluate()
+        print("\nInitial evaluation loss: " + str(initial_loss))
 
     for epoch in range(resume_epoch, num_epochs):
         if verbose:
@@ -541,6 +567,73 @@ def training(num_epochs, batch_size, bars, pianoroll, verbose, save_location, re
 
 
 
+def compute_correct_notes(seq_1, seq_2, pianoroll=False):       # only works for monophonic inputs!s
+
+    if pianoroll:
+        seq_1 = data.monophonic_repr_to_pianoroll(seq_1)
+        seq_2 = data.monophonic_repr_to_pianoroll(seq_2)
+
+    if seq_1.shape != seq_2.shape:
+        raise ValueError("Input mismatch: the input sequences don't have the same shape")
+
+    correct_notes = 0
+    for slice_1, slice_2 in zip(seq_1, seq_2):
+        if slice_1.max() == 0 and slice_2.max() == 0:       # could also be omitted if not using MIDI note zero as input, because then slice.argmax() == 0 is not ambiguous
+            correct_notes += 1
+        elif slice_1.argmax() == slice_2.argmax():
+            correct_notes += 1
+
+    return correct_notes
+
+
+def evaluate_correct_notes(bars, pianoroll=False, verbose=True):
+    vae = get_trained_vae(bars, pianoroll, verbose)
+    dset = data.FinalDataset('validation', bars, stride=3)
+    dloader = torch.utils.data.DataLoader(dset, batch_size=1)
+
+    if verbose:
+        print("Number of correct notes in the reconstruction of each clip:")
+
+    total_notes = 0
+    total_correct = 0
+    best = 0
+    worst = 1
+    for snippet in dloader:
+        reconstructed, _, _ = vae(snippet)
+        reconstructed = data.model_output_to_pianoroll(reconstructed)
+        # reconstructed = data.full_to_small_pianoroll(reconstructed)
+        snippet = snippet.squeeze()
+        if not pianoroll:
+            snippet = data.monophonic_repr_to_pianoroll(snippet)
+
+        length = snippet.shape[0]
+        correct_notes = compute_correct_notes(snippet, reconstructed, pianoroll)
+        total_notes += length
+        total_correct += correct_notes
+
+        ratio = correct_notes / length
+        if ratio > best:
+            best = ratio
+        if ratio < worst:       # dont use an elif, because possibly the first value will be the worst
+            worst = ratio
+
+        if verbose:
+            print("\t{}/{} = {}% correct".format(correct_notes, length, ratio*100))
+
+    print("best accuracy:\t\t{}%".format(best*100))
+    print("worst accuracy:\t\t{}%".format(worst*100))
+
+
+
+
+
+
+
+
 if __name__ == "__main__":
-    main()
+    #main()
+    #_parse_reconstruct()
+    evaluate_correct_notes(2)
+
+
 

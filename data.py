@@ -3,6 +3,7 @@ import torch
 import pypianoroll as ppr
 import pandas
 from torch.utils.data.dataset import Dataset
+import torch.nn.functional as F
 import pretty_midi
 import music21
 import os
@@ -309,14 +310,45 @@ def monophonic_repr_to_pianoroll(monophonic_repr):
     return pianoroll
 
 
+def model_output_to_pianoroll(sample, pianoroll=False):
+    if sample.dim() == 3:
+        if sample.shape[0] == 1:
+            sample = sample.squeeze()
+        else:
+            raise ValueError("model output has a batch size bigger than one")
+    sample = sample.argmax(dim=1)
+    num_classes = 88 if pianoroll else 90
+    sample = F.one_hot(sample, num_classes)
+
+    if not pianoroll:
+        sample = monophonic_repr_to_pianoroll(sample)
+
+    return sample
+
+def small_to_full_pianoroll(snippet):
+    if torch.is_tensor(snippet):
+        lower_notes = torch.zeros((snippet.shape[0], 21), dtype=snippet.dtype)
+        higher_notes = torch.zeros((snippet.shape[0], 19), dtype=snippet.dtype)
+        snippet = torch.cat((lower_notes, snippet, higher_notes), axis=1)
+    else:
+        lower_notes = np.zeros((snippet.shape[0], 21), dtype=snippet.dtype)
+        higher_notes = np.zeros((snippet.shape[0], 19), dtype=snippet.dtype)
+        snippet = np.concatenate((lower_notes, snippet, higher_notes), axis=1)
+
+    return snippet
+
+def full_to_small_pianoroll(snippet):
+    snippet = snippet[..., 21:109]
+    return snippet
+
+
+
 def pianoroll_to_midi(snippet, filename="Sampled/sample.midi"):
     snippet = np.asarray(snippet, dtype=np.uint8)
     snippet = snippet * 127  # sets velocity of notes from 1 to 127 (max MIDI velocity)
 
     if snippet.shape[1] == 88:
-        lower_notes = np.zeros((snippet.shape[0], 21), dtype=np.uint8)
-        higher_notes = np.zeros((snippet.shape[0], 19), dtype=np.uint8)
-        snippet = np.concatenate((lower_notes, snippet, higher_notes), axis=1)
+        small_to_full_pianoroll(snippet)
 
     snippet = ppr.Track(pianoroll=snippet)
     snippet = ppr.Multitrack(tracks=[snippet], tempo=120, beat_resolution=4)

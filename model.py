@@ -156,20 +156,24 @@ class VAE(nn.Module):
         return out, z_mean, z_std_deviation
 
 
+
     def sample(self, z=None):   # always returns a pianoroll representation
         if z is None:
             z = torch.randn((1, latent_dimension), requires_grad=False)
 
         sample = self.decode(z)
-        sample = sample.squeeze()
-        sample = sample.argmax(dim=1)
-        num_classes = 88 if self.pianoroll else 90
-        sample = F.one_hot(sample, num_classes)
-
-        if not self.pianoroll:
-            sample = data.monophonic_repr_to_pianoroll(sample)
+        sample = data.model_output_to_pianoroll(sample, self.pianoroll)
 
         return sample
+        # sample = sample.squeeze()
+        # sample = sample.argmax(dim=1)
+        # num_classes = 88 if self.pianoroll else 90
+        # sample = F.one_hot(sample, num_classes)
+        #
+        # if not self.pianoroll:
+        #     sample = data.monophonic_repr_to_pianoroll(sample)
+        #
+        # return sample
 
 
     def set_ground_truth(self, ground_truth):
