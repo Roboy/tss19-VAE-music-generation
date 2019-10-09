@@ -598,7 +598,17 @@ def evaluate_correct_notes(bars, pianoroll=False, verbose=True):
     total_correct = 0
     best = 0
     worst = 1
+
+    # TODO delete again
+    i = 0
+    ip = range(0, 3600, 500)
+
     for snippet in dloader:
+        i += 1
+        if i == 100 or i in ip:
+            print(i)
+        if i == 3600:
+            break
         reconstructed, _, _ = vae(snippet)
         reconstructed = data.model_output_to_pianoroll(reconstructed)
         # reconstructed = data.full_to_small_pianoroll(reconstructed)
@@ -622,6 +632,7 @@ def evaluate_correct_notes(bars, pianoroll=False, verbose=True):
 
     print("best accuracy:\t\t{}%".format(best*100))
     print("worst accuracy:\t\t{}%".format(worst*100))
+    print("average accuracy:\t\t{}%".format((total_correct / total_notes) * 100))
 
 
 
@@ -631,9 +642,9 @@ def evaluate_correct_notes(bars, pianoroll=False, verbose=True):
 
 
 if __name__ == "__main__":
-    #main()
+    main()
     #_parse_reconstruct()
-    evaluate_correct_notes(2)
+    # evaluate_correct_notes(2)
 
 
 
