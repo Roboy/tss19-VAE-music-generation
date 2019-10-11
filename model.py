@@ -27,7 +27,7 @@ class VAE(nn.Module):
             self.scheduled_sampling_ratio = 0
             self.ground_truth = None
 
-        self.input_size = 88 if pianoroll else 90
+        self.input_size = 89 if pianoroll else 90
         self.pianoroll = pianoroll
         self.batch_size = 1     # gets overwritten in forward, but is used when any function except forward() is called, e.g. sample()
         self.seq_len = bars * 4 * data.resolution_per_beat

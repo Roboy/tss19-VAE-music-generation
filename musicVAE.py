@@ -45,6 +45,7 @@ import argparse
 # from schema import Schema, And, Use, Optional
 import matplotlib.pyplot as plt
 import sys
+import random
 from _datetime import datetime
 import model
 import data
@@ -92,7 +93,7 @@ def _parse_show_datasets(args):
             spaces -= len(d)
             if spaces <=0:
                 spaces = 10
-            print('\t' + d + ' ' * spaces + 'with size ' + str(s))
+            print('\t' + d + '.' * spaces + 'with size ' + str(s))
     else:
         for d in dsets:
             print('\t' + d)
@@ -629,10 +630,10 @@ def compute_correct_notes(seq_1, seq_2, pianoroll=False):       # only works for
     return correct_notes
 
 
-def evaluate_correct_notes(bars, pianoroll=False, verbose=True):
+def evaluate_correct_notes(bars, comparisons=15000, pianoroll=False, verbose=True):
     vae = get_trained_vae(bars, pianoroll, verbose)
     dset = data.FinalDataset('validation', bars, stride=3)
-    dloader = torch.utils.data.DataLoader(dset, batch_size=1)
+    #dloader = torch.utils.data.DataLoader(dset, batch_size=1)
 
     if verbose:
         print("Number of correct notes in the reconstruction of each clip:")
@@ -642,16 +643,16 @@ def evaluate_correct_notes(bars, pianoroll=False, verbose=True):
     best = 0
     worst = 1
 
-    # TODO delete again
-    i = 0
-    ip = range(0, 3600, 500)
+    it = random.sample(range(0, len(dset)), comparisons)
+    n=0
+    for i in it:
+        snippet = dset.__getitem__(i)
+        snippet = snippet.unsqueeze(0)
 
-    for snippet in dloader:
-        i += 1
-        if i == 100 or i in ip:
-            print(i)
-        if i == 3600:
-            break
+        n += 1
+        if n in range(0, comparisons, 500) or n == 100:
+            print(n, '\t\t{}/{} correct'.format(total_correct, total_notes))
+
         reconstructed, _, _ = vae(snippet)
         reconstructed = data.model_output_to_pianoroll(reconstructed)
         # reconstructed = data.full_to_small_pianoroll(reconstructed)

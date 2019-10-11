@@ -239,6 +239,7 @@ def create_final_dataset(split, bars=2, stride=1, pianoroll=False, transpose=Fal
                     transposed_performance = ppr.binarize(transposed_performance)
                     transposed_performance = transposed_performance.pianoroll
                     transposed_performance = transposed_performance[:, 21:109]      # using only pitches that exist on a piano keyboard ( [21, 108] )
+                    transposed_performance = pianoroll_to_mono_pianoroll(transposed_performance)
                 else:
                     transposed_performance = transposed_performance.pianoroll
                     transposed_performance = pianoroll_to_monophonic_repr(transposed_performance)
@@ -301,6 +302,27 @@ def create_final_dataset(split, bars=2, stride=1, pianoroll=False, transpose=Fal
             print("Dataset would be empty and is not generated. Maybe there are too many long pauses in the data which cause snippets to get discarded.")
 
 
+def pianoroll_to_mono_pianoroll(pianoroll):
+    monophonic = []  # using a list for faster append() operation
+
+    for slice in pianoroll:
+
+        monophonic_slice = np.zeros(len(slice), dtype=bool)
+
+        if slice.any():
+            for k in range(len(monophonic_slice)-1, -1, -1):
+                if slice[k]:                    # note detected
+                    monophonic_slice[k] = 1
+                    break                       # convert to monophonic by keeping only highest note
+
+        monophonic.append(monophonic_slice)
+
+    monophonic = np.stack(monophonic, axis=0)  # converting list to ndarray
+    return monophonic
+
+
+
+
 def pianoroll_to_monophonic_repr(pianoroll):
 
     # also converts from dimension 128 to 90
@@ -315,6 +337,7 @@ def pianoroll_to_monophonic_repr(pianoroll):
         monophonic_slice = np.zeros(90, dtype=bool)
         no_note = True
 
+        # TODO possible improvement: use slice.any() before to check if there are any notes in the slice at all (see pianoroll_to_mono_pianoroll() above)
         for k in range(108, 20, -1):            # looking only at pitches that exist on a piano keyboard ( [21, 108] )
             if slice[k] > 0:                    # note detected
                 no_note = False
@@ -372,11 +395,13 @@ def model_output_to_pianoroll(sample, pianoroll=False):
         else:
             raise ValueError("model output has a batch size bigger than one")
     sample = sample.argmax(dim=1)
-    num_classes = 88 if pianoroll else 90
+    num_classes = 89 if pianoroll else 90
     sample = F.one_hot(sample, num_classes)
 
     if not pianoroll:
         sample = monophonic_repr_to_pianoroll(sample)
+    else:
+        sample = sample[:, 0:89]   #TODO check if this is correct (correct dimension and if it actually cuts pauses instead of e.g. highest notes
 
     return sample
 
