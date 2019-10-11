@@ -42,8 +42,8 @@ def get_available_datasets(show_size):
     return out
 
 
-def delete_dataset(split, bars, stride, pianoroll):
-    dset_name = get_dataset_name(split, bars, stride, pianoroll)
+def delete_dataset(split, bars, stride, pianoroll, transposed):
+    dset_name = get_dataset_name(split, bars, stride, pianoroll, transposed)
     with h5py.File(finalDataset_path, 'a') as f:
         if dset_name in f.keys():
             del f[dset_name]
@@ -68,6 +68,7 @@ class MaestroDataset(Dataset):
             raise ValueError("class MaestroDataset was initialized with invalid aruments, split has to be 'train', 'test' or 'validation'!")
 
         self.root_dir = root_dir
+        # TODO bars should be unnecessary
         self.bars = bars
 
         # check whether csv for this split already exists:
@@ -89,7 +90,11 @@ class MaestroDataset(Dataset):
             self.compute_tempo()
             self.csv_data_frame.to_csv(path_or_buf=edited_csv_path, index=False, na_rep="NaN")
 
+            self.csv_data_frame = pandas.read_csv(edited_csv_path)
 
+        if 'key' not in self.csv_data_frame.columns:
+            self.compute_key()
+            self.csv_data_frame.to_csv(path_or_buf=edited_csv_path, index=False)
 
     def __len__(self):
         return len(self.csv_data_frame)
@@ -110,13 +115,26 @@ class MaestroDataset(Dataset):
         full_performance = self.get_full_performance(index, beat_resolution)
         return full_performance
 
+
+    def get_key(self, index):
+        if 'key' not in self.csv_data_frame.columns:
+            raise ValueError("key information seems to not have been generated yet. Call MaestroDataset.compute_key() to compute it and save it in the csv file.")
+
+        row = self.csv_data_frame.iloc[[index]]
+        key = row['key']
+        key = key.item()        # TODO change to not deprecated function if possible?
+        key = key[0:2]
+        return key
+
+
+
     def get_path(self, index):
         row = self.csv_data_frame.iloc[[index]]
         out = row['midi_filename']
         out = out[index]
         return out
 
-
+    # returns a ppr.Track object (because then ppr.transpose() can only be called with tracks, not with pianorolls)
     def get_full_performance(self, index, beat_resolution=resolution_per_beat):
         infos = self.csv_data_frame.iloc[index]
         midi_filename = infos['midi_filename']
@@ -124,7 +142,6 @@ class MaestroDataset(Dataset):
 
         midi = ppr.parse(filepath=path, beat_resolution=beat_resolution)  # get Multitrack object
         midi = midi.tracks[0]                                # get first/only track
-        # midi = midi.pianoroll        has to return track in order for ppr.transpose() to work later
         return midi
 
     def compute_tempo(self):
@@ -138,15 +155,28 @@ class MaestroDataset(Dataset):
 
         self.csv_data_frame = self.csv_data_frame.assign(tempo=pandas.Series(tempos))
 
+
+    def compute_key(self):
+        print("computing the keys of the performances...")
+        key_list = []
+        for _, row in self.csv_data_frame.iterrows():       #iterrows returns index and row as pandas Series object
+            path = "" + self.root_dir + "/" + row['midi_filename']
+            midi_data = music21.converter.parse(path)
+            key = midi_data.analyze('key')      # checked first 5 performances, and key was always right, even with the first performance in dataset which uses a lot of whole tone scales and chromaticism (meaning guessing its correct key should be quite hard)
+            key_list.append(key)
+            print(key, '\t\t', path)
+
+        self.csv_data_frame = self.csv_data_frame.assign(key=pandas.Series(key_list))
+
 class FinalDataset(Dataset):
-    def __init__(self, split='train', bars=2, stride=1, pianoroll=False):
+    def __init__(self, split='train', bars=2, stride=1, pianoroll=False, transpose=False):
         if (split != 'train' and split != 'test' and split != 'validation'):
             raise ValueError("class FinalDataset was initialized with invalid aruments, split has to be 'train', 'test' or 'validation'!")
         self.split = split
         self.bars = bars
         self.stride = stride
         self.dset = None
-        self.dset_name = get_dataset_name(split, bars, stride, pianoroll)
+        self.dset_name = get_dataset_name(split, bars, stride, pianoroll, transpose)
 
         f = h5py.File(finalDataset_path, 'r')        # TODO does this need to be closed somehow? With doesnt work because f needs to stay open as long as dset is used
         if self.dset_name not in f.keys():
@@ -165,13 +195,16 @@ class FinalDataset(Dataset):
         return self.dset_name
 
 
-def get_dataset_name(split, bars, stride, pianoroll):
-    return ("pianoroll_" if pianoroll else "") + split + '_' + str(bars) + "bars_" + str(stride) + "stride_tempo_" + "computed" if calculate_correct_tempo else "120"
+def get_dataset_name(split, bars, stride, pianoroll, transpose):
+    return ("pianoroll_" if pianoroll else "") + split + '_' + str(bars) + "bars_" + str(stride) + "stride_tempo_" + ("computed" if calculate_correct_tempo else "120") + ("_transposed" if transpose else "")
 
-def create_final_dataset(split, bars=2, stride=1, pianoroll=False):
+def create_final_dataset(split, bars=2, stride=1, pianoroll=False, transpose=False):
 
-    dset_name = get_dataset_name(split, bars, stride, pianoroll)
+    dset_name = get_dataset_name(split, bars, stride, pianoroll, transpose)
     maestro = MaestroDataset(split, bars)
+
+    transpose_dict = {'C ': 0, 'C#': -1, 'D-': -1, 'D ': -2, 'D#': -3, 'E-': -3, 'E ': -4, 'F-': -4, 'E#': -5, 'F ': -5, 'F#': -6, 'G-': -6, 'G ': -7, 'G#': -8, 'A-': -8, 'A ': -9, 'A#': -10, 'B-': -10, 'B ': -11, 'C-': -11, 'B#': -11,       # major keys (capital letters)
+                      'a ': 0, 'a#': -1, 'b-': -1, 'b ': -2, 'c-': -2, 'b#': -3, 'c ': -3, 'c#': -4, 'd-': -4, 'd ': -5, 'd#': -6, 'e-': -6, 'e ': -7, 'f-': -7, 'e#': -8, 'f ': -8, 'f#': -9, 'g-': -9, 'g ': -10, 'g#': -11, 'a-': -11}      # minor keys
 
     with h5py.File(finalDataset_path, 'a') as f:
         if dset_name in f.keys():
@@ -179,7 +212,8 @@ def create_final_dataset(split, bars=2, stride=1, pianoroll=False):
             return
 
         c = 0
-        for performance in maestro:
+        for index in range(len(maestro)):
+            performance = maestro.__getitem__(index)
 
             c += 1
             print("\nperformance " + str(c) + " with " + str(performance.pianoroll.shape[0] // 16) + " bars")
@@ -188,8 +222,18 @@ def create_final_dataset(split, bars=2, stride=1, pianoroll=False):
             snippet_list = []
 
             # transpose performance
-            for semitones in range(-6, 6):
-                # print("transposing to " + str(semitones))
+            t = None
+            if not transpose:
+                t = range(-6, 6)
+            else:
+                key = maestro.get_key(index)
+                distance = transpose_dict[key]
+                if distance < -6:
+                    distance += 12
+                t = [distance]
+
+            for semitones in t:
+                # print("key is {}, transposing by {} semitones".format((key if transpose else "/"), semitones))
                 transposed_performance = ppr.transpose(performance, semitones)
                 if pianoroll:
                     transposed_performance = ppr.binarize(transposed_performance)
@@ -200,27 +244,38 @@ def create_final_dataset(split, bars=2, stride=1, pianoroll=False):
                     transposed_performance = pianoroll_to_monophonic_repr(transposed_performance)
 
                 for i in range(0, len(transposed_performance)-bars*resolution_per_beat*4, stride*resolution_per_beat*4):
-                    i_end = i+bars*resolution_per_beat*4
+                    i_end = i + bars * resolution_per_beat * 4
                     snippet = transposed_performance[i:i_end]
+
+                    if pianoroll:
+                        pauses = np.zeros((snippet.shape[0], 1), dtype=bool)
 
                     # check for consecutive rests in performance (if performance is in monophonic representation -> also discards perfomances which have one note which is held very long
                     max_rests = 0
                     rests = 0
+                    position = 0
                     for slice in snippet:
                         if pianoroll and not np.any(slice):
                             rests += 1
+                            pauses[position, 0] = 1
                         elif not pianoroll and (slice[88] == 1 or slice[89] == 1):
                             rests += 1
                         else:
                             if rests > max_rests:
                                 max_rests = rests
                             rests = 0
+
+                        position += 1
+
                     if rests > max_rests:
                         max_rests = rests
 
                     if max_rests > resolution_per_beat * 4:     # discard snippet because it has too many consecutive rests (more than 1 bar)
                         discarded += 1
                         continue
+
+                    if pianoroll:
+                        snippet = np.concatenate((snippet, pauses), axis=1)
 
                     snippet_list.append(snippet)
 
@@ -357,22 +412,3 @@ def pianoroll_to_midi(snippet, filename="Sampled/sample.midi"):
 
 
 
-
-# old test code for conversion from/to monophonic representation
-
-# performance = dataset.get_full_performance(0)
-# performance = performance[0:500]
-# performance[0, 0] = 1
-# performance[1, 0] = 1
-# performance[2, 0] = 1
-#
-# np.savetxt(fname="Pianoroll.txt", X=performance)
-# performance2 = pianoroll_to_monophonic_repr(performance)
-# np.savetxt(fname="monophonic.txt", X=performance2)
-# performance3 = monophonic_repr_to_pianoroll(performance2)
-# np.savetxt(fname="Pianoroll_2.txt", X=performance3)
-# performance4 = pianoroll_to_monophonic_repr(performance3)
-
-# ds = FinalDataset(split='test')
-# item = ds.__getitem__(0)
-# print(item)

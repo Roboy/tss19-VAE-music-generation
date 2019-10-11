@@ -58,6 +58,8 @@ beta = 0.2                 # gets annealed for 2 bars, but is 0.25 for 16 bars
 
 verbose = False
 
+# TODO add transposed to everything!!! (and check!)
+
 
 def _parse_train(args):
     # num_epochs = args.epochs
@@ -70,11 +72,15 @@ def _parse_train(args):
     if args.pianoroll:
         repr = "pianoroll"
     print("\tusing " + repr + " representation")
+    if args.transpose:
+        print('\tusing traning data transposed to only one major and one minor key')
+    else:
+        print('\tusing training data transposed to every possible key')
     print("\tverbose is set to " + str(args.verbose))
     if args.resume:
         print("\ttrying to resume training from previous checkpoint\n")
 
-    training(args.epochs, args.batch, args.bars, args.pianoroll, args.verbose, args.save_location, args.resume)
+    training(args.epochs, args.batch, args.bars, args.pianoroll, args.transpose, args.verbose, args.save_location, args.resume)
 
 def _parse_show_datasets(args):
     print("the following datasets are available at the moment:\n")
@@ -82,7 +88,11 @@ def _parse_show_datasets(args):
     if args.size:
         i = iter(dsets)
         for d, s in zip(i, i):
-            print('\t' + d + '\t\t\twith size ' + str(s))
+            spaces = 70
+            spaces -= len(d)
+            if spaces <=0:
+                spaces = 10
+            print('\t' + d + ' ' * spaces + 'with size ' + str(s))
     else:
         for d in dsets:
             print('\t' + d)
@@ -90,13 +100,13 @@ def _parse_show_datasets(args):
 
 
 def _parse_generate_dataset(args):
-    data.create_final_dataset(args.split, args.bars, args.stride, args.pianoroll)
+    data.create_final_dataset(args.split, args.bars, args.stride, args.pianoroll, args.transpose)
 
 def _parse_delete_dataset(args):
-    data.delete_dataset(args.split, args.bars, args.stride, args.pianoroll)
+    data.delete_dataset(args.split, args.bars, args.stride, args.pianoroll, args.transpose)
 
 def _parse_sample(args):
-    vae = get_trained_vae(args.bars, args.pianoroll, args.verbose)
+    vae = get_trained_vae(args.bars, args.pianoroll, args.transpose, args.verbose)
 
     sample = vae.sample()
     data.pianoroll_to_midi(sample, args.save_location)
@@ -111,7 +121,7 @@ def _parse_sample(args):
     # data.pianoroll_to_midi(sample)
 
 def _parse_interpolate(args):
-    vae = get_trained_vae(args.bars, args.pianoroll, args.verbose)
+    vae = get_trained_vae(args.bars, args.pianoroll, args.transpose, args.verbose)
     z = torch.randn((1, model.latent_dimension), requires_grad=False)
     z_end = torch.randn((1, model.latent_dimension), requires_grad=False)
     step_vector = (z_end - z) / args.steps
@@ -122,8 +132,8 @@ def _parse_interpolate(args):
         data.pianoroll_to_midi(sample, filename)
 
 
-def _parse_reconstruct(bars=2, pianoroll=False, save_location="Sampled", i=1, verbose=True):
-    vae= get_trained_vae(bars, pianoroll, verbose)
+def _parse_reconstruct(bars=2, pianoroll=False, transpose=False, save_location="Sampled", i=1, verbose=True):
+    vae= get_trained_vae(bars, pianoroll, transpose, verbose)
     ds = data.FinalDataset('train', bars=bars, pianoroll=pianoroll)
     snippet_before = ds.__getitem__(i)
     snippet_after, _, _ = vae(snippet_before.unsqueeze(dim=0))
@@ -143,11 +153,12 @@ def _parse_reconstruct(bars=2, pianoroll=False, save_location="Sampled", i=1, ve
 
 
 
-def get_trained_vae(bars, pianoroll=False, verbose=False):
+def get_trained_vae(bars, pianoroll=False, transpose=False, verbose=False):
     vae = model.VAE(bars, pianoroll)
     vae.eval()
 
     location = "/home/micaltu/tss19-VAE-music-generation/Models/Final"
+    # TODO use data.get_dataset_name and dont forget transpose
     dset_name = str(bars) + "bars_3stride_after_epoch_19"  # TODO change name to someting like xbars_final in the end
     if pianoroll:
         dset_name = "pianoroll_" + dset_name
@@ -228,6 +239,12 @@ def main():
     )
 
     train_parser.add_argument(
+        '-t', '--transpose',
+        action='store_true',
+        help='use the dataset where each sequence is transposed to either C Major or a minor'
+    )
+
+    train_parser.add_argument(
         '-r', '--resume',
         action='store_true',
         help='resume the training from a previously saved checkpoint'
@@ -284,6 +301,12 @@ def main():
         help='use a pianoroll representation instead of the default monophonic representation'
     )
 
+    generate_dataset_parser.add_argument(
+        '-t', '--transpose',
+        action='store_true',
+        help='transpose every performance to either C Major or a minor so that all generated sequences share the same notes'
+    )
+
     # generate_dataset_parser.add_argument(
     #     '-d', '--dataset_location',
     #     help='path to the .h5 file storing the dataset',
@@ -329,6 +352,12 @@ def main():
         help='use a pianoroll representation instead of the default monophonic representation'
     )
 
+    delete_dataset_parser.add_argument(
+        '-t', '--transpose',
+        action='store_true',
+        help='use the dataset where each sequence is transposed to either C Major or a minor'
+    )
+
     # delete_dataset_parser.add_argument(
     #     '-d', '--dataset_location',
     #     help='path to the .h5 file storing the dataset',
@@ -361,6 +390,12 @@ def main():
         '-p', '--pianoroll',
         action='store_true',
         help='use a model trained on pianoroll representation instead of the default monophonic one'
+    )
+
+    sample_parser.add_argument(
+        '-t', '--transpose',
+        action='store_true',
+        help='use the model trained with sequences transposed to either C Major or a minor'
     )
 
     sample_parser.add_argument(
@@ -410,6 +445,12 @@ def main():
     )
 
     interpolate_parser.add_argument(
+        '-t', '--transpose',
+        action='store_true',
+        help='use the model trained with sequences transposed to either C Major or a minor'
+    )
+
+    interpolate_parser.add_argument(
         '-v', '--verbose',
         action='store_true',
         help='get more information during the interpolation process'
@@ -445,7 +486,7 @@ def get_checkpoint(dset_name, location):
 
 
 
-def training(num_epochs, batch_size, bars, pianoroll, verbose, save_location, resume=False):
+def training(num_epochs, batch_size, bars, pianoroll, transpose, verbose, save_location, resume=False):
 
     def loss_func(x_hat, x, mean, std_deviation, beta):
         bce = F.binary_cross_entropy(x_hat, x, reduction='sum')
@@ -478,10 +519,10 @@ def training(num_epochs, batch_size, bars, pianoroll, verbose, save_location, re
         vae.train()
         return avg_loss
 
-
-    train_set = data.FinalDataset('train', bars, stride=3, pianoroll=pianoroll)
-    train_loader = torch.utils.data.DataLoader(train_set, batch_size=batch_size)
-    eval_set = data.FinalDataset('validation', bars, stride=3, pianoroll=pianoroll)
+    stride = 1 if transpose else 3
+    train_set = data.FinalDataset('train', bars, stride=stride, pianoroll=pianoroll, transpose=transpose)
+    train_loader = torch.utils.data.DataLoader(train_set, batch_size=batch_size) # TODO change for 16 bars: , shuffle=True)
+    eval_set = data.FinalDataset('validation', bars, stride=stride, pianoroll=pianoroll, transpose=transpose)
     eval_loader = torch.utils.data.DataLoader(eval_set, batch_size=batch_size)
 
     loss_list = []
@@ -512,6 +553,8 @@ def training(num_epochs, batch_size, bars, pianoroll, verbose, save_location, re
 
     #compute initial evaluation loss before training
     if not resume:
+        if verbose:
+            print("Initial Evaluation\n\n")
         initial_loss = evaluate()
         print("\nInitial evaluation loss: " + str(initial_loss))
 
