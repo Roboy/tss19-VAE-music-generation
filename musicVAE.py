@@ -50,6 +50,9 @@ from _datetime import datetime
 import model
 import data
 
+#TODO maybe delete again if not needed, only used for demo interpolation between midi files
+import pypianoroll as ppr
+import numpy as np
 
 # PARAMETERS FROM GOOGLE PAPER:
 batch_size = 512
@@ -158,9 +161,11 @@ def get_trained_vae(bars, pianoroll=False, transpose=False, verbose=False):
     vae = model.VAE(bars, pianoroll)
     vae.eval()
 
-    location = "/home/micaltu/tss19-VAE-music-generation/Models/Final"
+    #TODO change back to /Final
+    location = "/home/micaltu/tss19-VAE-music-generation/Models/Checkpoints"
     # TODO use data.get_dataset_name and dont forget transpose
-    dset_name = str(bars) + "bars_3stride_after_epoch_19"  # TODO change name to someting like xbars_final in the end
+    dset_name = "train_" + str(bars) + "bars_1stride_tempo_computed_transposed_after_epoch_30"  # TODO change name to someting like xbars_final in the end
+    #dset_name = "train_2bars_1stride_tempo_computed_transposed_after_epoch_28"
     if pianoroll:
         dset_name = "pianoroll_" + dset_name
 
@@ -482,7 +487,7 @@ def get_checkpoint(dset_name, location):
     try:
         checkpoint = torch.load(path, map_location="cpu")
     except:
-         raise FileNotFoundError("Could not find a previosuly saved checkpoint.")
+         raise FileNotFoundError("Could not find a previosuly saved checkpoint at " + path)
     return checkpoint
 
 
@@ -611,11 +616,7 @@ def training(num_epochs, batch_size, bars, pianoroll, transpose, verbose, save_l
 
 
 
-def compute_correct_notes(seq_1, seq_2, pianoroll=False):       # only works for monophonic inputs!s
-
-    if pianoroll:
-        seq_1 = data.monophonic_repr_to_pianoroll(seq_1)
-        seq_2 = data.monophonic_repr_to_pianoroll(seq_2)
+def compute_correct_notes(seq_1, seq_2, pianoroll=False):       # only works for pianorollinputs!s
 
     if seq_1.shape != seq_2.shape:
         raise ValueError("Input mismatch: the input sequences don't have the same shape")
@@ -630,9 +631,9 @@ def compute_correct_notes(seq_1, seq_2, pianoroll=False):       # only works for
     return correct_notes
 
 
-def evaluate_correct_notes(bars, comparisons=15000, pianoroll=False, verbose=True):
-    vae = get_trained_vae(bars, pianoroll, verbose)
-    dset = data.FinalDataset('validation', bars, stride=3)
+def evaluate_correct_notes(bars, comparisons=8000, pianoroll=True, transpose=True, verbose=True):
+    vae = get_trained_vae(bars, pianoroll, transpose, verbose)
+    dset = data.FinalDataset('validation', bars, stride=1, pianoroll=pianoroll, transpose=transpose)
     #dloader = torch.utils.data.DataLoader(dset, batch_size=1)
 
     if verbose:
@@ -651,14 +652,15 @@ def evaluate_correct_notes(bars, comparisons=15000, pianoroll=False, verbose=Tru
 
         n += 1
         if n in range(0, comparisons, 500) or n == 100:
-            print(n, '\t\t{}/{} correct'.format(total_correct, total_notes))
+            print(n, '\t\t{}/{}  =  {} correct'.format(total_correct, total_notes, total_correct/total_notes))
 
         reconstructed, _, _ = vae(snippet)
-        reconstructed = data.model_output_to_pianoroll(reconstructed)
-        # reconstructed = data.full_to_small_pianoroll(reconstructed)
+        reconstructed = data.model_output_to_pianoroll(reconstructed, pianoroll)
         snippet = snippet.squeeze()
         if not pianoroll:
             snippet = data.monophonic_repr_to_pianoroll(snippet)
+        else:
+            snippet = snippet[:, 0:88]     # remove pause tokens
 
         length = snippet.shape[0]
         correct_notes = compute_correct_notes(snippet, reconstructed, pianoroll)
@@ -688,7 +690,48 @@ def evaluate_correct_notes(bars, comparisons=15000, pianoroll=False, verbose=Tru
 if __name__ == "__main__":
     main()
     #_parse_reconstruct()
-    # evaluate_correct_notes(2)
+    #evaluate_correct_notes(16)
+
+    if False:
+
+        vae = get_trained_vae(bars=2, pianoroll=True, transpose=True, verbose=True)
+        steps = 8
+        path_1 = "/home/micaltu/tss19-VAE-music-generation/Sampled/SotW.midi"
+        #TODO extract that into data
+        midi_1 = ppr.parse(filepath=path_1, beat_resolution=4)  # get Multitrack object
+        midi_1 = midi_1.tracks[0]
+        midi_1 = ppr.binarize(midi_1)
+        midi_1 = midi_1.pianoroll
+        midi_1 = data.full_to_small_pianoroll(midi_1)
+        midi_1 = data.pianoroll_to_mono_pianoroll(midi_1)
+        midi_1 = data.pianoroll_to_one_hot_pianoroll(midi_1)
+        midi_1 = torch.from_numpy(midi_1).float()
+        midi_1 = midi_1.unsqueeze(dim=0)
+        m, v = vae.encode(midi_1)
+        z = vae.reparameterize(m, v)
+
+        path_2 = "/home/micaltu/tss19-VAE-music-generation/Sampled/lick.midi"
+        midi_2 = ppr.parse(filepath=path_2, beat_resolution=4)  # get Multitrack object
+        midi_2 = midi_2.tracks[0]
+        midi_2 = ppr.binarize(midi_2)
+        midi_2 = midi_2.pianoroll
+        midi_2 = data.full_to_small_pianoroll(midi_2)
+        midi_2 = data.pianoroll_to_mono_pianoroll(midi_2)
+        midi_2 = data.pianoroll_to_one_hot_pianoroll(midi_2)
+        midi_2 = torch.from_numpy(midi_2).float()
+        midi_2 = midi_2.unsqueeze(dim=0)
+        m, v = vae.encode(midi_2)
+        z_end = vae.reparameterize(m, v)
+
+
+        step_vector = (z_end - z) / steps
+        # TODO now includes start sample and end sample, do the same for sample()
+        for i in range(steps + 2):
+            sample = vae.sample(z)
+            filename = "Sampled/interpolate_" + str(i) + ".midi"
+            data.pianoroll_to_midi(sample, filename)
+            z = z + step_vector
+
 
 
 

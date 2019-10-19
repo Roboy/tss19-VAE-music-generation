@@ -301,7 +301,19 @@ def create_final_dataset(split, bars=2, stride=1, pianoroll=False, transpose=Fal
         if dset_name not in f.keys():
             print("Dataset would be empty and is not generated. Maybe there are too many long pauses in the data which cause snippets to get discarded.")
 
+# works with input of all sizes, but input has to be mono already!
+def pianoroll_to_one_hot_pianoroll(pianoroll):
+    pauses = np.zeros((pianoroll.shape[0], 1), dtype=bool)
+    position = 0
+    for slice in pianoroll:
+        if not np.any(slice):
+            pauses[position, 0] = 1
+        position +=1
 
+    pianoroll = np.concatenate((pianoroll, pauses), axis=1)
+    return pianoroll
+
+#  works with input of all sizes, discards all but highest notes for every time step
 def pianoroll_to_mono_pianoroll(pianoroll):
     monophonic = []  # using a list for faster append() operation
 
@@ -322,7 +334,7 @@ def pianoroll_to_mono_pianoroll(pianoroll):
 
 
 
-
+# input of size (t, 128), output (t, 90)
 def pianoroll_to_monophonic_repr(pianoroll):
 
     # also converts from dimension 128 to 90
@@ -401,7 +413,7 @@ def model_output_to_pianoroll(sample, pianoroll=False):
     if not pianoroll:
         sample = monophonic_repr_to_pianoroll(sample)
     else:
-        sample = sample[:, 0:89]   #TODO check if this is correct (correct dimension and if it actually cuts pauses instead of e.g. highest notes
+        sample = sample[:, 0:88]   #remove the pause tokens     #TODO check this
 
     return sample
 
@@ -428,7 +440,10 @@ def pianoroll_to_midi(snippet, filename="Sampled/sample.midi"):
     snippet = snippet * 127  # sets velocity of notes from 1 to 127 (max MIDI velocity)
 
     if snippet.shape[1] == 88:
-        small_to_full_pianoroll(snippet)
+        snippet = small_to_full_pianoroll(snippet)
+    else:
+        if not snippet.shape[1] == 128:
+            raise ValueError("input shape does not have 128 pitches (or 88, then it will be converted automatically) and cannot be converted to MIDI!")
 
     snippet = ppr.Track(pianoroll=snippet)
     snippet = ppr.Multitrack(tracks=[snippet], tempo=120, beat_resolution=4)
