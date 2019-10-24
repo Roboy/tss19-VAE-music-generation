@@ -56,7 +56,7 @@ import numpy as np
 
 # PARAMETERS FROM GOOGLE PAPER:
 batch_size = 512
-learning_rate = 0.001      # gets annealed to 0.00001
+learning_rate = 0.001/2      # gets annealed to 0.00001
 #exp_decay_rate = 0.9999
 beta = 0.2                 # gets annealed for 2 bars, but is 0.25 for 16 bars
 
@@ -82,9 +82,13 @@ def _parse_train(args):
         print('\tusing training data transposed to every possible key')
     print("\tverbose is set to " + str(args.verbose))
     if args.resume:
-        print("\ttrying to resume training from previous checkpoint\n")
+        if args.initialize:
+            raise ValueError("Resuming training from previous checkpoint and using pretrained weights is not possible!")
+        print("\ttrying to resume training from previous checkpoint")
+    if args.initialize:
+        print("\ttrying to load pretrained weights from 2 bar model\n")
 
-    training(args.epochs, args.batch, args.bars, args.pianoroll, args.transpose, args.verbose, args.save_location, args.resume)
+    training(args.epochs, args.batch, args.bars, args.pianoroll, args.transpose, args.verbose, args.save_location, args.resume, args.initialize)
 
 def _parse_show_datasets(args):
     print("the following datasets are available at the moment:\n")
@@ -136,6 +140,28 @@ def _parse_interpolate(args):
         data.pianoroll_to_midi(sample, filename)
 
 
+def interpolate_between_midis(path_1="/home/micaltu/tss19-VAE-music-generation/Sampled/bh.midi" , path_2="/home/micaltu/tss19-VAE-music-generation/Sampled/SotW.midi"):
+    vae = get_trained_vae(bars=2, pianoroll=True, transpose=True, verbose=True)
+    steps = 8
+    midi_1 = data.midi_to_small_one_hot_pianoroll(path_1)
+    midi_1 = midi_1.unsqueeze(dim=0)
+    m, v = vae.encode(midi_1)
+    z = vae.reparameterize(m, v)
+
+    midi_2 = data.midi_to_small_one_hot_pianoroll(path_2)
+    midi_2 = midi_2.unsqueeze(dim=0)
+    m, v = vae.encode(midi_2)
+    z_end = vae.reparameterize(m, v)
+
+    step_vector = (z_end - z) / steps
+    # TODO now includes start sample and end sample, do the same for sample()
+    for i in range(steps + 2):
+        sample = vae.sample(z)
+        filename = "Sampled/interpolate_" + str(i) + ".midi"
+        data.pianoroll_to_midi(sample, filename)
+        z = z + step_vector
+
+
 def _parse_reconstruct(bars=2, pianoroll=False, transpose=False, save_location="Sampled", i=1, verbose=True):
     vae= get_trained_vae(bars, pianoroll, transpose, verbose)
     ds = data.FinalDataset('train', bars=bars, pianoroll=pianoroll)
@@ -183,6 +209,27 @@ def get_trained_vae(bars, pianoroll=False, transpose=False, verbose=False):
 
     return vae
 
+def get_pretrained_vae(bars, pianoroll=False, transpose=False, verbose=False):
+    vae = model.VAE(bars, pianoroll)
+    vae.train()
+
+    # TODO change back to /Final
+    location = "/home/micaltu/tss19-VAE-music-generation/Models/Checkpoints"
+    dset_name = "train_2bars_1stride_tempo_computed_transposed_after_epoch_30"  # TODO change name to someting like xbars_final in the end
+    if pianoroll:
+        dset_name = "pianoroll_" + dset_name
+
+    checkpoint = get_checkpoint(dset_name, location)
+    if verbose:
+        print("loaded Checkpoint")
+
+    prefix = "last_"
+    pretrained_dict = checkpoint[prefix + 'vae_state_dict']
+
+    pretrained_l2 = {k:v for k, v in pretrained_dict.items() if (k[0:7] == "lstm_l2" or k[0:4] == "fc_4")}
+
+    vae.load_state_dict(pretrained_l2, strict=False)
+    return vae
 
 def main():
 
@@ -254,6 +301,12 @@ def main():
         '-r', '--resume',
         action='store_true',
         help='resume the training from a previously saved checkpoint'
+    )
+
+    train_parser.add_argument(
+        '-i', '--initialize',
+        action='store_true',
+        help='initialize the parameters of the level 2 LSTM with the pretrained weights from the 2 bar model'
     )
 
     train_parser.add_argument(
@@ -492,7 +545,7 @@ def get_checkpoint(dset_name, location):
 
 
 
-def training(num_epochs, batch_size, bars, pianoroll, transpose, verbose, save_location, resume=False):
+def training(num_epochs, batch_size, bars, pianoroll, transpose, verbose, save_location, resume=False, initialize=False):
 
     def loss_func(x_hat, x, mean, std_deviation, beta):
         bce = F.binary_cross_entropy(x_hat, x, reduction='sum')
@@ -527,7 +580,7 @@ def training(num_epochs, batch_size, bars, pianoroll, transpose, verbose, save_l
 
     stride = 1 if transpose else 3
     train_set = data.FinalDataset('train', bars, stride=stride, pianoroll=pianoroll, transpose=transpose)
-    train_loader = torch.utils.data.DataLoader(train_set, batch_size=batch_size) # TODO change for 16 bars: , shuffle=True)
+    train_loader = torch.utils.data.DataLoader(train_set, batch_size=batch_size, shuffle=True) # TODO change for 16 bars: , shuffle=True)
     eval_set = data.FinalDataset('validation', bars, stride=stride, pianoroll=pianoroll, transpose=transpose)
     eval_loader = torch.utils.data.DataLoader(eval_set, batch_size=batch_size)
 
@@ -535,7 +588,12 @@ def training(num_epochs, batch_size, bars, pianoroll, transpose, verbose, save_l
     resume_epoch = 0
     min_eval_loss = sys.maxsize     # does not remember min loss if trainig is aborted and resumed, but all losses are saved in loss_list()
 
-    vae = model.VAE(bars, pianoroll)
+    if initialize:
+        vae = get_pretrained_vae(bars=bars, pianoroll=pianoroll, transpose=transpose, verbose=verbose)
+        if verbose:
+            print("loaded the pretrained weights")
+    else:
+        vae = model.VAE(bars, pianoroll)
     vae.train()
 
     if resume:
@@ -691,46 +749,9 @@ if __name__ == "__main__":
     main()
     #_parse_reconstruct()
     #evaluate_correct_notes(16)
-
-    if False:
-
-        vae = get_trained_vae(bars=2, pianoroll=True, transpose=True, verbose=True)
-        steps = 8
-        path_1 = "/home/micaltu/tss19-VAE-music-generation/Sampled/SotW.midi"
-        #TODO extract that into data
-        midi_1 = ppr.parse(filepath=path_1, beat_resolution=4)  # get Multitrack object
-        midi_1 = midi_1.tracks[0]
-        midi_1 = ppr.binarize(midi_1)
-        midi_1 = midi_1.pianoroll
-        midi_1 = data.full_to_small_pianoroll(midi_1)
-        midi_1 = data.pianoroll_to_mono_pianoroll(midi_1)
-        midi_1 = data.pianoroll_to_one_hot_pianoroll(midi_1)
-        midi_1 = torch.from_numpy(midi_1).float()
-        midi_1 = midi_1.unsqueeze(dim=0)
-        m, v = vae.encode(midi_1)
-        z = vae.reparameterize(m, v)
-
-        path_2 = "/home/micaltu/tss19-VAE-music-generation/Sampled/lick.midi"
-        midi_2 = ppr.parse(filepath=path_2, beat_resolution=4)  # get Multitrack object
-        midi_2 = midi_2.tracks[0]
-        midi_2 = ppr.binarize(midi_2)
-        midi_2 = midi_2.pianoroll
-        midi_2 = data.full_to_small_pianoroll(midi_2)
-        midi_2 = data.pianoroll_to_mono_pianoroll(midi_2)
-        midi_2 = data.pianoroll_to_one_hot_pianoroll(midi_2)
-        midi_2 = torch.from_numpy(midi_2).float()
-        midi_2 = midi_2.unsqueeze(dim=0)
-        m, v = vae.encode(midi_2)
-        z_end = vae.reparameterize(m, v)
+    #get_pretrained_vae(16, pianoroll=True, transpose=True)
 
 
-        step_vector = (z_end - z) / steps
-        # TODO now includes start sample and end sample, do the same for sample()
-        for i in range(steps + 2):
-            sample = vae.sample(z)
-            filename = "Sampled/interpolate_" + str(i) + ".midi"
-            data.pianoroll_to_midi(sample, filename)
-            z = z + step_vector
 
 
 

@@ -449,6 +449,17 @@ def pianoroll_to_midi(snippet, filename="Sampled/sample.midi"):
     snippet = ppr.Multitrack(tracks=[snippet], tempo=120, beat_resolution=4)
     ppr.write(snippet, "/home/micaltu/tss19-VAE-music-generation/" + filename)
 
+def midi_to_small_one_hot_pianoroll(path, beat_resolution=4):
+    midi = ppr.parse(filepath=path, beat_resolution=beat_resolution)  # get Multitrack object
+    midi = midi.tracks[0]
+    midi = ppr.binarize(midi)
+    midi = midi.pianoroll
+    midi = full_to_small_pianoroll(midi)
+    midi = pianoroll_to_mono_pianoroll(midi)
+    midi = pianoroll_to_one_hot_pianoroll(midi)
+    midi = torch.from_numpy(midi).float()
+    return midi
+
 
 
 
