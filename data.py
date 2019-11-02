@@ -7,6 +7,7 @@ import torch.nn.functional as F
 import pretty_midi
 import music21
 import os
+import random
 import sys
 import h5py
 
@@ -54,7 +55,7 @@ def delete_dataset(split, bars, stride, pianoroll, transposed):
 '''
 about Maestro Dataset:
 
-Tempo seems to always be 120 and downbeat in ppr Multitrack object is only True at index 0, rest is false
+Tempo of the MIDI files is always 120 and downbeat in ppr Multitrack object is only True at index 0, rest is false
 
 A piano has (usually, but this is the case for the one used to generate the dataset in the Yamaha e-Competition) 88 keys which correspond to MIDI pitches [21, 108] (including)
 
@@ -301,6 +302,22 @@ def create_final_dataset(split, bars=2, stride=1, pianoroll=False, transpose=Fal
         if dset_name not in f.keys():
             print("Dataset would be empty and is not generated. Maybe there are too many long pauses in the data which cause snippets to get discarded.")
 
+def get_random_training_data(amount=15, split="train", bars=2, stride=1, pianoroll=True, transpose=True):
+    dset_name = get_dataset_name(split, bars, stride, pianoroll, transpose)
+    dset = FinalDataset(split, bars, stride, pianoroll, transpose)
+    it = random.sample(range(0, len(dset)), amount)
+    n = 0
+    for i in it:
+        snippet = dset.__getitem__(i)
+        if not pianoroll:
+            snippet = monophonic_repr_to_pianoroll(snippet)
+        filename = "Sampled/training_sample_" + str(n) + ".midi"
+        pianoroll_to_midi(snippet, filename)
+        n += 1
+
+
+
+
 # works with input of all sizes, but input has to be mono already!
 def pianoroll_to_one_hot_pianoroll(pianoroll):
     pauses = np.zeros((pianoroll.shape[0], 1), dtype=bool)
@@ -312,6 +329,9 @@ def pianoroll_to_one_hot_pianoroll(pianoroll):
 
     pianoroll = np.concatenate((pianoroll, pauses), axis=1)
     return pianoroll
+
+def one_hot_pianoroll_to_small_pianoroll(pianoroll):
+    return pianoroll[..., 0:88]
 
 #  works with input of all sizes, discards all but highest notes for every time step
 def pianoroll_to_mono_pianoroll(pianoroll):
@@ -434,12 +454,15 @@ def full_to_small_pianoroll(snippet):
     return snippet
 
 
-
+# works with all kinds of pianorolls
 def pianoroll_to_midi(snippet, filename="Sampled/sample.midi"):
     snippet = np.asarray(snippet, dtype=np.uint8)
     snippet = snippet * 127  # sets velocity of notes from 1 to 127 (max MIDI velocity)
 
-    if snippet.shape[1] == 88:
+    if snippet.shape[1] == 89:
+        snippet = one_hot_pianoroll_to_small_pianoroll(snippet)
+        snippet = small_to_full_pianoroll(snippet)
+    elif snippet.shape[1] == 88:
         snippet = small_to_full_pianoroll(snippet)
     else:
         if not snippet.shape[1] == 128:
@@ -461,5 +484,5 @@ def midi_to_small_one_hot_pianoroll(path, beat_resolution=4):
     return midi
 
 
-
-
+#TODO remove again or expose in CLI
+#get_random_training_data(bars=2)

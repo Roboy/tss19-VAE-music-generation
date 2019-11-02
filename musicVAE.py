@@ -191,7 +191,7 @@ def get_trained_vae(bars, pianoroll=False, transpose=False, verbose=False):
     location = "/home/micaltu/tss19-VAE-music-generation/Models/Checkpoints"
     # TODO use data.get_dataset_name and dont forget transpose
     dset_name = "train_" + str(bars) + "bars_1stride_tempo_computed_transposed_after_epoch_30"  # TODO change name to someting like xbars_final in the end
-    #dset_name = "train_2bars_1stride_tempo_computed_transposed_after_epoch_28"
+    dset_name = "train_2bars_1stride_tempo_computed_transposed_after_epoch_94"
     if pianoroll:
         dset_name = "pianoroll_" + dset_name
 
@@ -689,7 +689,7 @@ def compute_correct_notes(seq_1, seq_2, pianoroll=False):       # only works for
     return correct_notes
 
 
-def evaluate_correct_notes(bars, comparisons=8000, pianoroll=True, transpose=True, verbose=True):
+def evaluate_correct_notes(bars, comparisons=8000, pianoroll=True, transpose=True, verbose=False):
     vae = get_trained_vae(bars, pianoroll, transpose, verbose)
     dset = data.FinalDataset('validation', bars, stride=1, pianoroll=pianoroll, transpose=transpose)
     #dloader = torch.utils.data.DataLoader(dset, batch_size=1)
@@ -748,8 +748,7 @@ def evaluate_correct_notes(bars, comparisons=8000, pianoroll=True, transpose=Tru
 if __name__ == "__main__":
     main()
     #_parse_reconstruct()
-    #evaluate_correct_notes(16)
-    #get_pretrained_vae(16, pianoroll=True, transpose=True)
+    #evaluate_correct_notes(2)
 
 
 
