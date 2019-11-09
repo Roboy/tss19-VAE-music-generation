@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
+import pypianoroll as ppr
 import numpy as np
 import musicVAE
+
 
 #tum colors:
 grey = (153/255, 153/255, 153/255)
@@ -106,11 +108,84 @@ def plot_loss_all_lengths(location="/home/micaltu/tss19-VAE-music-generation/Mod
         ax.set_title(str(bars) + " bars", fontsize=20)
 
         bars *= 2
-    fig.savefig("all_losses.png")
+    fig.savefig("all_losses.png") # dpi=100
 
 
-# uncomment what you want to plot
+def plot_pianoroll(path="Sampled/4_bar_samples/sample_4_0.midi"):
+    midi = ppr.parse(filepath=path, beat_resolution=4)  # get Multitrack object
+    midi = midi.tracks[0]  # get first/only track
+    pianoroll = midi.pianoroll
+    print(pianoroll.shape)
 
-#plot_all_2bar_losses()
-#plot_train_and_eval_loss("pianoroll_train_8bars_1stride_tempo_computed_transposed_after_e_11")
-#plot_loss_all_lengths()
+    ppr.plot(midi, filename="testppr.png", beat_resolution=4)
+
+#the melodies are not very recognizable in the plot
+def plot_interpolation_sotw_to_lick():
+    interpolations = []
+    for i in range(0, 10, 3):
+        path = "Sampled/interpolation_SotW_to_lick/2/interpolate_" + str(i) + ".midi"
+        #plot_pianoroll(path)
+        #return
+
+        midi = ppr.parse(filepath=path, beat_resolution=4)  # get Multitrack object
+        midi = midi.tracks[0]  # get first/only track
+        midi.name = ""
+        if i == 0:
+            midi.name = "start sequence"
+        if i == 10:
+            midi.name = "end sequence"
+
+        interpolations.append(midi)
+
+    mt = ppr.Multitrack(tracks=interpolations, beat_resolution=4)
+    p, _ = ppr.plot(mt, yticklabel="off", xtick='beat', xticklabel=True, grid="both")
+    #p.set_size_inches((8, 8), forward=True)
+
+    filename = "interpolation_SotW_to_lick.png"
+    p.savefig(filename)
+
+
+def plot_interpolation_pianorolls(bars=16):
+    interpolations = []
+    for i in range(0, 6, 2):
+        path = "Sampled/" + str(bars) + "bar_interpolation/interpolate_" + str(i) + ".midi"
+
+        midi = ppr.parse(filepath=path, beat_resolution=4)  # get Multitrack object
+        midi = midi.tracks[0]  # get first/only track
+        midi.name = ""
+        if i == 0:
+            midi.name = "start sequence"
+        if i == 4:
+            midi.name = "end sequence"
+        pr = midi.pianoroll
+
+        # padding to full length in case MIDI file ends earlier
+        if pr.shape[0] != bars * 16:
+            padding = np.zeros((bars * 16 - pr.shape[0], pr.shape[1]))
+            pr = np.concatenate((pr, padding), axis=0)
+            midi.pianoroll = pr
+        interpolations.append(midi)
+
+    mt = ppr.Multitrack(tracks=interpolations, beat_resolution=4)
+
+    if bars == 16:
+        p, _ = ppr.plot(mt, yticklabel="number", xtick='beat', xticklabel=False, grid="off")
+        # there seems to be a bug in ppr, despite xticklabel=False, the plot still has the labels for each x-axis value
+
+    else:
+        p, _ = ppr.plot(mt,yticklabel="number", xtick='beat', xticklabel=True, grid="both")
+    p.set_size_inches((8, 8), forward=True)
+
+    filename = str(bars) + "bar_interpolation.png"
+    p.savefig(filename)
+
+
+
+
+# uncomment what you want to plot:
+
+# plot_all_2bar_losses()
+# plot_train_and_eval_loss("pianoroll_train_8bars_1stride_tempo_computed_transposed_after_e_11")
+# plot_loss_all_lengths()
+# plot_interpolation_pianorolls(16)
+
