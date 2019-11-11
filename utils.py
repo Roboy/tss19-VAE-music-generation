@@ -2,15 +2,81 @@ import matplotlib.pyplot as plt
 import pypianoroll as ppr
 import numpy as np
 import musicVAE
+import math
 
 
-#tum colors:
+# tum colors:
 grey = (153/255, 153/255, 153/255)
 green = (162/255, 173/255, 0.)
 blue = (0/255, 101/255, 189/255)    # lighter blue: (100/255, 160/255, 200/255)
 orange = (227/255, 114/255, 34/255)
 black = (0., 0., 0.)
 white = (1., 1., 1.)
+
+
+# survey results
+survey_complete = np.array([0, 0, 0, 0, 0, 3, 4, 6, 7, 6, 4, 4, 1, 1, 0, 0])
+survey_hobby_musicians = np.array([0, 0, 0, 0, 0, 1, 3, 6, 7, 1, 3, 4, 0, 0, 0, 0])
+survey_non_musicians = np.array([0, 0, 0, 0, 0 , 1, 1, 0, 0, 5, 1, 0, 0, 1, 0, 0])
+survey_prof_musicians = np.array([0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0])
+survey_by_question = np.array([15, 25, 15, 20, 18, 24, 17, 25, 14, 14, 26, 28, 19, 19, 21])
+x = np.array([i for i in range(16)])
+
+
+def print_survey_info():
+    texts = ["all participants", "professional musicians", "hobby musicians", "non-musicians"]
+    surveys = [survey_complete, survey_prof_musicians, survey_hobby_musicians, survey_non_musicians]
+
+    for t, s in zip(texts, surveys):
+        answers = []
+        for i in range(len(s)):
+            n = s[i]
+            for j in range(n):
+                answers.append(i)
+
+        participants = len(answers)
+        mean = np.mean(answers)
+
+        std = 0
+        for n in answers:
+            std += (n - mean) ** 2
+        std /= participants     # computes the uncorrected std
+        std = math.sqrt(std)
+        print("Results for " + t + ":")
+        print("\tParticipants: \t\t\t" + str(participants))
+        print("\tMean: \t\t\t\t\t" + str(mean))
+        print("\tStandard deviation:\t\t" + str(std) + "\n")
+
+
+def plot_survey():
+    #x = range(16)
+    plt.bar(x, survey_prof_musicians, label="professional musicians", color=green)
+    plt.bar(x, survey_hobby_musicians, bottom=survey_prof_musicians, label="hobby musicians", color=blue)
+    plt.bar(x, survey_non_musicians, bottom=survey_prof_musicians+survey_hobby_musicians, label="non-musicians", color=orange)
+
+    plt.ylabel("Number of Participants")
+    plt.xlabel("Correct Answers")
+    plt.ylim((0, 8))
+    plt.xlim((0, 15))
+    plt.xticks(x)
+    plt.legend()
+    plt.grid(True, axis="y")
+    plt.savefig("survey.png")
+
+def plot_survey_by_question():
+    x_1 = x[1:]
+    y = (survey_by_question / 36) * 100 # convert to percent
+    plt.bar(x_1, y, color=blue)
+    plt.ylabel("Percentage of correct answers")
+    plt.xlabel("Question number")
+    plt.ylim((0, 100))
+    plt.xlim((0, 15))
+    plt.xticks(x)
+
+    plt.grid(True, axis="y")
+    plt.savefig("survey_by_question.png")
+
+
 
 
 def plot_train_and_eval_loss(checkpoint_name, location="/home/micaltu/tss19-VAE-music-generation/Models/Checkpoints"):
@@ -187,5 +253,8 @@ def plot_interpolation_pianorolls(bars=16):
 # plot_all_2bar_losses()
 # plot_train_and_eval_loss("pianoroll_train_8bars_1stride_tempo_computed_transposed_after_e_11")
 # plot_loss_all_lengths()
-# plot_interpolation_pianorolls(16)
+# plot_interpolation_pianorolls(4)
+plot_survey()
+# plot_survey_by_question()
+# print_survey_info()
 
