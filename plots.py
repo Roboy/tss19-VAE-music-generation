@@ -49,7 +49,6 @@ def print_survey_info():
 
 
 def plot_survey():
-    #x = range(16)
     plt.bar(x, survey_prof_musicians, label="professional musicians", color=green)
     plt.bar(x, survey_hobby_musicians, bottom=survey_prof_musicians, label="hobby musicians", color=blue)
     plt.bar(x, survey_non_musicians, bottom=survey_prof_musicians+survey_hobby_musicians, label="non-musicians", color=orange)
@@ -62,6 +61,7 @@ def plot_survey():
     plt.legend()
     plt.grid(True, axis="y")
     plt.savefig("survey.png")
+
 
 def plot_survey_by_question():
     x_1 = x[1:]
@@ -76,18 +76,13 @@ def plot_survey_by_question():
     plt.grid(True, axis="y")
     plt.savefig("survey_by_question.png")
 
-
-
-
 def plot_train_and_eval_loss(checkpoint_name, location="/home/micaltu/tss19-VAE-music-generation/Models/Checkpoints"):
     checkpoint = musicVAE.get_checkpoint(checkpoint_name, location)
     loss = checkpoint['last_loss_list']
     train_loss = [99] + [l[0] for l in loss]
     eval_loss = [99] + [l[1] for l in loss]
     loss = None
-
     x = range(1, len(train_loss)+1)
-
 
     plt.plot(x, train_loss, '--', color=blue, label="training loss")
     plt.plot(x, eval_loss, color=blue, label="validation loss")
@@ -107,8 +102,6 @@ def plot_all_2bar_losses(location="/home/micaltu/tss19-VAE-music-generation/Mode
         checkpoint = musicVAE.get_checkpoint(n, location)
         loss = checkpoint['last_loss_list']
         eval_loss = [99.] + [l[1] for l in loss]
-
-
 
         if n == "2bars_3stride_after_epoch_8": # normalize first loss
             factor = 24.090449431366114/eval_loss[-1]
@@ -185,14 +178,12 @@ def plot_pianoroll(path="Sampled/4_bar_samples/sample_4_0.midi"):
 
     ppr.plot(midi, filename="testppr.png", beat_resolution=4)
 
+
 #the melodies are not very recognizable in the plot
 def plot_interpolation_sotw_to_lick():
     interpolations = []
     for i in range(0, 10, 3):
         path = "Sampled/interpolation_SotW_to_lick/2/interpolate_" + str(i) + ".midi"
-        #plot_pianoroll(path)
-        #return
-
         midi = ppr.parse(filepath=path, beat_resolution=4)  # get Multitrack object
         midi = midi.tracks[0]  # get first/only track
         midi.name = ""
@@ -237,7 +228,6 @@ def plot_interpolation_pianorolls(bars=16):
     if bars == 16:
         p, _ = ppr.plot(mt, yticklabel="number", xtick='beat', xticklabel=False, grid="off")
         # there seems to be a bug in ppr, despite xticklabel=False, the plot still has the labels for each x-axis value
-
     else:
         p, _ = ppr.plot(mt,yticklabel="number", xtick='beat', xticklabel=True, grid="both")
     p.set_size_inches((8, 8), forward=True)
@@ -254,7 +244,7 @@ def plot_interpolation_pianorolls(bars=16):
 # plot_train_and_eval_loss("pianoroll_train_8bars_1stride_tempo_computed_transposed_after_e_11")
 # plot_loss_all_lengths()
 # plot_interpolation_pianorolls(4)
-plot_survey()
+# plot_survey()
 # plot_survey_by_question()
 # print_survey_info()
 

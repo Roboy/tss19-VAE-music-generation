@@ -7,28 +7,31 @@ import torch.nn.functional as F
 import pretty_midi
 import music21
 import os
+from inspect import getsourcefile
+from os.path import abspath
 import random
 import sys
 import h5py
 
+# get current path
+path_to_root = abspath(getsourcefile(lambda:0))
 
-finalDataset_path = '/home/micaltu/tss19-VAE-music-generation/Data/FinalDataset/final_dataset.h5'
+# remove filename from path
+name = os.path.basename(path_to_root)
+end_index = len(path_to_root) - len(name)
+path_to_root = path_to_root[0:end_index]
 
-# maestro_csv_path = "/home/micalt/PycharmProjects/Test2/Data/maestro-v2.0.0/maestro-v2.0.0.csv"
-# maestro_root_dir = "/home/micalt/PycharmProjects/Test2/Data/maestro-v2.0.0"
+finalDataset_path = path_to_root + "Data/FinalDataset/final_dataset.h5"
 
-maestro_root_dir = "/home/micaltu/tss19-VAE-music-generation/Data/maestro-v2.0.0"
+maestro_root_dir = path_to_root + "Data/maestro-v2.0.0"
 maestro_csv_path = maestro_root_dir + "/maestro-v2.0.0.csv"
 
-
+# Parameters for generating data from performances
 calculate_correct_tempo = True
 false_tempo = 120           # the tempo assigned to every one of the midi files
-
-
-# Parameters for generating data from performances
-
 resolution_per_beat = 4     # quantized to sixteenth notes if set to 4 (there are 4 sixteenth notes per beat)
 # length = model.bars
+
 
 def get_available_datasets(show_size):
     out = []
@@ -39,7 +42,6 @@ def get_available_datasets(show_size):
                 ds = f[k]
                 size = ds.shape[0]
                 out.append(size)
-
     return out
 
 
@@ -116,7 +118,6 @@ class MaestroDataset(Dataset):
         full_performance = self.get_full_performance(index, beat_resolution)
         return full_performance
 
-
     def get_key(self, index):
         if 'key' not in self.csv_data_frame.columns:
             raise ValueError("key information seems to not have been generated yet. Call MaestroDataset.compute_key() to compute it and save it in the csv file.")
@@ -126,8 +127,6 @@ class MaestroDataset(Dataset):
         key = key.item()        # TODO change to not deprecated function if possible?
         key = key[0:2]
         return key
-
-
 
     def get_path(self, index):
         row = self.csv_data_frame.iloc[[index]]
@@ -156,7 +155,6 @@ class MaestroDataset(Dataset):
 
         self.csv_data_frame = self.csv_data_frame.assign(tempo=pandas.Series(tempos))
 
-
     def compute_key(self):
         print("computing the keys of the performances...")
         key_list = []
@@ -169,8 +167,9 @@ class MaestroDataset(Dataset):
 
         self.csv_data_frame = self.csv_data_frame.assign(key=pandas.Series(key_list))
 
+
 class FinalDataset(Dataset):
-    def __init__(self, split='train', bars=2, stride=1, pianoroll=False, transpose=False):
+    def __init__(self, split='train', bars=2, stride=1, pianoroll=True, transpose=True):
         if (split != 'train' and split != 'test' and split != 'validation'):
             raise ValueError("class FinalDataset was initialized with invalid aruments, split has to be 'train', 'test' or 'validation'!")
         self.split = split
@@ -179,7 +178,7 @@ class FinalDataset(Dataset):
         self.dset = None
         self.dset_name = get_dataset_name(split, bars, stride, pianoroll, transpose)
 
-        f = h5py.File(finalDataset_path, 'r')        # TODO does this need to be closed somehow? With doesnt work because f needs to stay open as long as dset is used
+        f = h5py.File(finalDataset_path, 'r')        # f stays opened, a __del__ method would be an option but seems to be unreliable/ontroversial. A with-statement doesnt work because f needs to stay open as long as dset is used
         if self.dset_name not in f.keys():
             command = "musicVAE.py generate-dataset " + split + " " + str(bars) + " " + str(stride) + (" --pianoroll" if pianoroll else "")
             raise ValueError("The dataset " + self.dset_name + " does not exist and has to be generated once before using it. The command to generate it is: " + command)
@@ -198,6 +197,7 @@ class FinalDataset(Dataset):
 
 def get_dataset_name(split, bars, stride, pianoroll, transpose):
     return ("pianoroll_" if pianoroll else "") + split + '_' + str(bars) + "bars_" + str(stride) + "stride_tempo_" + ("computed" if calculate_correct_tempo else "120") + ("_transposed" if transpose else "")
+
 
 def create_final_dataset(split, bars=2, stride=1, pianoroll=False, transpose=False):
 
@@ -281,7 +281,7 @@ def create_final_dataset(split, bars=2, stride=1, pianoroll=False, transpose=Fal
 
                     snippet_list.append(snippet)
 
-            if len(snippet_list) > 120000:
+            if len(snippet_list) > 120000:      # longer lists lead to memory error during the stack operation a few lines below; value found by experimenting, probably depends on machine
                 del snippet_list[120000:]
                 print("throwing away some snippets for memory reasons, had " + len(snippet_list) + " snippets")
             if not snippet_list:
@@ -302,8 +302,8 @@ def create_final_dataset(split, bars=2, stride=1, pianoroll=False, transpose=Fal
         if dset_name not in f.keys():
             print("Dataset would be empty and is not generated. Maybe there are too many long pauses in the data which cause snippets to get discarded.")
 
+
 def get_random_training_data(amount=15, split="train", bars=2, stride=1, pianoroll=True, transpose=True):
-    dset_name = get_dataset_name(split, bars, stride, pianoroll, transpose)
     dset = FinalDataset(split, bars, stride, pianoroll, transpose)
     it = random.sample(range(0, len(dset)), amount)
     n = 0
@@ -330,8 +330,10 @@ def pianoroll_to_one_hot_pianoroll(pianoroll):
     pianoroll = np.concatenate((pianoroll, pauses), axis=1)
     return pianoroll
 
+
 def one_hot_pianoroll_to_small_pianoroll(pianoroll):
     return pianoroll[..., 0:88]
+
 
 #  works with input of all sizes, discards all but highest notes for every time step
 def pianoroll_to_mono_pianoroll(pianoroll):
@@ -353,7 +355,6 @@ def pianoroll_to_mono_pianoroll(pianoroll):
     return monophonic
 
 
-
 # input of size (t, 128), output (t, 90)
 def pianoroll_to_monophonic_repr(pianoroll):
 
@@ -369,7 +370,7 @@ def pianoroll_to_monophonic_repr(pianoroll):
         monophonic_slice = np.zeros(90, dtype=bool)
         no_note = True
 
-        # TODO possible improvement: use slice.any() before to check if there are any notes in the slice at all (see pianoroll_to_mono_pianoroll() above)
+        # possible improvement: use slice.any() before to check if there are any notes in the slice at all (see pianoroll_to_mono_pianoroll() above)
         for k in range(108, 20, -1):            # looking only at pitches that exist on a piano keyboard ( [21, 108] )
             if slice[k] > 0:                    # note detected
                 no_note = False
@@ -437,6 +438,7 @@ def model_output_to_pianoroll(sample, pianoroll=False):
 
     return sample
 
+
 def small_to_full_pianoroll(snippet):
     if torch.is_tensor(snippet):
         lower_notes = torch.zeros((snippet.shape[0], 21), dtype=snippet.dtype)
@@ -448,6 +450,7 @@ def small_to_full_pianoroll(snippet):
         snippet = np.concatenate((lower_notes, snippet, higher_notes), axis=1)
 
     return snippet
+
 
 def full_to_small_pianoroll(snippet):
     snippet = snippet[..., 21:109]
@@ -472,6 +475,7 @@ def pianoroll_to_midi(snippet, filename="Sampled/sample.midi"):
     snippet = ppr.Multitrack(tracks=[snippet], tempo=120, beat_resolution=4)
     ppr.write(snippet, "/home/micaltu/tss19-VAE-music-generation/" + filename)
 
+
 def midi_to_small_one_hot_pianoroll(path, beat_resolution=4):
     midi = ppr.parse(filepath=path, beat_resolution=beat_resolution)  # get Multitrack object
     midi = midi.tracks[0]
@@ -482,7 +486,3 @@ def midi_to_small_one_hot_pianoroll(path, beat_resolution=4):
     midi = pianoroll_to_one_hot_pianoroll(midi)
     midi = torch.from_numpy(midi).float()
     return midi
-
-
-#TODO remove again or expose in CLI
-#get_random_training_data(bars=2)

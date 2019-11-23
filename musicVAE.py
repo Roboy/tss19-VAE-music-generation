@@ -1,78 +1,15 @@
 #!/usr/bin/env python
 
-"""MusicVAE
-
-usage:
-  musicVAE.py train <epochs> <batch> <bars> [-p | --pianoroll] [-d=<path> | --dataset-location=<path>]
-  musicVAE.py generate-dataset <split> <bars> <stride> [-p | --pianoroll] [-d=<path> | --dataset-location=<path>] [-m=<path2> | --maestro-location=<path2>]
-  musicVAE.py (-h | --help)
-
-options:
-  -h --help                             Show this screen.
-  -p --pianoroll                        Use a standard pianoroll representation for the data instead of the default monophonic one.
-  -d=<path> --dataset-location=<path>   Enter a File Path to the .h5 file containing the dataset(s) [default: Data/FinalDataset/final_dataset.h5]
-  -m=<path2> --maestro-location=<path2>]Enter a File Path to the folder containing the Maestro Dataset [default: "/media/micaltu/opensuse/home/micalt/PycharmProjects/Test2/Data/maestro-v2.0.0"
-
-commands:
-   train                                Train the network.
-   generate-dataset                     Generate a dataset that can be used for training or testing/validation.
-
-"""
-
-# from docopt import docopt
-
-TRAIN = """usage: musicVAE.py train <epochs> <batch> <bars> [-p | --pianoroll] [-d=<path> | --dataset-location=<path>]
-
-  -h --help                             Show this screen.
-  -p --pianoroll                        Use a standard pianoroll representation for the data instead of the default monophonic one.
-  -d=<path> --dataset-location=<path>   Enter a File Path to the .h5 file containing the dataset(s) [default: Data/FinalDataset/final_dataset.h5]
-"""
-
-GENERATEDATASET = """usage: musicVAE.py generate-dataset <split> <bars> <stride> [-p | --pianoroll] [-d=<path> | --dataset-location=<path>] [-m=<path2> | --maestro-location=<path2>]
-
-  -h --help                             Show this screen.
-  -p --pianoroll                        Use a standard pianoroll representation for the data instead of the default monophonic one.
-  -d=<path> --dataset-location=<path>   Enter a File Path to the .h5 file containing the dataset(s) [default: Data/FinalDataset/final_dataset.h5]
-  -m=<path2> --maestro-location=<path2> Enter a File Path to the folder containing the Maestro Dataset [default: "/media/micaltu/opensuse/home/micalt/PycharmProjects/Test2/Data/maestro-v2.0.0"
-"""
-
-
 import torch
-import torch.optim as optim
-import torch.nn.functional as F
-from torch.utils.data.dataset import Dataset
 import argparse
-# from schema import Schema, And, Use, Optional
-import matplotlib.pyplot as plt
-import sys
-import random
-from _datetime import datetime
 import model
 import data
-
-#TODO maybe delete again if not needed, only used for demo interpolation between midi files
-import pypianoroll as ppr
-import numpy as np
-
-# PARAMETERS FROM GOOGLE PAPER:
-batch_size = 512
-learning_rate = 0.001/2      # gets annealed to 0.00001
-#exp_decay_rate = 0.9999
-beta = 0.2                 # gets annealed for 2 bars, but is 0.25 for 16 bars
-
-verbose = False
-
-# TODO add transposed to everything!!! (and check!)
+import training
 
 
 def _parse_train(args):
-    # num_epochs = args.epochs
-    # batch_size = args.batch
-    # bars = args.bars
-    if args.verbose:
-        verbose = True
     print("starting training with:\n\t{} epochs\n\t{} batch size\n\t{} bars".format(args.epochs, args.batch, args.bars))
-    repr = "standard"
+    repr = "standard MIDI-like"
     if args.pianoroll:
         repr = "pianoroll"
     print("\tusing " + repr + " representation")
@@ -88,7 +25,7 @@ def _parse_train(args):
     if args.initialize:
         print("\ttrying to load pretrained weights from 2 bar model\n")
 
-    training(args.epochs, args.batch, args.bars, args.pianoroll, args.transpose, args.verbose, args.save_location, args.resume, args.initialize)
+    training.training(args.epochs, args.batch, args.bars, args.pianoroll, args.transpose, args.verbose, args.save_location, args.resume, args.initialize)
 
 def _parse_show_datasets(args):
     print("the following datasets are available at the moment:\n")
@@ -119,26 +56,16 @@ def _parse_sample(args):
     sample = vae.sample()
     data.pianoroll_to_midi(sample, args.save_location)
 
-    # z = torch.randn((1, model.latent_dimension), requires_grad=False)
-    # sample = vae.decode(z)
-    # sample = sample.squeeze()
-    # sample = sample.argmax(dim=1)
-    # num_classes = 88 if args.pianoroll else 90
-    # sample = F.one_hot(sample, num_classes)
-    # sample = data.monophonic_repr_to_pianoroll(sample)
-    # data.pianoroll_to_midi(sample)
-
 def _parse_interpolate(args):
     vae = get_trained_vae(args.bars, args.pianoroll, args.transpose, args.verbose)
     z = torch.randn((1, model.latent_dimension), requires_grad=False)
     z_end = torch.randn((1, model.latent_dimension), requires_grad=False)
     step_vector = (z_end - z) / args.steps
-    for i in range(args.steps+1):
+    for i in range(args.steps+2):
         z = z + step_vector
         sample = vae.sample(z)
         filename = args.save_location + "/interpolate_" + str(i) + ".midi"
         data.pianoroll_to_midi(sample, filename)
-
 
 def interpolate_between_midis(path_1="/home/micaltu/tss19-VAE-music-generation/Sampled/bh.midi" , path_2="/home/micaltu/tss19-VAE-music-generation/Sampled/SotW.midi"):
     vae = get_trained_vae(bars=2, pianoroll=True, transpose=True, verbose=True)
@@ -154,13 +81,11 @@ def interpolate_between_midis(path_1="/home/micaltu/tss19-VAE-music-generation/S
     z_end = vae.reparameterize(m, v)
 
     step_vector = (z_end - z) / steps
-    # TODO now includes start sample and end sample, do the same for sample()
     for i in range(steps + 2):
         sample = vae.sample(z)
         filename = "Sampled/interpolate_" + str(i) + ".midi"
         data.pianoroll_to_midi(sample, filename)
         z = z + step_vector
-
 
 def _parse_reconstruct(bars=2, pianoroll=False, transpose=False, save_location="Sampled", i=1, verbose=True):
     vae= get_trained_vae(bars, pianoroll, transpose, verbose)
@@ -181,23 +106,17 @@ def _parse_reconstruct(bars=2, pianoroll=False, transpose=False, save_location="
 
 
 
-
-
 def get_trained_vae(bars, pianoroll=False, transpose=False, verbose=False):
     vae = model.VAE(bars, pianoroll)
     vae.eval()
 
-    #TODO change back to /Final
-    location = "/home/micaltu/tss19-VAE-music-generation/Models/Checkpoints"
-    # TODO use data.get_dataset_name and dont forget transpose
-    dset_name = "train_" + str(bars) + "bars_1stride_tempo_computed_transposed_after_epoch_30"  # TODO change name to someting like xbars_final in the end
-    dset_name = "train_2bars_1stride_tempo_computed_transposed_after_epoch_94"
-    if pianoroll:
-        dset_name = "pianoroll_" + dset_name
+    location = "/home/micaltu/tss19-VAE-music-generation/Models/Final"
+    stride = 1 if transpose else 3
+    dset_name = data.get_dataset_name("train", bars, stride, pianoroll, transpose)
 
     checkpoint = get_checkpoint(dset_name, location)
     if verbose:
-        print("loaded Checkpoint")
+        print("loaded Checkpoint " + dset_name)
 
     prefix = "last_"
     vae.load_state_dict(checkpoint[prefix + 'vae_state_dict'])
@@ -213,9 +132,9 @@ def get_pretrained_vae(bars, pianoroll=False, transpose=False, verbose=False):
     vae = model.VAE(bars, pianoroll)
     vae.train()
 
-    # TODO change back to /Final
-    location = "/home/micaltu/tss19-VAE-music-generation/Models/Checkpoints"
-    dset_name = "train_2bars_1stride_tempo_computed_transposed_after_epoch_30"  # TODO change name to someting like xbars_final in the end
+    location = "/home/micaltu/tss19-VAE-music-generation/Models/Final"
+    stride = 1 if transpose else 3
+    dset_name = data.get_dataset_name("train", bars, stride, pianoroll, transpose)
     if pianoroll:
         dset_name = "pianoroll_" + dset_name
 
@@ -233,25 +152,12 @@ def get_pretrained_vae(bars, pianoroll=False, transpose=False, verbose=False):
 
 def main():
 
-    # arguments = docopt(__doc__, options_first=True)
-    # if arguments['<command>'] == 'train':
-    #     num_epochs = arguments['<epochs>']
-    #     batch_size = arguments['<batch-size>']
-    #     bars = arguments['<bars>']
-    #     print("starting training with:\n\t{} epochs\n\t{} batch size\n\t{} bars\n".format(num_epochs, batch_size, bars))
-    #     training()
-    # elif arguments['<command>'] == 'generate-dataset':
-    #     data.create_final_dataset(arguments['split'], arguments['bars'], arguments['stride'])
-    # else:
-    #     exit("{0} is not a command. \
-    #           See 'musicVAE.py --help'.".format(arguments['<command>']))
-
     parser = argparse.ArgumentParser()
     subparsers = parser.add_subparsers()
 
     # train parser
 
-    train_parser = subparsers.add_parser('train')
+    train_parser = subparsers.add_parser('train', help="train the model with your choice of dataset or continue the training from a saved checkpoint")
 
     train_parser.add_argument(
         "epochs",
@@ -321,7 +227,7 @@ def main():
 
     # show datasets parser
 
-    show_datasets_parser = subparsers.add_parser('show-datasets')
+    show_datasets_parser = subparsers.add_parser('show-datasets', help="shows all the datasets that are currently available in the HDF file containing all the training data")
 
     show_datasets_parser.add_argument(
         '-s', '--size',
@@ -335,11 +241,11 @@ def main():
 
     # generate-dataset parser
 
-    generate_dataset_parser = subparsers.add_parser('generate-dataset')
+    generate_dataset_parser = subparsers.add_parser('generate-dataset', help="generate a new dataset and save it to the HDF file containing all the training data")
 
     generate_dataset_parser.add_argument(
         "split",
-        help="can be one of the following: train, test or validation"
+        help="can be one of the following: train, test or validation; for the training, a train and validation set is required"
     )
 
     generate_dataset_parser.add_argument(
@@ -351,13 +257,13 @@ def main():
     generate_dataset_parser.add_argument(
         "stride",
         type=int,
-        help="stride in bars (how big are the steps with which a full performance from the Maestro Dataset gets stepped over)"
+        help="stride in bars (how big are the steps with which a full performance from the Maestro Dataset gets stepped over; this MusicVAE implementation requires a stride of 1 if the transpose flag is used, and 3 otherwise)"
     )
 
     generate_dataset_parser.add_argument(
         '-p', '--pianoroll',
         action='store_true',
-        help='use a pianoroll representation instead of the default monophonic representation'
+        help='use a pianoroll representation instead of the default MIDI-like representation'
     )
 
     generate_dataset_parser.add_argument(
@@ -386,7 +292,7 @@ def main():
 
     # delete-dataset parser
 
-    delete_dataset_parser = subparsers.add_parser('delete-dataset')
+    delete_dataset_parser = subparsers.add_parser('delete-dataset', help="delete one of the datasets from the HDF file")
 
     delete_dataset_parser.add_argument(
         "split",
@@ -408,7 +314,7 @@ def main():
     delete_dataset_parser.add_argument(
         '-p', '--pianoroll',
         action='store_true',
-        help='use a pianoroll representation instead of the default monophonic representation'
+        help='use a pianoroll representation instead of the default MIDI-like representation'
     )
 
     delete_dataset_parser.add_argument(
@@ -423,13 +329,6 @@ def main():
     #     required=False,
     #     default='Data/FinalDataset/final_dataset.h5'
     # )
-    #
-    # delete_dataset_parser.add_argument(
-    #     '-m', '--maestro_location',
-    #     help='path to the root folder of the Maestro Dataset',
-    #     required=False,
-    #     default='Data/FinalDataset/final_dataset.h5'
-    # )
 
     delete_dataset_parser.set_defaults(func=_parse_delete_dataset)
 
@@ -437,7 +336,7 @@ def main():
 
     # sample parser
 
-    sample_parser = subparsers.add_parser('sample')
+    sample_parser = subparsers.add_parser('sample', help="randomly generate a music sequence and save it as a MIDI file")
 
     sample_parser.add_argument(
         'bars',
@@ -448,7 +347,7 @@ def main():
     sample_parser.add_argument(
         '-p', '--pianoroll',
         action='store_true',
-        help='use a model trained on pianoroll representation instead of the default monophonic one'
+        help='use a model trained with sequences in pianoroll representation instead of the default MIDI-like one'
     )
 
     sample_parser.add_argument(
@@ -476,7 +375,7 @@ def main():
 
     # interpolate parser
 
-    interpolate_parser = subparsers.add_parser('interpolate')
+    interpolate_parser = subparsers.add_parser('interpolate', help="interpolate between two sequences; every generated sequence is saved as a MIDI file")
 
     interpolate_parser.add_argument(
         "bars",
@@ -487,7 +386,7 @@ def main():
     interpolate_parser.add_argument(
         "steps",
         type=int,
-        help="amount of steps used in the interpolation"
+        help="the number of intermediate sequences that are generated"
     )
 
     interpolate_parser.add_argument(
@@ -500,7 +399,7 @@ def main():
     interpolate_parser.add_argument(
         '-p', '--pianoroll',
         action='store_true',
-        help='use a model trained on pianoroll representation instead of the default monophonic one'
+        help='use a model trained with sequences in pianoroll representation instead of the default MIDI-like one'
     )
 
     interpolate_parser.add_argument(
@@ -545,213 +444,5 @@ def get_checkpoint(dset_name, location):
 
 
 
-def training(num_epochs, batch_size, bars, pianoroll, transpose, verbose, save_location, resume=False, initialize=False):
-
-    def loss_func(x_hat, x, mean, std_deviation, beta):
-        bce = F.binary_cross_entropy(x_hat, x, reduction='sum')
-        bce = bce / (batch_size * bars)
-        kl = -0.5 * torch.sum(1 + torch.log(std_deviation ** 2) - mean ** 2 - std_deviation ** 2)
-        kl = kl / batch_size
-        loss = bce + beta * kl
-
-        if verbose:
-            print("\t\tCross Entropy: \t{}\n\t\tKL-Divergence: \t{}\n\t\tFinal Loss: \t{}".format(bce, kl, loss))
-
-        return loss
-
-    def evaluate():
-        # TODO currently vae does not use teacher forcing during evaluation, try both options?
-
-        vae.eval()
-        avg_loss = 0
-        i = 0
-
-        for batch in eval_loader:
-            i += 1
-            if verbose:
-                print("\tbatch " + str(i) + ":")
-            batch = batch.to(device)
-            vae_output, mu, log_var = vae(batch)
-            loss = criterion(vae_output, batch, mu, log_var, beta)
-            avg_loss += loss.item()
-        avg_loss = avg_loss / (len(eval_set) / batch_size)
-        vae.train()
-        return avg_loss
-
-    stride = 1 if transpose else 3
-    train_set = data.FinalDataset('train', bars, stride=stride, pianoroll=pianoroll, transpose=transpose)
-    train_loader = torch.utils.data.DataLoader(train_set, batch_size=batch_size, shuffle=True) # TODO change for 16 bars: , shuffle=True)
-    eval_set = data.FinalDataset('validation', bars, stride=stride, pianoroll=pianoroll, transpose=transpose)
-    eval_loader = torch.utils.data.DataLoader(eval_set, batch_size=batch_size)
-
-    loss_list = []
-    resume_epoch = 0
-    min_eval_loss = sys.maxsize     # does not remember min loss if trainig is aborted and resumed, but all losses are saved in loss_list()
-
-    if initialize:
-        vae = get_pretrained_vae(bars=bars, pianoroll=pianoroll, transpose=transpose, verbose=verbose)
-        if verbose:
-            print("loaded the pretrained weights")
-    else:
-        vae = model.VAE(bars, pianoroll)
-    vae.train()
-
-    if resume:
-        checkpoint = get_checkpoint(str(train_set), save_location)
-        prefix = "last_"
-        loss_list = checkpoint[prefix + 'loss_list']
-        resume_epoch = checkpoint[prefix + 'epoch']
-
-        print("found checkpoint\n\tresuming training at epoch " + str(resume_epoch) + ("\n\tlast train loss: {}\n\tlast eval loss: {}\n".format(loss_list[-1][0], loss_list[-1][1]) if loss_list else "\n"))
-
-        vae.load_state_dict(checkpoint[prefix + 'vae_state_dict'])
-
-    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    vae.to(device)
-    print("using device " + str(device) + "\n")
-
-    optimizer = optim.Adam(vae.parameters(), lr=learning_rate)
-    if resume:
-        optimizer.load_state_dict(checkpoint[prefix + 'optim_state_dict'])
-    criterion = loss_func
-
-    #compute initial evaluation loss before training
-    if not resume:
-        if verbose:
-            print("Initial Evaluation\n\n")
-        initial_loss = evaluate()
-        print("\nInitial evaluation loss: " + str(initial_loss))
-
-    for epoch in range(resume_epoch, num_epochs):
-        if verbose:
-            print("\n\n\n\nSTARTING EPOCH " + str(epoch) + "\n")
-        avg_loss = 0
-        avg_correct = 0
-        i = 0
-
-        for batch in train_loader:
-            i += 1
-            batch = batch.to(device)        # .to() returns a copy for tensors!
-
-            optimizer.zero_grad()
-
-            if verbose:
-                print("\tbatch " + str(i) + ":")
-            vae.set_ground_truth(batch)
-            vae_output, mu, log_var = vae(batch)
-            loss = criterion(vae_output, batch, mu, log_var, beta)
-
-            # to free some memory:
-            vae_output = None
-            batch = None
-
-            loss.backward()
-            optimizer.step()
-
-            avg_loss += loss.item()
-
-        if verbose:
-            print("\n\n\nEvaluation of epoch " + str(epoch) + "\n")
-
-        avg_loss = avg_loss / (len(train_set) / batch_size)
-        eval_loss = evaluate()
-        timestamp = datetime.now()
-        timestamp = "{}.{}.  -  {}:{}".format(timestamp.day, timestamp.month, timestamp.hour, timestamp.minute)
-
-
-        print("EPOCH " + str(epoch) + "\t\t(finished at:   " + timestamp + ")")
-        print("\ttraining loss: \t\t" + str(avg_loss))
-        loss_list.append((avg_loss, eval_loss))
-        print("\tevaluation loss: \t" + str(eval_loss) + "\n")
-        best = False
-        if eval_loss <= min_eval_loss:
-            min_eval_loss = eval_loss
-            best = True
-
-        if verbose:
-            print(("\n\tsaving checkpoint.."))
-        save(vae, optimizer, loss_list, epoch+1, str(train_set), best, save_location)
-
-
-
-def compute_correct_notes(seq_1, seq_2, pianoroll=False):       # only works for pianorollinputs!s
-
-    if seq_1.shape != seq_2.shape:
-        raise ValueError("Input mismatch: the input sequences don't have the same shape")
-
-    correct_notes = 0
-    for slice_1, slice_2 in zip(seq_1, seq_2):
-        if slice_1.max() == 0 and slice_2.max() == 0:       # could also be omitted if not using MIDI note zero as input, because then slice.argmax() == 0 is not ambiguous
-            correct_notes += 1
-        elif slice_1.argmax() == slice_2.argmax():
-            correct_notes += 1
-
-    return correct_notes
-
-
-def evaluate_correct_notes(bars, comparisons=8000, pianoroll=True, transpose=True, verbose=False):
-    vae = get_trained_vae(bars, pianoroll, transpose, verbose)
-    dset = data.FinalDataset('validation', bars, stride=1, pianoroll=pianoroll, transpose=transpose)
-    #dloader = torch.utils.data.DataLoader(dset, batch_size=1)
-
-    if verbose:
-        print("Number of correct notes in the reconstruction of each clip:")
-
-    total_notes = 0
-    total_correct = 0
-    best = 0
-    worst = 1
-
-    it = random.sample(range(0, len(dset)), comparisons)
-    n=0
-    for i in it:
-        snippet = dset.__getitem__(i)
-        snippet = snippet.unsqueeze(0)
-
-        n += 1
-        if n in range(0, comparisons, 500) or n == 100:
-            print(n, '\t\t{}/{}  =  {} correct'.format(total_correct, total_notes, total_correct/total_notes))
-
-        reconstructed, _, _ = vae(snippet)
-        reconstructed = data.model_output_to_pianoroll(reconstructed, pianoroll)
-        snippet = snippet.squeeze()
-        if not pianoroll:
-            snippet = data.monophonic_repr_to_pianoroll(snippet)
-        else:
-            snippet = snippet[:, 0:88]     # remove pause tokens
-
-        length = snippet.shape[0]
-        correct_notes = compute_correct_notes(snippet, reconstructed, pianoroll)
-        total_notes += length
-        total_correct += correct_notes
-
-        ratio = correct_notes / length
-        if ratio > best:
-            best = ratio
-        if ratio < worst:       # dont use an elif, because possibly the first value will be the worst
-            worst = ratio
-
-        if verbose:
-            print("\t{}/{} = {}% correct".format(correct_notes, length, ratio*100))
-
-    print("best accuracy:\t\t{}%".format(best*100))
-    print("worst accuracy:\t\t{}%".format(worst*100))
-    print("average accuracy:\t\t{}%".format((total_correct / total_notes) * 100))
-
-
-
-
-
-
-
-
 if __name__ == "__main__":
     main()
-    #_parse_reconstruct()
-    #evaluate_correct_notes(2)
-
-
-
-
-
-
