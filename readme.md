@@ -50,7 +50,7 @@ pip install -r requirements.txt
 This is only necessary if you want to train the model yourself.
 Download the HDF file containing all the necessary datasets from [here](https://drive.google.com/open?id=1z1AzPuEL8I4SSJCzG2RnO3Xp5ORTBWGo) and save it under `Data/FinalDataset/final_dataset.h5`.
 ## Downloading the MAESTRO Dataset
-In case you want to generate new data sets, you will need to download the MAESTRO dataset. Otherwise, you can skip this step. You can also download already generated datasets from 
+In case you want to generate new data sets, you will need to download the MAESTRO dataset. Otherwise, you can skip this step.
 
 1. Download the MAESTRO Dataset.
 ```bash
@@ -77,16 +77,16 @@ Each one of the commands has its own help that explains its parameters (replace 
 ```bash
 python musicVAE.py <command> -h
 ```
-In general, you have to choose which of the models to use. How many bars, piano roll or MIDI-like representation, transposed to C major/a minor or to all key etc. The models trained with sequences in piano roll representation and transposed to C major/a minor have the best performance. Other options are only available for 2-bar sequences. Therefore, for best results and for longer sequences, you have to use the -p and -t flags.
+In general, you have to choose which of the models to use. How many bars, piano roll or MIDI-like representation, transposed to C major/a minor or to all keys etc. The models trained with sequences in piano roll representation and transposed to C major/a minor have the best performance. Other options are only available for 2-bar sequences. Therefore, for best results and for longer sequences, you have to use the -p and -t flags.
 
 #### Example use cases:
-- Generating a 4-bar long music sequence. The result will be saved as `Sampled/sample.midi`.
+- Generating a 4-bar long music sequence. The result will be saved as `Sampled/sample.midi`. The flags -p and -t can also be shortened to -pt.
 ```bash  
 python musicVAE.py sample 4 -p -t  
 ```
 - Interpolating between a randomly generated 2-bar sequence and the 2-bar long sequence `Sampled/manually_created_sequences/smoke.midi` (the first few notes of the riff from Smoke on the Water by Deep Purple) and generating 3 in-between sequences.
 ```bash  
-python musicVAE.py interpolate 2 3 -vpt -e /home/micaltu/tss19-VAE-music-generation/Sampled/manually_created_sequences/smoke.midi 
+python musicVAE.py interpolate 2 3 -ptv -e /home/micaltu/tss19-VAE-music-generation/Sampled/manually_created_sequences/smoke.midi 
 ```
 - Reconstructing the Smoke on the Water riff 5 times to get an imperfect reconstruction. This can be done to get a slightly different version of a music sequence.
 ```bash  
