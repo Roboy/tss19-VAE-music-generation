@@ -139,7 +139,7 @@ class MaestroDataset(Dataset):
         midi_filename = infos['midi_filename']
         path = "" + self.root_dir + "/" + midi_filename
 
-        midi = ppr.parse(filepath=path, beat_resolution=beat_resolution)  # get Multitrack object
+        midi = ppr.parse(path, beat_resolution=beat_resolution)  # get Multitrack object
         midi = midi.tracks[0]                                # get first/only track
         return midi
 
@@ -476,7 +476,7 @@ def pianoroll_to_midi(snippet, filename="Sampled/sample.midi"):
 
 
 def midi_to_small_one_hot_pianoroll(path, beat_resolution=4):
-    midi = ppr.parse(filepath=path, beat_resolution=beat_resolution)  # get Multitrack object
+    midi = ppr.parse(path, beat_resolution=beat_resolution)  # get Multitrack object
     midi = midi.tracks[0]
     midi = ppr.binarize(midi)
     midi = midi.pianoroll

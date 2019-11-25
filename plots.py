@@ -173,7 +173,7 @@ def plot_loss_all_lengths():
 
 
 def plot_pianoroll(path="Sampled/4bar_samples/sample_4_0.midi"):
-    midi = ppr.parse(filepath=path, beat_resolution=4)  # get Multitrack object
+    midi = ppr.parse(path, beat_resolution=4)  # get Multitrack object
     midi = midi.tracks[0]  # get first/only track
     pianoroll = midi.pianoroll
     print(pianoroll.shape)
@@ -186,7 +186,7 @@ def plot_interpolation_sotw_to_lick():
     interpolations = []
     for i in range(0, 10, 3):
         path = "Sampled/interpolation_examples/SotW_to_lick/1/interpolate_" + str(i) + ".midi"
-        midi = ppr.parse(filepath=path, beat_resolution=4)  # get Multitrack object
+        midi = ppr.parse(path, beat_resolution=4)  # get Multitrack object
         midi = midi.tracks[0]  # get first/only track
         midi.name = ""
         if i == 0:
@@ -209,7 +209,7 @@ def plot_interpolation_pianorolls(bars=16):
     for i in range(0, 6, 2):
         path = "Sampled/" + str(bars) + "bar_interpolation/interpolate_" + str(i) + ".midi"
 
-        midi = ppr.parse(filepath=path, beat_resolution=4)  # get Multitrack object
+        midi = ppr.parse(path, beat_resolution=4)  # get Multitrack object
         midi = midi.tracks[0]  # get first/only track
         midi.name = ""
         if i == 0:
