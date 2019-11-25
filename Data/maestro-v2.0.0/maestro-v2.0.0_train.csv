@@ -1,0 +1,968 @@
+canonical_title,split,year,midi_filename,duration,tempo,key
+Sonata Op. 1,train,2018,2018/MIDI-Unprocessed_Chamber3_MID--AUDIO_10_R3_2018_wav--1.midi,698.661160312,187.5137831451904,b minor
+Sonata Op. 1,train,2008,2008/MIDI-Unprocessed_03_R2_2008_01-03_ORIG_MID--AUDIO_03_R2_2008_wav--2.midi,759.51847125,166.18828503917456,e minor
+Sonata Op. 1,train,2017,2017/MIDI-Unprocessed_066_PIANO066_MID--AUDIO-split_07-07-17_Piano-e_3-02_wav--3.midi,464.64943260800004,195.5938379990064,e minor
+"24 Preludes Op. 11, No. 13-24",train,2004,2004/MIDI-Unprocessed_XP_21_R1_2004_01_ORIG_MID--AUDIO_21_R1_2004_01_Track01_wav.midi,872.6405880960001,202.21236007154755,b- minor
+"Etude Op. 2 No.1;  Etudes Op. 8, Nos. 5, 11 and 12",train,2013,2013/ORIG-MIDI_03_7_8_13_Group__MID--AUDIO_19_R2_2013_wav--3.midi,563.904350625,197.02832709780685,e- minor
+"Etude in D-flat Major, Op. 8 No. 10",train,2011,2011/MIDI-Unprocessed_15_R1_2011_MID--AUDIO_R1-D6_09_Track09_wav.midi,102.007109531,226.8426941150151,C# major
+Etudes from Op.8,train,2006,2006/MIDI-Unprocessed_19_R1_2006_01-07_ORIG_MID--AUDIO_19_R1_2006_04_Track04_wav.midi,550.997045156,195.88235294117038,b- minor
+Fantasy Op. 28 in B Minor,train,2013,2013/ORIG-MIDI_02_7_10_13_Group_MID--AUDIO_11_R3_2013_wav--3.midi,512.164284844,190.34482758620246,b minor
+"Fantasy in B Minor, Op. 28",train,2011,2011/MIDI-Unprocessed_09_R1_2011_MID--AUDIO_R1-D3_15_Track15_wav.midi,476.80641421900003,210.4109589041096,b minor
+"Fantasy, Op. 28",train,2014,2014/MIDI-UNPROCESSED_14-15_R1_2014_MID--AUDIO_15_R1_2014_wav--5.midi,486.857152031,208.67202535944486,b minor
+"Prelude and Nocturne for Left Hand, Op. 9",train,2008,2008/MIDI-Unprocessed_01_R1_2008_01-04_ORIG_MID--AUDIO_01_R1_2008_wav--3.midi,463.605305625,192.89059848399452,f# minor
+Sonata No. 2,train,2006,2006/MIDI-Unprocessed_12_R1_2006_01-08_ORIG_MID--AUDIO_12_R1_2006_02_Track02_wav.midi,613.737367031,209.87854251013385,c# minor
+"Sonata No. 2 in G-sharp Minor, Op. 19",train,2018,2018/MIDI-Unprocessed_Recital1-3_MID--AUDIO_01_R1_2018_wav--4.midi,701.147803125,210.11574886005346,E major
+"Sonata No. 2 in G-sharp Minor, Op. 19",train,2018,2018/MIDI-Unprocessed_Recital17-19_MID--AUDIO_18_R1_2018_wav--2.midi,685.005992344,209.1728312037793,E major
+"Sonata No. 2 in G-sharp Minor, Op. 19 (Complete)",train,2017,2017/MIDI-Unprocessed_079_PIANO079_MID--AUDIO-split_07-09-17_Piano-e_1-04_wav--4.midi,661.909149792,207.8098471986406,c# minor
+"Sonata No. 3 in F-sharp Minor, Op. 23",train,2018,2018/MIDI-Unprocessed_Recital5-7_MID--AUDIO_07_R1_2018_wav--2.midi,1120.09102734,193.29650092080857,B major
+"Sonata No. 3 in F-sharp Minor, Op. 23",train,2018,2018/MIDI-Unprocessed_Recital9-11_MID--AUDIO_11_R1_2018_wav--2.midi,1195.01082422,206.77726407399948,F# major
+"Sonata No. 3 in F-sharp Minor, Op. 23",train,2018,2018/MIDI-Unprocessed_Chamber6_MID--AUDIO_20_R3_2018_wav--2.midi,1117.95828375,207.70791075050704,F# major
+"Sonata No. 5 in F-sharp Minor, Op. 53",train,2004,2004/MIDI-Unprocessed_SMF_07_R1_2004_01_ORIG_MID--AUDIO_07_R1_2004_12_Track12_wav.midi,659.835660317,206.01936665795355,e- minor
+"Sonata No. 5, Op. 53",train,2018,2018/MIDI-Unprocessed_Recital12_MID--AUDIO_12_R1_2018_wav--2.midi,701.4883476560001,204.51595006934974,e- minor
+"Sonata No. 5, Op. 53",train,2009,2009/MIDI-Unprocessed_09_R1_2009_01-04_ORIG_MID--AUDIO_09_R1_2009_09_R1_2009_04_WAV.midi,706.203887813,203.1479223337437,e- minor
+"Sonata No. 5, Op. 53",train,2009,2009/MIDI-Unprocessed_19_R1_2009_03-04_ORIG_MID--AUDIO_19_R1_2009_19_R1_2009_04_WAV.midi,648.955013438,196.05531074305168,e- minor
+"Sonata No. 5, Op. 53",train,2008,2008/MIDI-Unprocessed_07_R1_2008_01-04_ORIG_MID--AUDIO_07_R1_2008_wav--4.midi,601.648703906,181.14680764538326,e- minor
+"Sonata No. 5, Op. 53",train,2014,2014/MIDI-UNPROCESSED_21-22_R1_2014_MID--AUDIO_21_R1_2014_wav--6.midi,707.9039395310001,184.93218931635613,e- minor
+"Sonata No. 5, Op. 53",train,2014,2014/MIDI-UNPROCESSED_21-22_R1_2014_MID--AUDIO_22_R1_2014_wav--4.midi,644.840434219,209.48855333657468,e- minor
+"Piano Trio in D Minor, Op. 32",train,2018,2018/MIDI-Unprocessed_Chamber2_MID--AUDIO_09_R3_2018_wav--3.midi,1736.58613734,205.87149491506318,g minor
+"Piano Trio in D Minor, Op. 32",train,2018,2018/MIDI-Unprocessed_Chamber4_MID--AUDIO_11_R3_2018_wav--3.midi,1613.55073687,205.3547710590731,g minor
+"Piano Trio in D Minor, Op. 32",train,2018,2018/MIDI-Unprocessed_Chamber6_MID--AUDIO_20_R3_2018_wav--3.midi,1714.92884063,207.53923843319177,g minor
+Sonata No. 10 in B Minor,train,2009,2009/MIDI-Unprocessed_09_R1_2009_01-04_ORIG_MID--AUDIO_09_R1_2009_09_R1_2009_01_WAV.midi,232.76552578099998,232.95352906863758,b minor
+"Sonata No. 1, 2nd, 3rd and 4th movements",train,2008,2008/MIDI-Unprocessed_02_R3_2008_01-03_ORIG_MID--AUDIO_02_R3_2008_wav--3.midi,939.13367625,209.1659236443237,a minor
+Faust Waltz,train,2006,2006/MIDI-Unprocessed_08_R1_2006_01-04_ORIG_MID--AUDIO_08_R1_2006_Disk1_01_Track01_wav.midi,557.392605,211.84815447261101,A- major
+"""Feux d'artifice"" from Book II",train,2008,2008/MIDI-Unprocessed_10_R3_2008_01-05_ORIG_MID--AUDIO_10_R3_2008_wav--4.midi,242.752161094,214.38991445295196,A- major
+"""Images"", Series I",train,2013,2013/ORIG-MIDI_03_7_10_13_Group_MID--AUDIO_18_R3_2013_wav--2.midi,918.021250781,179.59077622604528,g# minor
+"""Les collines d'Anacapri"" from Preludes, Book I",train,2008,2008/MIDI-Unprocessed_07_R3_2008_01-05_ORIG_MID--AUDIO_07_R3_2008_wav--3.midi,166.49556,190.93922651933715,B major
+"""Ondine"" from Book II",train,2008,2008/MIDI-Unprocessed_10_R3_2008_01-05_ORIG_MID--AUDIO_10_R3_2008_wav--3.midi,193.30108875,218.23348330571065,D major
+"""Voiles"" from Preludes, Book I",train,2008,2008/MIDI-Unprocessed_07_R3_2008_01-05_ORIG_MID--AUDIO_07_R3_2008_wav--4.midi,212.29546078099997,169.59314775160504,A- major
+"Barcarolle, Op. 60",train,2015,2015/MIDI-Unprocessed_R1_D1-1-8_mid--AUDIO-from_mp3_02_R1_2015_wav--3.midi,482.75520833300004,212.7031019202284,F# major
+Bruyeres,train,2006,2006/MIDI-Unprocessed_01_R1_2006_01-09_ORIG_MID--AUDIO_01_R1_2006_03_Track03_wav.midi,984.5275945310001,219.61312026908797,A- major
+"Etude ""Pour le arpeges composes""",train,2009,2009/MIDI-Unprocessed_11_R1_2009_01-05_ORIG_MID--AUDIO_11_R1_2009_11_R1_2009_02_WAV.midi,274.671199688,206.80538555691257,A- major
+"Etude ""Pour les huit doigts""",train,2009,2009/MIDI-Unprocessed_11_R1_2009_01-05_ORIG_MID--AUDIO_11_R1_2009_11_R1_2009_03_WAV.midi,90.9961696875,213.1011969532101,C# major
+"Etude No. 6, Book I, ""Pour les huits doigts""",train,2008,2008/MIDI-Unprocessed_11_R2_2008_01-05_ORIG_MID--AUDIO_11_R2_2008_wav--2.midi,79.3348565625,214.67989179441028,b- minor
+Feux d'artifice,train,2006,2006/MIDI-Unprocessed_18_R1_2006_01-05_ORIG_MID--AUDIO_18_R1_2006_02_Track02_wav.midi,242.57855015599998,216.22926093514405,C# major
+Four Preludes,train,2006,2006/MIDI-Unprocessed_14_R1_2006_01-05_ORIG_MID--AUDIO_14_R1_2006_03_Track03_wav.midi,672.9013035940001,206.86868686868303,B major
+Image (Book II),train,2004,2004/MIDI-Unprocessed_XP_08_R1_2004_03_ORIG_MID--AUDIO_08_R1_2004_03_Track03_wav.midi,701.103700969,197.37615038182645,F# major
+"Images Book 1 (Complete), L 110",train,2014,2014/MIDI-UNPROCESSED_09-10_R1_2014_MID--AUDIO_10_R1_2014_wav--4.midi,903.260314687,209.20913884008363,g# minor
+Images Book II,train,2006,2006/MIDI-Unprocessed_24_R1_2006_01-05_ORIG_MID--AUDIO_24_R1_2006_02_Track02_wav.midi,679.697504063,184.7230320699713,F# major
+"Images, Book I",train,2009,2009/MIDI-Unprocessed_15_R1_2009_03-06_ORIG_MID--AUDIO_15_R1_2009_15_R1_2009_03_WAV.midi,924.171084375,221.10458284371705,g# minor
+"Images, Book I, ""Reflets dans l'eau""",train,2008,2008/MIDI-Unprocessed_06_R2_2008_01-05_ORIG_MID--AUDIO_06_R2_2008_wav--4.midi,281.579579531,209.98481012658908,C# major
+"Images, Book II",train,2018,2018/MIDI-Unprocessed_Recital20_MID--AUDIO_20_R1_2018_wav--3.midi,845.710959844,180.9208804283171,b minor
+"Images, Book II, ""Poissons d'or""",train,2008,2008/MIDI-Unprocessed_06_R2_2008_01-05_ORIG_MID--AUDIO_06_R2_2008_wav--5.midi,219.9784125,215.9999999999983,F# major
+L'Isle Joyeuse,train,2011,2011/MIDI-Unprocessed_15_R1_2011_MID--AUDIO_R1-D6_10_Track10_wav.midi,329.56030078099997,216.28458498023707,A major
+L'isle joyeuse,train,2014,2014/MIDI-UNPROCESSED_06-08_R1_2014_MID--AUDIO_07_R1_2014_wav--6.midi,363.915234375,215.8875585632485,A major
+L'isle joyeuse,train,2013,2013/ORIG-MIDI_02_7_7_13_Group__MID--AUDIO_15_R1_2013_wav--4.midi,298.988750156,214.29443394855286,A major
+L'isle joyeuse,train,2013,2013/ORIG-MIDI_02_7_10_13_Group_MID--AUDIO_12_R3_2013_wav--3.midi,350.077107188,207.85128485511788,A major
+L'isle joyeuse,train,2017,2017/MIDI-Unprocessed_071_PIANO071_MID--AUDIO-split_07-08-17_Piano-e_1-04_wav--4.midi,346.025013871,212.35023041475543,A major
+"L'isle joyeuse, L. 106",train,2018,2018/MIDI-Unprocessed_Recital1-3_MID--AUDIO_02_R1_2018_wav--4.midi,349.685814844,213.8454152664424,A major
+Les Collines d'Anacapri from Book I,train,2008,2008/MIDI-Unprocessed_10_R3_2008_01-05_ORIG_MID--AUDIO_10_R3_2008_wav--2.midi,176.46349875,191.90005205622361,B major
+"Prelude No. 24 ""Fireworks""",train,2008,2008/MIDI-Unprocessed_04_R2_2008_01-04_ORIG_MID--AUDIO_04_R2_2008_wav--1.midi,318.511967813,211.72300623564183,A- major
+"Prelude No. 7, Book II, La terrasse des audiences du clair de lune",train,2018,2018/MIDI-Unprocessed_Recital9-11_MID--AUDIO_10_R1_2018_wav--3.midi,297.192544688,141.60116448326073,F# major
+"Preludes Book II: “Feux d'artifice,” L 123, No. 12",train,2014,2014/MIDI-UNPROCESSED_06-08_R1_2014_MID--AUDIO_07_R1_2014_wav--5.midi,257.919079688,206.65783304454087,C# major
+"Preludes No. 2, 6, 12",train,2004,2004/MIDI-Unprocessed_SMF_12_01_2004_01-05_ORIG_MID--AUDIO_12_R1_2004_08_Track08_wav.midi,338.261822638,193.89587073608672,D major
+"Preludes No. 2, 6, 12",train,2004,2004/MIDI-Unprocessed_SMF_12_01_2004_01-05_ORIG_MID--AUDIO_12_R1_2004_09_Track09_wav.midi,260.039831171,206.19077700568812,f minor
+"Preludes, Book II, III - La puerta del vino",train,2013,2013/ORIG-MIDI_01_7_8_13_Group__MID--AUDIO_02_R2_2013_wav--2.midi,179.321401875,176.17204301075222,C# major
+"Preludes, Book II, L 123 (Complete)",train,2014,2014/MIDI-UNPROCESSED_06-08_R1_2014_MID--AUDIO_08_R1_2014_wav--2.midi,2463.4804425,213.48707917221526,f minor
+"Preludes, Book II, L 123, IV. «Les fées sont d'exquises danseuses»",train,2015,2015/MIDI-Unprocessed_R1_D1-1-8_mid--AUDIO-from_mp3_02_R1_2015_wav--4.midi,173.30208333299996,215.59575795384487,f# minor
+"Preludes, Book II, VII - La terasse des audiences du clair de lune",train,2013,2013/ORIG-MIDI_01_7_8_13_Group__MID--AUDIO_02_R2_2013_wav--3.midi,240.3202725,150.5303612605693,F# major
+PreludesBII/7-12,train,2006,2006/MIDI-Unprocessed_04_R1_2006_01-04_ORIG_MID--AUDIO_04_R1_2006_02_Track02_wav.midi,1184.04261937,208.81247500997654,C major
+Three Etudes,train,2006,2006/MIDI-Unprocessed_05_R1_2006_01-05_ORIG_MID--AUDIO_05_R1_2006_02_Track02_wav.midi,727.226836875,204.61440869959225,e- minor
+"Prelude, Fugue et Variation, Op. 18, Arrangement Delle Vigne",train,2018,2018/MIDI-Unprocessed_Recital1-3_MID--AUDIO_01_R1_2018_wav--2.midi,632.269666875,176.63905032768704,b minor
+"Prélude, chorale, et fugue, M. 21",train,2014,2014/MIDI-UNPROCESSED_16-18_R1_2014_MID--AUDIO_16_R1_2014_wav--3.midi,706.374827813,152.98804780876492,b minor
+Sonata K. 466,train,2008,2008/MIDI-Unprocessed_09_R3_2008_01-07_ORIG_MID--AUDIO_09_R3_2008_wav--3.midi,121.187111719,195.2257121986863,a minor
+"Sonata in B Minor, K. 197",train,2009,2009/MIDI-Unprocessed_14_R1_2009_01-05_ORIG_MID--AUDIO_14_R1_2009_14_R1_2009_04_WAV.midi,298.063270313,217.10597650703227,b minor
+"Sonata in B Minor, K. 27",train,2009,2009/MIDI-Unprocessed_01_R1_2009_01-04_ORIG_MID--AUDIO_01_R1_2009_01_R1_2009_01_WAV.midi,95.0212725,234.9308084486512,b minor
+"Sonata in B Minor, K. 87",train,2018,2018/MIDI-Unprocessed_Recital5-7_MID--AUDIO_07_R1_2018_wav--3.midi,294.075560625,158.48667239896739,b minor
+"Sonata in B Minor, K. 87",train,2014,2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--1.midi,317.398186875,177.09053916582153,b minor
+"Sonata in B Minor, L. 33",train,2009,2009/MIDI-Unprocessed_09_R1_2009_01-04_ORIG_MID--AUDIO_09_R1_2009_09_R1_2009_02_WAV.midi,167.319544219,162.16249298719842,b minor
+"Sonata in C Major, K. 179",train,2009,2009/MIDI-Unprocessed_14_R1_2009_01-05_ORIG_MID--AUDIO_14_R1_2009_14_R1_2009_03_WAV.midi,132.72823265600002,192.3789281918932,C major
+"Sonata in C Major, K. 513",train,2014,2014/MIDI-UNPROCESSED_09-10_R1_2014_MID--AUDIO_10_R1_2014_wav--2.midi,174.2092275,226.69051878354355,C major
+"Sonata in C Minor, K. 84",train,2014,2014/MIDI-UNPROCESSED_09-10_R1_2014_MID--AUDIO_10_R1_2014_wav--1.midi,79.7421745313,185.49480040254903,c minor
+"Sonata in D Major, K. 119",train,2009,2009/MIDI-Unprocessed_01_R1_2009_01-04_ORIG_MID--AUDIO_01_R1_2009_01_R1_2009_02_WAV.midi,136.35403031299998,210.28571428571246,D major
+"Sonata in D Major, K. 145",train,2014,2014/MIDI-UNPROCESSED_19-21_R3_2014_MID--AUDIO_21_R3_2014_wav--2.midi,205.845146719,204.67707082832987,D major
+"Sonata in D Major, K. 430",train,2014,2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--2.midi,170.509979063,234.50381679389412,D major
+"Sonata in D Major, K. 576",train,2009,2009/MIDI-Unprocessed_02_R1_2009_01-02_ORIG_MID--AUDIO_02_R1_2009_02_R1_2009_01_WAV.midi,788.930835,194.37975210915772,A major
+"Sonata in D Minor, K. 1",train,2014,2014/MIDI-UNPROCESSED_04-05_R1_2014_MID--AUDIO_04_R1_2014_wav--1.midi,139.008942187,230.14683847767543,d minor
+"Sonata in D Minor, K. 141",train,2018,2018/MIDI-Unprocessed_Recital9-11_MID--AUDIO_09_R1_2018_wav--6.midi,194.77277531200002,192.5348189415066,d minor
+"Sonata in D Minor, K. 141",train,2014,2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_11_R1_2014_wav--2.midi,201.39002296900003,201.3026211278746,d minor
+"Sonata in G Major, K. 146",train,2009,2009/MIDI-Unprocessed_14_R1_2009_01-05_ORIG_MID--AUDIO_14_R1_2009_14_R1_2009_05_WAV.midi,143.520155625,194.07008086253396,D major
+"Sonata in G Major, K. 455",train,2017,2017/MIDI-Unprocessed_083_PIANO083_MID--AUDIO-split_07-09-17_Piano-e_2_-06_wav--2.midi,96.3852114708,207.67447849600842,G major
+"Lyric Piece in A Minor, “Waltz,” Op. 12 No. 2",train,2014,2014/MIDI-UNPROCESSED_21-22_R1_2014_MID--AUDIO_21_R1_2014_wav--1.midi,111.434183437,206.63677130045,a minor
+"Lyric Piece in E Minor, “Valse-Impromptu,” Op. 47 No.1",train,2014,2014/MIDI-UNPROCESSED_21-22_R1_2014_MID--AUDIO_21_R1_2014_wav--3.midi,183.914078906,213.94812680115442,e minor
+"Lyric Piece in E Minor, “Waltz,” Op. 38 No. 7",train,2014,2014/MIDI-UNPROCESSED_21-22_R1_2014_MID--AUDIO_21_R1_2014_wav--2.midi,75.84527671880002,198.4194528875377,e minor
+Variations Serieuses Op. 54,train,2017,2017/MIDI-Unprocessed_070_PIANO070_MID--AUDIO-split_07-08-17_Piano-e_1-02_wav--3.midi,724.4814927580002,194.1949918778935,d minor
+Variations Serieuses Op. 54,train,2017,2017/MIDI-Unprocessed_072_PIANO072_MID--AUDIO-split_07-08-17_Piano-e_1-06_wav--1.midi,665.7766522080001,206.03068998819592,d minor
+Variations Serieuses Op. 54,train,2017,2017/MIDI-Unprocessed_074_PIANO074_MID--AUDIO-split_07-08-17_Piano-e_2-04_wav--1.midi,712.135399408,193.63027791462642,d minor
+Variations Serieuses Op. 54,train,2017,2017/MIDI-Unprocessed_081_PIANO081_MID--AUDIO-split_07-09-17_Piano-e_2_-02_wav--1.midi,623.0332719080001,205.5053145363115,d minor
+Variations Serieuses Op. 54,train,2017,2017/MIDI-Unprocessed_083_PIANO083_MID--AUDIO-split_07-09-17_Piano-e_2_-06_wav--4.midi,632.121902587,210.9618968065271,d minor
+"Variations Serieuses, Op. 54",train,2008,2008/MIDI-Unprocessed_08_R3_2008_01-05_ORIG_MID--AUDIO_08_R3_2008_wav--3.midi,641.788888125,204.49704142011794,d minor
+"Variations Serieuses, Op. 54",train,2008,2008/MIDI-Unprocessed_10_R3_2008_01-05_ORIG_MID--AUDIO_10_R3_2008_wav--1.midi,649.901860781,199.84478429582367,d minor
+"Variations Serieuses, Op. 54",train,2008,2008/MIDI-Unprocessed_11_R3_2008_01-04_ORIG_MID--AUDIO_11_R3_2008_wav--2.midi,723.034800469,204.17343601645783,d minor
+"Variations Serieuses, Op. 54",train,2015,2015/MIDI-Unprocessed_R2_D1-2-3-6-7-8-11_mid--AUDIO-from_mp3_03_R2_2015_wav--2.midi,677.239583333,199.3695531244208,d minor
+"Variations Serieuses, Op. 54",train,2015,2015/MIDI-Unprocessed_R2_D1-2-3-6-7-8-11_mid--AUDIO-from_mp3_07_R2_2015_wav--2.midi,667.11875,203.69489665264285,d minor
+"Variations Serieuses, Op. 54",train,2013,2013/ORIG-MIDI_01_7_10_13_Group_MID--AUDIO_02_R3_2013_wav--1.midi,615.815356406,202.75595621377826,d minor
+"Variations Serieuses, Op. 54",train,2013,2013/ORIG-MIDI_02_7_10_13_Group_MID--AUDIO_11_R3_2013_wav--1.midi,666.257346563,204.0631054525266,d minor
+"Variations Serieuses, Op. 54",train,2013,2013/ORIG-MIDI_03_7_10_13_Group_MID--AUDIO_15_R3_2013_wav--1.midi,614.557344844,208.54141581897426,d minor
+"Variations Serieuses, Op. 54",train,2013,2013/ORIG-MIDI_03_7_10_13_Group_MID--AUDIO_17_R3_2013_wav--2.midi,642.626227031,205.4536067958901,d minor
+"Variations Serieuses, Op. 54",train,2013,2013/ORIG-MIDI_03_7_10_13_Group_MID--AUDIO_18_R3_2013_wav--3.midi,738.074849531,198.5074437757364,d minor
+"Variations Serieuses, Op. 54",train,2011,2011/MIDI-Unprocessed_03_R3_2011_MID--AUDIO_R3-D1_04_Track04_wav.midi,654.413074219,206.00332098607498,d minor
+"Variations Serieuses, Op. 54",train,2011,2011/MIDI-Unprocessed_04_R3_2011_MID--AUDIO_R3-D2_04_Track04_wav.midi,661.2827254690001,208.38892029395092,d minor
+"Variations Serieuses, Op. 54",train,2011,2011/MIDI-Unprocessed_06_R3_2011_MID--AUDIO_R3-D3_02_Track02_wav.midi,643.549035937,201.8224952856001,d minor
+"Variations Serieuses, Op. 54",train,2011,2011/MIDI-Unprocessed_23_R3_2011_MID--AUDIO_R3-D8_05_Track05_wav.midi,706.74074625,205.85788077621098,d minor
+"Variations Seriouses, Op. 54",train,2011,2011/MIDI-Unprocessed_16_R3_2011_MID--AUDIO_R3-D5_02_Track02_wav.midi,669.421072031,199.48051948051898,d minor
+"Variations serieuses, Op. 54",train,2008,2008/MIDI-Unprocessed_07_R3_2008_01-05_ORIG_MID--AUDIO_07_R3_2008_wav--2.midi,690.980879531,198.16076744955487,d minor
+"Variations sérieuses, Op. 54",train,2015,2015/MIDI-Unprocessed_R2_D1-2-3-6-7-8-11_mid--AUDIO-from_mp3_06_R2_2015_wav--2.midi,623.717708333,202.62302603907818,d minor
+"Variations sérieuses, Op. 54",train,2015,2015/MIDI-Unprocessed_R2_D2-12-13-15_mid--AUDIO-from_mp3_13_R2_2015_wav--1.midi,661.06875,202.71448900585997,d minor
+"Variations sérieuses, Op. 54",train,2015,2015/MIDI-Unprocessed_R2_D2-12-13-15_mid--AUDIO-from_mp3_15_R2_2015_wav--2.midi,709.4020833330002,200.41753653444724,d minor
+Scherzo,train,2006,2006/MIDI-Unprocessed_12_R1_2006_01-08_ORIG_MID--AUDIO_12_R1_2006_06_Track06_wav.midi,267.87232828099997,223.82513661202333,g minor
+Scherzo from A Midsummer Night's Dream,train,2011,2011/MIDI-Unprocessed_03_R3_2011_MID--AUDIO_R3-D1_05_Track05_wav.midi,253.743068906,218.22950819671607,g minor
+"Scherzo from Mendelssohn's ""Midsummer Night's Dream""",train,2008,2008/MIDI-Unprocessed_08_R2_2008_01-04_ORIG_MID--AUDIO_08_R2_2008_wav--4.midi,261.753210469,226.20333290272683,g minor
+"""La Campanella""",train,2008,2008/MIDI-Unprocessed_09_R1_2008_01-05_ORIG_MID--AUDIO_09_R1_2008_wav--3.midi,273.16212,223.77288008965095,g# minor
+"""La Campanella""",train,2008,2008/MIDI-Unprocessed_10_R1_2008_01-04_ORIG_MID--AUDIO_10_R1_2008_wav--4.midi,265.471155469,214.6393398988554,g# minor
+"""La Campanella""",train,2008,2008/MIDI-Unprocessed_18_R1_2008_01-04_ORIG_MID--AUDIO_18_R1_2008_wav--4.midi,269.971685156,211.40308398114044,g# minor
+Annes de Pelerinage III: Le jeux d'eau a la Villa d'Este,train,2011,2011/MIDI-Unprocessed_17_R2_2011_MID--AUDIO_R2-D5_03_Track03_wav.midi,428.27280890599997,214.25914445132614,F# major
+"Après une lecture de Dante: Fantasia quasi Sonata, S.161, No. 7",train,2014,2014/MIDI-UNPROCESSED_09-10_R1_2014_MID--AUDIO_09_R1_2014_wav--2.midi,1027.3494,212.30364194822164,D major
+"Aprés une lecture de Dante: Fantasia quasi Sonata, S.161, No. 7",train,2014,2014/MIDI-UNPROCESSED_04-08-12_R3_2014_MID--AUDIO_04_R3_2014_wav--1.midi,997.267966406,212.26130653267487,D major
+"Ballade No. 2 in B Minor, S 171",train,2013,2013/ORIG-MIDI_01_7_8_13_Group__MID--AUDIO_04_R2_2013_wav--3.midi,747.902564063,204.7760495848412,B major
+"Ballade No. 2 in B Minor, S 171",train,2013,2013/ORIG-MIDI_03_7_8_13_Group__MID--AUDIO_15_R2_2013_wav--2.midi,741.736704844,205.76021433354651,F# major
+"Ballade No. 2 in B Minor, S. 171",train,2014,2014/MIDI-UNPROCESSED_21-22_R1_2014_MID--AUDIO_22_R1_2014_wav--2.midi,856.576333594,206.4575805752209,B major
+"Ballade No. 2 in B Minor, S. 171",train,2011,2011/MIDI-Unprocessed_16_R2_2011_MID--AUDIO_R2-D4_08_Track08_wav.midi,821.002117031,194.25279280545516,F# major
+"Concert Etude ""La Leggierezza""",train,2013,2013/ORIG-MIDI_01_7_7_13_Group__MID--AUDIO_12_R1_2013_wav--4.midi,303.805785937,209.83027459638558,b- minor
+"Concert Etude ""Un Sospiro""",train,2008,2008/MIDI-Unprocessed_11_R2_2008_01-05_ORIG_MID--AUDIO_11_R2_2008_wav--5.midi,376.477988906,213.46964856230315,C# major
+"Concert Etude No. 2 La Leggierezza, S. 144",train,2015,2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_16_R1_2015_wav--3.midi,290.866666667,209.36497754971367,b- minor
+"Concert Etude No. 2, ""La Leggierezza"", S. 144/2",train,2011,2011/MIDI-Unprocessed_03_R1_2011_MID--AUDIO_R1-D1_18_Track18_wav.midi,272.248659375,210.48489107519381,b- minor
+"Concert Etude No. 2, ""La Leggierezza"", S. 144/2",train,2011,2011/MIDI-Unprocessed_05_R1_2011_MID--AUDIO_R1-D2_11_Track11_wav.midi,263.861915625,208.0048149262696,b- minor
+"Concert Etude No. 2, “La leggierezza"", S. 144",train,2015,2015/MIDI-Unprocessed_R1_D1-1-8_mid--AUDIO-from_mp3_06_R1_2015_wav--5.midi,273.5625,204.25531914893574,b- minor
+"Concert Etude No. 3 in D-flat Major, ""Un Sospiro"", S. 144/3",train,2011,2011/MIDI-Unprocessed_04_R3_2011_MID--AUDIO_R3-D2_03_Track03_wav.midi,351.182875313,216.0527472527459,C# major
+"Concert Etude No. 3 in D-flat Major, ""Un Sospiro"", S. 144/3",train,2011,2011/MIDI-Unprocessed_08_R1_2011_MID--AUDIO_R1-D3_10_Track10_wav.midi,375.854325,213.91387866175728,C# major
+Dante Sonata,train,2004,2004/MIDI-Unprocessed_SMF_22_R1_2004_01-04_ORIG_MID--AUDIO_22_R1_2004_17_Track17_wav.midi,1005.00558223,207.4959760864517,D major
+Dante Sonata,train,2006,2006/MIDI-Unprocessed_09_R1_2006_01-04_ORIG_MID--AUDIO_09_R1_2006_02_Track02_wav.midi,1003.39109062,208.23757262750308,D major
+Dante Sonata,train,2006,2006/MIDI-Unprocessed_10_R1_2006_01-04_ORIG_MID--AUDIO_10_R1_2006_05_Track05_wav.midi,913.148125313,208.14052697616054,e- minor
+Dante Sonata,train,2009,2009/MIDI-Unprocessed_05_R1_2009_01-02_ORIG_MID--AUDIO_05_R1_2009_05_R1_2009_02_WAV.midi,901.1743125,219.00645015279343,D major
+Dante Sonata,train,2009,2009/MIDI-Unprocessed_11_R1_2009_06-09_ORIG_MID--AUDIO_11_R1_2009_11_R1_2009_09_WAV.midi,984.984324844,212.93233082706192,D major
+"Grandes Etudes de Paganini, S. 141",train,2018,2018/MIDI-Unprocessed_Recital1-3_MID--AUDIO_01_R1_2018_wav--3.midi,1610.85576094,210.13239187996467,g minor
+"Grandes ètudes de Paganini No. 3 ""La Campanella"", S. 141",train,2015,2015/MIDI-Unprocessed_R1_D1-1-8_mid--AUDIO-from_mp3_01_R1_2015_wav--5.midi,262.876041667,213.53104726598409,g# minor
+"Grandes ètudes de Paganini No. 3 ""La Campanella"", S. 141",train,2015,2015/MIDI-Unprocessed_R1_D1-1-8_mid--AUDIO-from_mp3_02_R1_2015_wav--6.midi,276.421875,210.75405663378345,g# minor
+"Grandes ètudes de Paganini No. 3 La Campanella, S. 141",train,2015,2015/MIDI-Unprocessed_R1_D1-9-12_mid--AUDIO-from_mp3_12_R1_2015_wav--5.midi,262.686458333,215.87927803530948,g# minor
+"Grandes études de Paganini, No. 3 ""La campanella"", S.141/3",train,2017,2017/MIDI-Unprocessed_046_PIANO046_MID--AUDIO-split_07-06-17_Piano-e_2-02_wav--3.midi,282.123617587,207.1587600616526,g# minor
+"Grandes études de Paganini, No. 3 ""La campanella"", S.141/3",train,2017,2017/MIDI-Unprocessed_054_PIANO054_MID--AUDIO-split_07-07-17_Piano-e_1-02_wav--3.midi,264.791437558,216.04500937695374,g# minor
+"Grandes études de Paganini, No. 3 ""La campanella"", S.141/3",train,2017,2017/MIDI-Unprocessed_066_PIANO066_MID--AUDIO-split_07-07-17_Piano-e_3-02_wav--4.midi,283.232586512,190.77359829666443,g# minor
+"Hungarian Rhapsody No. 10 in E-flat Major, S. 244/10",train,2015,2015/MIDI-Unprocessed_R1_D2-21-22_mid--AUDIO-from_mp3_22_R1_2015_wav--5.midi,335.35,204.68134414831908,E major
+"Hungarian Rhapsody No. 10, S. 244/10",train,2011,2011/MIDI-Unprocessed_23_R2_2011_MID--AUDIO_R2-D6_04_Track04_wav.midi,334.736577656,216.84705882352787,E major
+"Hungarian Rhapsody No. 6, S.244/6",train,2017,2017/MIDI-Unprocessed_043_PIANO043_MID--AUDIO-split_07-06-17_Piano-e_1-03_wav--4.midi,441.165573321,235.73879024977833,b- minor
+"Hungarian Rhapsody No. 6, S.244/6",train,2017,2017/MIDI-Unprocessed_081_PIANO081_MID--AUDIO-split_07-09-17_Piano-e_2_-02_wav--4.midi,386.800455096,224.0302743614115,b- minor
+Mephisto Waltz,train,2006,2006/MIDI-Unprocessed_02_R1_2006_01-04_ORIG_MID--AUDIO_02_R1_2006_03_Track03_wav.midi,670.279778437,213.8283062645007,c# minor
+Mephisto Waltz No. 1,train,2004,2004/MIDI-Unprocessed_SMF_05_R1_2004_02-03_ORIG_MID--AUDIO_05_R1_2004_06_Track06_wav.midi,621.447953048,215.213026990864,c# minor
+Mephisto Waltz No. 1,train,2004,2004/MIDI-Unprocessed_SMF_12_01_2004_01-05_ORIG_MID--AUDIO_12_R1_2004_10_Track10_wav.midi,685.255457123,211.65354330708487,C# major
+Mephisto Waltz No. 1,train,2009,2009/MIDI-Unprocessed_17_R1_2009_01-03_ORIG_MID--AUDIO_17_R1_2009_17_R1_2009_03_WAV.midi,641.0209935940001,213.52162400706013,c# minor
+Mephisto Waltz No. 1,train,2013,2013/ORIG-MIDI_02_7_8_13_Group__MID--AUDIO_11_R2_2013_wav--3.midi,662.270972344,213.65538063402198,A major
+"Mephisto Waltz No. 1, S.514",train,2014,2014/MIDI-UNPROCESSED_04-08-12_R3_2014_MID--AUDIO_04_R3_2014_wav--2.midi,676.2947296880001,213.66306027820733,c# minor
+"Mephisto Waltz No. 1, S.514",train,2014,2014/MIDI-UNPROCESSED_21-22_R1_2014_MID--AUDIO_21_R1_2014_wav--4.midi,682.626187031,213.6978276788023,c# minor
+Mephisto-Waltz No. 1,train,2008,2008/MIDI-Unprocessed_03_R2_2008_01-03_ORIG_MID--AUDIO_03_R2_2008_wav--3.midi,637.078689844,208.97959183673234,c# minor
+"Paganini Etude No. 3, S. 141/3 ""La Campanella""",train,2013,2013/ORIG-MIDI_01_7_6_13_Group__MID--AUDIO_02_R1_2013_wav--5.midi,255.070524844,217.3331780598575,g# minor
+"Paganini Etude No. 3, S. 141/3 ""La Campanella""",train,2013,2013/ORIG-MIDI_03_7_6_13_Group__MID--AUDIO_09_R1_2013_wav--2.midi,274.468208438,212.40362051625968,g# minor
+"Paraphrase de concert sur Rigoletto, S.434",train,2017,2017/MIDI-Unprocessed_067_PIANO067_MID--AUDIO-split_07-07-17_Piano-e_3-03_wav--4.midi,421.584472688,208.8955795812204,C# major
+Polonaise in E Major,train,2008,2008/MIDI-Unprocessed_02_R1_2008_01-05_ORIG_MID--AUDIO_02_R1_2008_wav--4.midi,468.594616875,206.3187351336273,E major
+Rhapsodie Espagnole,train,2008,2008/MIDI-Unprocessed_04_R2_2008_01-04_ORIG_MID--AUDIO_04_R2_2008_wav--4.midi,794.3007548439999,199.04967602591918,f# minor
+Rhapsodie Espagnole,train,2008,2008/MIDI-Unprocessed_08_R3_2008_01-05_ORIG_MID--AUDIO_08_R3_2008_wav--2.midi,750.80053125,215.3516470990767,f# minor
+Rhapsodie Espagnole S.254,train,2011,2011/MIDI-Unprocessed_25_R3_2011_MID--AUDIO_R3-D9_06_Track06_wav.midi,774.292762031,213.8367154318089,f# minor
+"Rhapsodie Espagnole, S. 254",train,2018,2018/MIDI-Unprocessed_Recital1-3_MID--AUDIO_02_R1_2018_wav--2.midi,794.9791729689999,214.3809769966234,f# minor
+"Rhapsodie Espagnole, S. 254",train,2015,2015/MIDI-Unprocessed_R1_D1-1-8_mid--AUDIO-from_mp3_08_R1_2015_wav--4.midi,783.325,209.87854251012038,f# minor
+"Rhapsodie Espagnole, S. 254",train,2013,2013/ORIG-MIDI_03_7_8_13_Group__MID--AUDIO_17_R2_2013_wav--3.midi,743.269822969,216.71957671962352,f# minor
+"Rhapsodie Espagnole, S. 254",train,2013,2013/ORIG-MIDI_02_7_10_13_Group_MID--AUDIO_12_R3_2013_wav--4.midi,771.030211875,214.25310677149687,f# minor
+"Rhapsodie Espagnole, S.254",train,2014,2014/MIDI-UNPROCESSED_16-18_R1_2014_MID--AUDIO_17_R1_2014_wav--2.midi,794.788200938,214.66307985039447,f# minor
+Rhapsody Esp.,train,2006,2006/MIDI-Unprocessed_04_R1_2006_01-04_ORIG_MID--AUDIO_04_R1_2006_03_Track03_wav.midi,773.212367813,216.44848361074082,f# minor
+Rhapsody Esp.,train,2006,2006/MIDI-Unprocessed_18_R1_2006_01-05_ORIG_MID--AUDIO_18_R1_2006_04_Track04_wav.midi,754.92445875,216.10057872681298,f# minor
+Rigoletto Paraphrase,train,2009,2009/MIDI-Unprocessed_15_R1_2009_03-06_ORIG_MID--AUDIO_15_R1_2009_15_R1_2009_06_WAV.midi,391.29635015599996,212.35023041474656,C# major
+"Rigoletto Paraphrase, S. 434",train,2011,2011/MIDI-Unprocessed_09_R2_2011_MID--AUDIO_R2-D3_03_Track03_wav.midi,379.090165781,213.1309297912732,C# major
+Rigoletto-Paraphrase,train,2008,2008/MIDI-Unprocessed_03_R1_2008_01-04_ORIG_MID--AUDIO_03_R1_2008_wav--4.midi,421.416512344,205.95947556614848,C# major
+"Sonata In B Minor, S. 178",train,2018,2018/MIDI-Unprocessed_Recital4_MID--AUDIO_04_R1_2018_wav--5.midi,1700.13318234,200.9130546293898,B major
+Sonata in B Min.,train,2006,2006/MIDI-Unprocessed_06_R1_2006_01-04_ORIG_MID--AUDIO_06_R1_2006_03_Track03_wav.midi,1744.15290328,192.6079797339968,B major
+Sonata in B Min.,train,2006,2006/MIDI-Unprocessed_24_R1_2006_01-05_ORIG_MID--AUDIO_24_R1_2006_05_Track05_wav.midi,1396.30736437,207.69026156346905,B major
+"Sonata in B Minor, S. 178",train,2009,2009/MIDI-Unprocessed_03_R1_2009_01-02_ORIG_MID--AUDIO_03_R1_2009_03_R1_2009_02_WAV.midi,1670.37092578,190.29224904700038,B major
+"Sonata in B Minor, S. 178",train,2009,2009/MIDI-Unprocessed_19_R1_2009_01-02_ORIG_MID--AUDIO_19_R1_2009_19_R1_2009_02_WAV.midi,1710.21062953,198.83495145631485,B major
+"Sonata in B Minor, S. 178",train,2009,2009/MIDI-Unprocessed_21_R1_2009_04_ORIG_MID--AUDIO_21_R1_2009_21_R1_2009_04_WAV.midi,1726.19619047,208.02653399671678,B major
+"Sonata in B Minor, S. 178",train,2014,2014/MIDI-UNPROCESSED_01-03_R1_2014_MID--AUDIO_02_R1_2014_wav--5.midi,1480.26561375,202.30046536131303,B major
+Sonetto 104 del Petrarca,train,2009,2009/MIDI-Unprocessed_15_R1_2009_03-06_ORIG_MID--AUDIO_15_R1_2009_15_R1_2009_05_WAV.midi,379.317195469,184.22174840085538,E major
+Sonetto 104 del Petrarca,train,2008,2008/MIDI-Unprocessed_17_R1_2008_01-04_ORIG_MID--AUDIO_17_R1_2008_wav--4.midi,398.72956921900004,192.57313432836486,E major
+Spanish Rhapsody,train,2004,2004/MIDI-Unprocessed_XP_06_R1_2004_02-03_ORIG_MID--AUDIO_06_R1_2004_05_Track05_wav.midi,750.325777985,209.25430210324922,f# minor
+Spanish Rhapsody,train,2009,2009/MIDI-Unprocessed_04_R1_2009_04-06_ORIG_MID--AUDIO_04_R1_2009_04_R1_2009_05_WAV.midi,802.764955781,198.45405224005827,f# minor
+Tarantella,train,2015,2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_18_R1_2015_wav--4.midi,545.376041667,212.45205075244368,E- major
+Tarantella from Annees de Pelerinage 2eme Annee,train,2008,2008/MIDI-Unprocessed_10_R2_2008_01-05_ORIG_MID--AUDIO_10_R2_2008_wav--3.midi,532.707800625,215.55093555094857,E- major
+"Tarantella, S. 162 No. 3 from Venezia e Napoli",train,2011,2011/MIDI-Unprocessed_06_R3_2011_MID--AUDIO_R3-D3_06_Track06_wav.midi,487.864095469,203.3670613562973,E- major
+"Tarantella, Venezia e Napoli in G Minor, S.159",train,2017,2017/MIDI-Unprocessed_047_PIANO047_MID--AUDIO-split_07-06-17_Piano-e_2-04_wav--4.midi,504.10223074199996,222.0445459737115,E- major
+"Transcendental Etude No. 2, “Molto vivace""",train,2015,2015/MIDI-Unprocessed_R1_D1-1-8_mid--AUDIO-from_mp3_06_R1_2015_wav--4.midi,128.82395833299998,227.18692773630102,a minor
+"Transcendental Etude No. 4 ""Mazeppa""",train,2008,2008/MIDI-Unprocessed_04_R3_2008_01-07_ORIG_MID--AUDIO_04_R3_2008_wav--4.midi,494.70970828099996,218.76186859095696,B- major
+"Transcendental Etude No. 4, ""Mazeppa""",train,2015,2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_17_R1_2015_wav--4.midi,414.234375,207.54679211290195,B- major
+"Transcendental Etude No. 5 ""Feux Follets""",train,2008,2008/MIDI-Unprocessed_04_R3_2008_01-07_ORIG_MID--AUDIO_04_R3_2008_wav--5.midi,226.426055625,208.7091556130771,B- major
+"Transcendental Etude No. 5 ""Feux Follets""",train,2013,2013/ORIG-MIDI_02_7_6_13_Group__MID--AUDIO_07_R1_2013_wav--3.midi,243.934050937,210.7317073170669,B- major
+"Transcendental Etude No. 5 ""Feux Follets""",train,2013,2013/ORIG-MIDI_02_7_7_13_Group__MID--AUDIO_15_R1_2013_wav--3.midi,208.186223437,204.9952335557642,B- major
+"Transcendental Etude No. 5 “Feux Follets,” S.139, No. 5",train,2014,2014/MIDI-UNPROCESSED_09-10_R1_2014_MID--AUDIO_09_R1_2014_wav--3.midi,220.76901,204.16482055826103,B- major
+"Transcendental Etude No. 5, ""Feux Follets"", S. 139/5",train,2011,2011/MIDI-Unprocessed_06_R2_2011_MID--AUDIO_R2-D2_07_Track07_wav.midi,215.347006875,204.67870891323648,B- major
+"Trois Etudes de Concert ""La leggierezza"", S.144",train,2017,2017/MIDI-Unprocessed_052_PIANO052_MID--AUDIO-split_07-06-17_Piano-e_3-03_wav--1.midi,286.726159138,207.0588235294081,b- minor
+"Valse de l'opera Faust de Charles Gounod, S.407",train,2017,2017/MIDI-Unprocessed_060_PIANO060_MID--AUDIO-split_07-07-17_Piano-e_2-04_wav--5.midi,529.717489842,209.45454545453688,A- major
+"Valse de l'opera Faust de Charles Gounod, S.407",train,2017,2017/MIDI-Unprocessed_072_PIANO072_MID--AUDIO-split_07-08-17_Piano-e_1-06_wav--4.midi,549.447094021,207.6091309571484,A- major
+Venezia e Napoli,train,2011,2011/MIDI-Unprocessed_22_R3_2011_MID--AUDIO_R3-D7_07_Track07_wav.midi,327.398176875,208.9959336878307,F# major
+Venezia e Napoli,train,2011,2011/MIDI-Unprocessed_22_R3_2011_MID--AUDIO_R3-D7_08_Track08_wav.midi,328.064575781,212.40780911062993,e- minor
+Venezia e Napoli,train,2011,2011/MIDI-Unprocessed_22_R3_2011_MID--AUDIO_R3-D7_09_Track09_wav.midi,403.523902031,218.35818815331226,E- major
+"Venezia e Napoli, S. 162",train,2018,2018/MIDI-Unprocessed_Recital17-19_MID--AUDIO_19_R1_2018_wav--4.midi,990.9138060939999,213.93219606996655,e- minor
+"Venezia e Napoli, S.162 (Complete)",train,2014,2014/MIDI-UNPROCESSED_04-05_R1_2014_MID--AUDIO_05_R1_2014_wav--8.midi,1033.23481078,210.1950051317067,e- minor
+"Études d'exécution transcendante, No. 4, ""Mazeppa"" S.139/4",train,2017,2017/MIDI-Unprocessed_045_PIANO045_MID--AUDIO-split_07-06-17_Piano-e_2-01_wav--4.midi,394.658322575,214.50411603292955,B- major
+"Études d'exécution transcendante, No. 4, ""Mazeppa"" S.139/4",train,2017,2017/MIDI-Unprocessed_050_PIANO050_MID--AUDIO-split_07-06-17_Piano-e_3-01_wav--3.midi,484.962367262,212.75393807713155,B- major
+"Études d'exécution transcendante, No. 5, ""Feux follets"" S.139/5",train,2017,2017/MIDI-Unprocessed_047_PIANO047_MID--AUDIO-split_07-06-17_Piano-e_2-04_wav--2.midi,212.663487858,215.0637311703356,B- major
+Danse Macabre S555/R240,train,2011,2011/MIDI-Unprocessed_03_R3_2011_MID--AUDIO_R3-D1_07_Track07_wav.midi,604.709598281,203.85843164468707,g minor
+Impromptu Op. 142 No. 1 F Minor,train,2008,2008/MIDI-Unprocessed_06_R2_2008_01-05_ORIG_MID--AUDIO_06_R2_2008_wav--3.midi,584.9433253130001,217.12857005481388,A- major
+Impromptu Op. 142 No. 1 in F Minor,train,2008,2008/MIDI-Unprocessed_11_R2_2008_01-05_ORIG_MID--AUDIO_11_R2_2008_wav--3.midi,635.781949688,222.62937842608648,f minor
+"Impromptu Op. 142 No. 1 in F Minor, D. 935",train,2017,2017/MIDI-Unprocessed_075_PIANO075_MID--AUDIO-split_07-08-17_Piano-e_2-06_wav--1.midi,578.621096367,220.39410751864597,A- major
+"Impromptu Op. 142 No. 1 in F Minor, D. 935",train,2017,2017/MIDI-Unprocessed_081_PIANO081_MID--AUDIO-split_07-09-17_Piano-e_2_-02_wav--3.midi,566.241883521,217.83038027872868,f minor
+"Impromptu Op. 142 No. 1 in F Minor, D935",train,2013,2013/ORIG-MIDI_03_7_8_13_Group__MID--AUDIO_15_R2_2013_wav--1.midi,574.096648125,218.79367905631022,f minor
+"Impromptu Op. 142 No. 1, in F Minor, D935",train,2011,2011/MIDI-Unprocessed_03_R2_2011_MID--AUDIO_R2-D1_07_Track07_wav.midi,537.582261562,212.3893805309769,f minor
+"Impromptu Op. 142 No. 3 in B-Flat Major, D935",train,2013,2013/ORIG-MIDI_02_7_8_13_Group__MID--AUDIO_08_R2_2013_wav--1.midi,638.698613438,207.28744939271562,B- major
+Impromptu Op. 142 No. 3 in B-flat Major,train,2015,2015/MIDI-Unprocessed_R2_D1-2-3-6-7-8-11_mid--AUDIO-from_mp3_07_R2_2015_wav--3.midi,392.00520833300004,200.44289781714605,B- major
+Impromptu Op. 142 No. 3 in B-flat Major,train,2015,2015/MIDI-Unprocessed_R2_D1-2-3-6-7-8-11_mid--AUDIO-from_mp3_08_R2_2015_wav--2.midi,685.165625,205.61414895342025,B- major
+Impromptu Op. 142 No. 3 in B-flat Major,train,2015,2015/MIDI-Unprocessed_R2_D2-19-21-22_mid--AUDIO-from_mp3_21_R2_2015_wav--1.midi,685.057291667,208.99854862118988,B- major
+Impromptu Op. 142 No. 3 in B-flat Major,train,2013,2013/ORIG-MIDI_02_7_8_13_Group__MID--AUDIO_11_R2_2013_wav--1.midi,474.560155781,215.1884057971,B- major
+"Impromptu Op. 142 No. 3 in B-flat Major, D. 935",train,2017,2017/MIDI-Unprocessed_074_PIANO074_MID--AUDIO-split_07-08-17_Piano-e_2-04_wav--2.midi,680.221025875,190.57615516257732,B- major
+"Impromptu Op. 142 No. 3 in B-flat Major, D. 935",train,2017,2017/MIDI-Unprocessed_080_PIANO080_MID--AUDIO-split_07-09-17_Piano-e_1-06_wav--1.midi,551.678920692,206.51597817614936,B- major
+"Impromptu Op. 142 No. 3 in B-flat Major, D935",train,2013,2013/ORIG-MIDI_01_7_8_13_Group__MID--AUDIO_02_R2_2013_wav--1.midi,634.483874063,208.328445747814,B- major
+"Impromptu Op. 142 No. 3 in B-flat Major, D935",train,2013,2013/ORIG-MIDI_02_7_8_13_Group__MID--AUDIO_12_R2_2013_wav--2.midi,462.785327812,191.07544141251918,B- major
+"Impromptu Op. 142 No. 3 in B-flat Major, D935",train,2013,2013/ORIG-MIDI_02_7_8_13_Group__MID--AUDIO_14_R2_2013_wav--1.midi,389.417345625,208.2635952762797,B- major
+"Impromptu Op. 142 No. 3 in B-flat Major, D935",train,2013,2013/ORIG-MIDI_03_7_8_13_Group__MID--AUDIO_18_R2_2013_wav--1.midi,717.590094375,205.64084255622726,B- major
+"Impromptu Op. 142 No. 3, in B-Flat Major, D935",train,2011,2011/MIDI-Unprocessed_06_R2_2011_MID--AUDIO_R2-D2_06_Track06_wav.midi,523.286068594,220.53876658006905,B- major
+"Impromptu Op. 142 No. 3, in B-Flat Major, D935",train,2011,2011/MIDI-Unprocessed_10_R2_2011_MID--AUDIO_R2-D3_10_Track10_wav.midi,696.2159170310001,202.38671665774083,B- major
+"Impromptu Op. 142 No. 3, in B-Flat Major, D935",train,2011,2011/MIDI-Unprocessed_17_R2_2011_MID--AUDIO_R2-D5_04_Track04_wav.midi,399.084803906,212.86795842422532,B- major
+"Impromptu Op. 142 No. 3, in B-Flat Major, D935",train,2011,2011/MIDI-Unprocessed_22_R2_2011_MID--AUDIO_R2-D5_08_Track08_wav.midi,407.183086406,202.3154246100531,B- major
+Impromptu Op. 90 No. 1,train,2018,2018/MIDI-Unprocessed_Recital9-11_MID--AUDIO_11_R1_2018_wav--1.midi,566.467115156,208.89721099832317,c minor
+Impromptu Op. 90 No. 1 in C Minor,train,2008,2008/MIDI-Unprocessed_03_R2_2008_01-03_ORIG_MID--AUDIO_03_R2_2008_wav--1.midi,532.502138437,200.49870303740107,c minor
+Impromptu Op. 90 No. 1 in C Minor,train,2013,2013/ORIG-MIDI_01_7_8_13_Group__MID--AUDIO_04_R2_2013_wav--1.midi,519.3584549999998,201.9229282123977,c minor
+"Impromptu Op. 90 No. 1 in C Minor, D. 899",train,2017,2017/MIDI-Unprocessed_079_PIANO079_MID--AUDIO-split_07-09-17_Piano-e_1-04_wav--2.midi,559.081662196,206.22986036519862,c minor
+"Impromptu Op. 90 No. 1, in C Minor, D899",train,2011,2011/MIDI-Unprocessed_04_R2_2011_MID--AUDIO_R2-D2_02_Track02_wav.midi,588.366131719,206.4014576374132,c minor
+"Impromptu Op. 90 No. 1, in C Minor, D899",train,2011,2011/MIDI-Unprocessed_25_R2_2011_MID--AUDIO_R2-D6_07_Track07_wav.midi,566.914497188,201.8663514359246,c minor
+Impromptu Op. 90 No. 2,train,2008,2008/MIDI-Unprocessed_02_R2_2008_01-05_ORIG_MID--AUDIO_02_R2_2008_wav--1.midi,223.212917812,188.9592760180996,e- minor
+Impromptu Op. 90 No. 2 E-flat Major,train,2008,2008/MIDI-Unprocessed_09_R2_2008_01-05_ORIG_MID--AUDIO_09_R2_2008_wav--1.midi,264.60844265599997,199.78576893649688,e- minor
+Impromptu Op. 90 No. 2 in E-flat Major,train,2008,2008/MIDI-Unprocessed_12_R2_2008_01-04_ORIG_MID--AUDIO_12_R2_2008_wav--2.midi,274.862171719,210.37997054492016,e- minor
+Impromptu Op. 90 No. 2 in E-flat Major,train,2015,2015/MIDI-Unprocessed_R2_D2-19-21-22_mid--AUDIO-from_mp3_22_R2_2015_wav--1.midi,287.720833333,225.32842879663625,e- minor
+"Impromptu Op. 90 No. 2 in E-flat Major, D. 899",train,2017,2017/MIDI-Unprocessed_070_PIANO070_MID--AUDIO-split_07-08-17_Piano-e_1-02_wav--1.midi,287.37038675,212.86333593916427,e- minor
+"Impromptu Op. 90 No. 2 in E-flat Major, D899",train,2013,2013/ORIG-MIDI_01_7_8_13_Group__MID--AUDIO_03_R2_2013_wav--2.midi,267.370192031,205.00707785642032,e- minor
+Impromptu Op. 90 No. 3 in G-flat,train,2008,2008/MIDI-Unprocessed_17_R2_2008_01-04_ORIG_MID--AUDIO_17_R2_2008_wav--3.midi,300.2561100000001,217.3166506256032,F# major
+Impromptu Op. 90 No. 3 in G-flat Major,train,2008,2008/MIDI-Unprocessed_07_R2_2008_01-05_ORIG_MID--AUDIO_07_R2_2008_wav--1.midi,375.151868438,207.46076665808903,F# major
+Impromptu Op. 90 No. 3 in G-flat Major,train,2008,2008/MIDI-Unprocessed_08_R2_2008_01-04_ORIG_MID--AUDIO_08_R2_2008_wav--2.midi,365.193277969,205.33927486327855,F# major
+Impromptu Op. 90 No. 3 in G-flat Major,train,2015,2015/MIDI-Unprocessed_R2_D1-2-3-6-7-8-11_mid--AUDIO-from_mp3_11_R2_2015_wav--2.midi,355.17395833300003,212.7143233975209,F# major
+Impromptu Op. 90 No. 3 in G-flat Major,train,2015,2015/MIDI-Unprocessed_R2_D2-12-13-15_mid--AUDIO-from_mp3_13_R2_2015_wav--3.midi,302.311458333,217.08542713567851,F# major
+Impromptu Op. 90 No. 3 in G-flat Major,train,2015,2015/MIDI-Unprocessed_R2_D2-12-13-15_mid--AUDIO-from_mp3_15_R2_2015_wav--1.midi,366.34375,204.79999999999995,F# major
+"Impromptu Op. 90 No. 3 in G-flat Major, D. 899",train,2017,2017/MIDI-Unprocessed_073_PIANO073_MID--AUDIO-split_07-08-17_Piano-e_2-02_wav--2.midi,366.46294791199995,208.34338075716664,F# major
+"Impromptu Op. 90 No. 3 in G-flat Major, D. 899",train,2017,2017/MIDI-Unprocessed_082_PIANO082_MID--AUDIO-split_07-09-17_Piano-e_2_-04_wav--3.midi,327.167200292,218.3741844471854,F# major
+"Impromptu Op. 90 No. 3 in G-flat Major, D899",train,2013,2013/ORIG-MIDI_03_7_8_13_Group__MID--AUDIO_17_R2_2013_wav--2.midi,357.281961094,207.79350023324622,F# major
+"Impromptu Op. 90 No. 3, in G-flat Major, D899",train,2011,2011/MIDI-Unprocessed_09_R2_2011_MID--AUDIO_R2-D3_04_Track04_wav.midi,320.318857031,216.79428942245465,F# major
+"Impromptu Op. 90 No. 3, in G-flat Major, D899",train,2011,2011/MIDI-Unprocessed_16_R2_2011_MID--AUDIO_R2-D4_09_Track09_wav.midi,258.66560671900004,215.60920830993697,F# major
+"Impromptu Op. 90, No. 3, in G-flat Major, D899",train,2011,2011/MIDI-Unprocessed_12_R2_2011_MID--AUDIO_R2-D4_04_Track04_wav.midi,307.35679734400003,219.21979067553988,F# major
+"Impromptu Op.142 No.3, in B-Flat Major, D935",train,2013,2013/ORIG-MIDI_03_7_8_13_Group__MID--AUDIO_19_R2_2013_wav--1.midi,445.906338281,205.12175962293682,B- major
+Impromptus Op. 90,train,2018,2018/MIDI-Unprocessed_Recital12_MID--AUDIO_12_R1_2018_wav--3.midi,644.3890457809999,212.6843595929944,F# major
+"Impromptus Op. 90, No. 3",train,2004,2004/MIDI-Unprocessed_SMF_17_R1_2004_01-03_ORIG_MID--AUDIO_17_R1_2004_02_Track02_wav--1.midi,340.525040821,218.18181818181893,F# major
+Son. in Bb D.960,train,2006,2006/MIDI-Unprocessed_05_R2_2006_01_ORIG_MID--AUDIO_05_R2_2006_01_Track01_wav.midi,776.2425464060001,212.97226923578185,B- major
+Son. in Bb D.960,train,2006,2006/MIDI-Unprocessed_09_R2_2006_01_ORIG_MID--AUDIO_09_R2_2006_01_Track01_wav.midi,932.691375,208.10702569128048,B- major
+Son. in Bb D.960,train,2006,2006/MIDI-Unprocessed_16_R2_2006_01_ORIG_MID--AUDIO_16_R2_2006_01_Track01_wav.midi,849.4849945310001,206.22575832919213,B- major
+Son. in Bb D.961,train,2006,2006/MIDI-Unprocessed_05_R2_2006_01_ORIG_MID--AUDIO_05_R2_2006_02_Track02_wav.midi,468.10049343800006,187.8040896634116,c# minor
+Son. in Bb D.961,train,2006,2006/MIDI-Unprocessed_09_R2_2006_01_ORIG_MID--AUDIO_09_R2_2006_02_Track02_wav.midi,590.496204375,164.95873247373018,c# minor
+Son. in Bb D.961,train,2006,2006/MIDI-Unprocessed_16_R2_2006_01_ORIG_MID--AUDIO_16_R2_2006_02_Track02_wav.midi,592.003948594,160.02604590590505,c# minor
+Son. in Bb D.962,train,2006,2006/MIDI-Unprocessed_05_R2_2006_01_ORIG_MID--AUDIO_05_R2_2006_03_Track03_wav.midi,709.957890469,219.87411167512525,c minor
+Son. in Bb D.962,train,2006,2006/MIDI-Unprocessed_09_R2_2006_01_ORIG_MID--AUDIO_09_R2_2006_03_Track03_wav.midi,772.517924063,218.9413854351669,B- major
+Son. in Bb D.962,train,2006,2006/MIDI-Unprocessed_16_R2_2006_01_ORIG_MID--AUDIO_16_R2_2006_03_Track03_wav.midi,719.6907867189999,218.00486618004845,B- major
+Sonata in A D959,train,2006,2006/MIDI-Unprocessed_01_R2_2006_01_ORIG_MID--AUDIO_01_R2_2006_01_Track01_wav.midi,660.7685700000002,198.8972431077706,A major
+Sonata in A D959,train,2006,2006/MIDI-Unprocessed_07_R2_2006_01_ORIG_MID--AUDIO_07_R2_2006_01_Track01_wav.midi,670.895429531,206.33428054766117,A major
+Sonata in A D959,train,2006,2006/MIDI-Unprocessed_08_R2_2006_01_ORIG_MID--AUDIO_08_R2_2006_01_Track01_wav.midi,677.290989375,212.6464906632273,A major
+Sonata in A D960,train,2006,2006/MIDI-Unprocessed_01_R2_2006_01_ORIG_MID--AUDIO_01_R2_2006_02_Track02_wav.midi,435.83022656300005,198.12359622665744,f# minor
+Sonata in A D960,train,2006,2006/MIDI-Unprocessed_07_R2_2006_01_ORIG_MID--AUDIO_07_R2_2006_02_Track02_wav.midi,420.042315,203.44370860926517,f# minor
+Sonata in A D960,train,2006,2006/MIDI-Unprocessed_08_R2_2006_01_ORIG_MID--AUDIO_08_R2_2006_02_Track02_wav.midi,427.673183437,195.1853159195213,f# minor
+Sonata in A D961,train,2006,2006/MIDI-Unprocessed_01_R2_2006_01_ORIG_MID--AUDIO_01_R2_2006_03_Track03_wav.midi,896.542906875,215.30569639130454,A major
+Sonata in A D961,train,2006,2006/MIDI-Unprocessed_07_R2_2006_01_ORIG_MID--AUDIO_07_R2_2006_03_Track03_wav.midi,272.131138125,211.45075891281112,D major
+Sonata in A D961,train,2006,2006/MIDI-Unprocessed_08_R2_2006_01_ORIG_MID--AUDIO_08_R2_2006_03_Track03_wav.midi,844.489005937,221.2725090035963,A major
+Sonata in A D962,train,2006,2006/MIDI-Unprocessed_07_R2_2006_01_ORIG_MID--AUDIO_07_R2_2006_04_Track04_wav.midi,648.601114219,225.5994534896979,A major
+"Sonata in A Major, D. 959 (Complete)",train,2014,2014/MIDI-UNPROCESSED_04-07-08-10-12-15-17_R2_2014_MID--AUDIO_08_R2_2014_wav.midi,2341.60689984,218.30651225746703,A major
+"Sonata in A Major, D. 959 (Complete)",train,2014,2014/MIDI-UNPROCESSED_04-07-08-10-12-15-17_R2_2014_MID--AUDIO_17_R2_2014_wav.midi,2210.52262922,198.11553833111438,A major
+"Sonata in A Major, D. 959 (Complete)",train,2014,2014/MIDI-UNPROCESSED_19-20-21_R2_2014_MID--AUDIO_19_R2_2014_wav.midi,2453.07847641,217.49325013500643,A major
+"Sonata in A Major, D959",train,2018,2018/MIDI-Unprocessed_Schubert1-3_MID--AUDIO_07_R2_2018_wav.midi,2244.51297984,199.5433430438525,A major
+Sonata in A Min.,train,2006,2006/MIDI-Unprocessed_22_R2_2006_01_ORIG_MID--AUDIO_22_R2_2006_01_Track01_wav.midi,569.863212188,181.81684712791457,a minor
+Sonata in A Min.,train,2006,2006/MIDI-Unprocessed_22_R2_2006_01_ORIG_MID--AUDIO_22_R2_2006_02_Track02_wav.midi,794.52912,184.1516327928727,C major
+Sonata in A Min.,train,2006,2006/MIDI-Unprocessed_22_R2_2006_01_ORIG_MID--AUDIO_22_R2_2006_03_Track03_wav.midi,463.446384844,189.2957746478914,a minor
+Sonata in A Min.,train,2006,2006/MIDI-Unprocessed_22_R2_2006_01_ORIG_MID--AUDIO_22_R2_2006_04_Track04_wav.midi,308.593441406,227.75172413793103,a minor
+Sonata in A Min.,train,2006,2006/MIDI-Unprocessed_23_R2_2006_01_ORIG_MID--AUDIO_23_R2_2006_01_Track01_wav.midi,658.862856094,189.60854092526858,a minor
+Sonata in A Min.,train,2006,2006/MIDI-Unprocessed_23_R2_2006_01_ORIG_MID--AUDIO_23_R2_2006_02_Track02_wav.midi,731.219888438,195.3315902067969,C major
+Sonata in A Min.,train,2006,2006/MIDI-Unprocessed_23_R2_2006_01_ORIG_MID--AUDIO_23_R2_2006_03_Track03_wav.midi,424.8500025,196.14770671490928,a minor
+Sonata in A Min.,train,2006,2006/MIDI-Unprocessed_23_R2_2006_01_ORIG_MID--AUDIO_23_R2_2006_04_Track04_wav.midi,272.51174671900003,223.4145710776416,a minor
+"Sonata in A Minor, D. 845",train,2009,2009/MIDI-Unprocessed_09_R2_2009_01_ORIG_MID--AUDIO_09_R2_2009_09_R2_2009_01_WAV.midi,463.744194375,195.1332369345241,a minor
+"Sonata in A Minor, D. 846",train,2009,2009/MIDI-Unprocessed_09_R2_2009_01_ORIG_MID--AUDIO_09_R2_2009_09_R2_2009_02_WAV.midi,398.83774218699995,199.2139600691717,C major
+"Sonata in A Minor, D. 847",train,2009,2009/MIDI-Unprocessed_09_R2_2009_01_ORIG_MID--AUDIO_09_R2_2009_09_R2_2009_03_WAV.midi,280.387005938,193.970007892659,a minor
+"Sonata in A Minor, D. 848",train,2009,2009/MIDI-Unprocessed_09_R2_2009_01_ORIG_MID--AUDIO_09_R2_2009_09_R2_2009_04_WAV.midi,293.561405156,223.43107827291809,a minor
+"Sonata in A Minor, D845",train,2018,2018/MIDI-Unprocessed_Schubert1-3_MID--AUDIO_02_R2_2018_wav.midi,1846.46449969,211.12129250062665,C major
+"Sonata in A minor, D. 845 (Complete)",train,2014,2014/MIDI-UNPROCESSED_04-07-08-10-12-15-17_R2_2014_MID--AUDIO_15_R2_2014_wav.midi,1682.59847766,208.1657449957124,C major
+Sonata in B-flat Major D. 960,train,2009,2009/MIDI-Unprocessed_21_R2_2009_01_ORIG_MID--AUDIO_21_R2_2009_21_R2_2009_01_WAV.midi,908.675640469,206.95314892315,B- major
+Sonata in B-flat Major D. 961,train,2009,2009/MIDI-Unprocessed_21_R2_2009_01_ORIG_MID--AUDIO_21_R2_2009_21_R2_2009_02_WAV.midi,635.457430781,169.8175787728038,c# minor
+Sonata in B-flat Major D. 962,train,2009,2009/MIDI-Unprocessed_21_R2_2009_01_ORIG_MID--AUDIO_21_R2_2009_21_R2_2009_03_WAV.midi,216.3032025,220.8678102926324,b- minor
+Sonata in B-flat Major D. 963,train,2009,2009/MIDI-Unprocessed_21_R2_2009_01_ORIG_MID--AUDIO_21_R2_2009_21_R2_2009_04_WAV.midi,434.902075781,207.73131973402317,c minor
+"Sonata in B-flat Major, D. 960",train,2009,2009/MIDI-Unprocessed_10_R2_2009_01_ORIG_MID--AUDIO_10_R2_2009_10_R2_2009_01_WAV.midi,949.83879375,202.94108169074426,B- major
+"Sonata in B-flat Major, D. 960 (Complete)",train,2014,2014/MIDI-UNPROCESSED_04-07-08-10-12-15-17_R2_2014_MID--AUDIO_04_R2_2014_wav.midi,2213.10943219,197.93430869102608,B- major
+"Sonata in B-flat Major, D. 960 (Complete)",train,2014,2014/MIDI-UNPROCESSED_04-07-08-10-12-15-17_R2_2014_MID--AUDIO_12_R2_2014_wav.midi,2624.66350781,209.5566022413452,F major
+"Sonata in B-flat Major, D. 961",train,2009,2009/MIDI-Unprocessed_10_R2_2009_01_ORIG_MID--AUDIO_10_R2_2009_10_R2_2009_02_WAV.midi,672.761079375,156.96350364963502,c# minor
+"Sonata in B-flat Major, D. 962",train,2009,2009/MIDI-Unprocessed_10_R2_2009_01_ORIG_MID--AUDIO_10_R2_2009_10_R2_2009_03_WAV.midi,220.92125343799998,229.6030308021736,b- minor
+"Sonata in B-flat Major, D. 963",train,2009,2009/MIDI-Unprocessed_10_R2_2009_01_ORIG_MID--AUDIO_10_R2_2009_10_R2_2009_04_WAV.midi,515.92897125,220.33087883713532,g minor
+"Sonata in B-flat Major, D960",train,2004,2004/MIDI-Unprocessed_XP_14_R2_2004_01_ORIG_MID--AUDIO_14_R2_2004_01_Track01_wav.midi,902.3210560939999,204.44689655172425,B- major
+"Sonata in B-flat Major, D960",train,2004,2004/MIDI-Unprocessed_XP_14_R2_2004_01_ORIG_MID--AUDIO_14_R2_2004_02_Track02_wav.midi,595.733285317,167.00052714812583,c# minor
+"Sonata in B-flat Major, D960",train,2004,2004/MIDI-Unprocessed_XP_14_R2_2004_01_ORIG_MID--AUDIO_14_R2_2004_03_Track03_wav.midi,225.191643375,228.09917355372102,b- minor
+"Sonata in B-flat Major, D960",train,2004,2004/MIDI-Unprocessed_XP_14_R2_2004_01_ORIG_MID--AUDIO_14_R2_2004_04_Track04_wav.midi,456.34160250599996,208.44390832328608,g minor
+"Sonata in B-flat Major, D960",train,2004,2004/MIDI-Unprocessed_XP_16_R2_2004_01_ORIG_MID--AUDIO_16_R2_2004_01_Track01_wav.midi,917.292165775,203.71091747821328,B- major
+"Sonata in B-flat Major, D960",train,2004,2004/MIDI-Unprocessed_XP_16_R2_2004_01_ORIG_MID--AUDIO_16_R2_2004_02_Track02_wav.midi,572.456644581,161.16396194739903,c# minor
+"Sonata in B-flat Major, D960",train,2004,2004/MIDI-Unprocessed_XP_16_R2_2004_01_ORIG_MID--AUDIO_16_R2_2004_03_Track03_wav.midi,240.996083931,226.0689940095033,b- minor
+"Sonata in B-flat Major, D960",train,2004,2004/MIDI-Unprocessed_XP_16_R2_2004_01_ORIG_MID--AUDIO_16_R2_2004_04_Track04_wav.midi,488.711165135,217.06783369802432,g minor
+"Sonata in B-flat Major, D960",train,2018,2018/MIDI-Unprocessed_Schubert4-6_MID--AUDIO_09_R2_2018_wav.midi,2561.10988547,199.39541686981715,B- major
+"Sonata in B-flat Major, D960",train,2018,2018/MIDI-Unprocessed_Schubert4-6_MID--AUDIO_10_R2_2018_wav.midi,2421.89528109,212.28117717198367,B- major
+"Sonata in C  Minor, D. 958",train,2009,2009/MIDI-Unprocessed_17_R2_2009_01_ORIG_MID--AUDIO_17_R2_2009_17_R2_2009_01_WAV.midi,475.983765469,212.89757805660983,c minor
+"Sonata in C  Minor, D. 959",train,2009,2009/MIDI-Unprocessed_17_R2_2009_01_ORIG_MID--AUDIO_17_R2_2009_17_R2_2009_02_WAV.midi,488.363560781,189.5987289689135,A- major
+"Sonata in C  Minor, D. 960",train,2009,2009/MIDI-Unprocessed_17_R2_2009_01_ORIG_MID--AUDIO_17_R2_2009_17_R2_2009_03_WAV.midi,203.632275,207.12499279663447,E- major
+"Sonata in C  Minor, D. 961",train,2009,2009/MIDI-Unprocessed_17_R2_2009_01_ORIG_MID--AUDIO_17_R2_2009_17_R2_2009_04_WAV.midi,521.642106562,207.27116949878223,f minor
+"Sonata in C Minor, D. 958",train,2009,2009/MIDI-Unprocessed_07_R2_2009_01_ORIG_MID--AUDIO_07_R2_2009_07_R2_2009_01_WAV.midi,480.3627675,209.5770255344022,c minor
+"Sonata in C Minor, D. 958",train,2009,2009/MIDI-Unprocessed_12_R2_2009_01_ORIG_MID--AUDIO_12_R2_2009_12_R2_2009_01_WAV.midi,493.52114109400003,214.64270056992734,c minor
+"Sonata in C Minor, D. 958 (Complete)",train,2014,2014/MIDI-UNPROCESSED_04-07-08-10-12-15-17_R2_2014_MID--AUDIO_07_R2_2014_wav.midi,1790.89831594,208.66987773249326,A- major
+"Sonata in C Minor, D. 958 (Complete)",train,2014,2014/MIDI-UNPROCESSED_19-20-21_R2_2014_MID--AUDIO_21_R2_2014_wav.midi,1766.21885344,224.932881355934,A- major
+"Sonata in C Minor, D. 959",train,2009,2009/MIDI-Unprocessed_07_R2_2009_01_ORIG_MID--AUDIO_07_R2_2009_07_R2_2009_02_WAV.midi,469.549477031,197.3696145124695,A- major
+"Sonata in C Minor, D. 959",train,2009,2009/MIDI-Unprocessed_12_R2_2009_01_ORIG_MID--AUDIO_12_R2_2009_12_R2_2009_02_WAV.midi,573.772129219,171.4996949359381,A- major
+"Sonata in C Minor, D. 960",train,2009,2009/MIDI-Unprocessed_07_R2_2009_01_ORIG_MID--AUDIO_07_R2_2009_07_R2_2009_03_WAV.midi,166.621094063,224.09009470181903,A- major
+"Sonata in C Minor, D. 960",train,2009,2009/MIDI-Unprocessed_12_R2_2009_01_ORIG_MID--AUDIO_12_R2_2009_12_R2_2009_03_WAV.midi,151.10027625,215.26613816534413,A- major
+"Sonata in C Minor, D. 961",train,2009,2009/MIDI-Unprocessed_07_R2_2009_01_ORIG_MID--AUDIO_07_R2_2009_07_R2_2009_04_WAV.midi,520.219832344,222.70779014308724,f minor
+"Sonata in C Minor, D. 961",train,2009,2009/MIDI-Unprocessed_12_R2_2009_01_ORIG_MID--AUDIO_12_R2_2009_12_R2_2009_04_WAV.midi,560.5763625,221.64719740846715,f minor
+"Sonata in C Minor, D958",train,2004,2004/MIDI-Unprocessed_XP_06_R2_2004_01_ORIG_MID--AUDIO_06_R2_2004_01_Track01_wav.midi,692.722315437,214.925373134324,c minor
+"Sonata in C Minor, D958",train,2004,2004/MIDI-Unprocessed_XP_06_R2_2004_01_ORIG_MID--AUDIO_06_R2_2004_02_Track02_wav.midi,525.664047577,194.628487825268,A- major
+"Sonata in C Minor, D958",train,2004,2004/MIDI-Unprocessed_XP_06_R2_2004_01_ORIG_MID--AUDIO_06_R2_2004_03_Track03_wav.midi,745.937970417,219.2495921696508,c minor
+"Sonata in C Minor, D958",train,2004,2004/MIDI-Unprocessed_XP_19_R2_2004_01_ORIG_MID--AUDIO_19_R2_2004_01_Track01_wav.midi,452.828792356,211.98952509024045,c minor
+"Sonata in C Minor, D958",train,2004,2004/MIDI-Unprocessed_XP_19_R2_2004_01_ORIG_MID--AUDIO_19_R2_2004_02_Track02_wav.midi,465.319140125,197.4618452714557,A- major
+"Sonata in C Minor, D958",train,2004,2004/MIDI-Unprocessed_XP_19_R2_2004_01_ORIG_MID--AUDIO_19_R2_2004_03_Track03_wav.midi,705.474414571,203.59229603981828,c minor
+"Sonata in C Minor, D958",train,2004,2004/MIDI-Unprocessed_XP_22_R2_2004_01_ORIG_MID--AUDIO_22_R2_2004_01_Track01_wav.midi,463.915298113,220.80177350821967,c minor
+"Sonata in C Minor, D958",train,2004,2004/MIDI-Unprocessed_XP_22_R2_2004_01_ORIG_MID--AUDIO_22_R2_2004_02_Track02_wav.midi,466.286017615,184.4273031582008,A- major
+"Sonata in C Minor, D958",train,2004,2004/MIDI-Unprocessed_XP_22_R2_2004_01_ORIG_MID--AUDIO_22_R2_2004_03_Track03_wav.midi,152.737797285,212.95971978984383,E- major
+"Sonata in C Minor, D958",train,2004,2004/MIDI-Unprocessed_XP_22_R2_2004_01_ORIG_MID--AUDIO_22_R2_2004_04_Track04_wav.midi,547.8103497669999,219.48829613499316,f minor
+"Sonata in C Minor, D958",train,2018,2018/MIDI-Unprocessed_Schubert1-3_MID--AUDIO_05_R2_2018_wav.midi,1743.52523297,205.71428571428498,A- major
+"Sonata in C Minor, D958",train,2018,2018/MIDI-Unprocessed_Schubert4-6_MID--AUDIO_08_R2_2018_wav.midi,1749.02602875,202.78401852924327,A- major
+"Sonata in C Minor, D958",train,2018,2018/MIDI-Unprocessed_Schubert7-9_MID--AUDIO_11_R2_2018_wav.midi,1631.10547359,215.77818853971092,A- major
+"Sonata in C Minor, D958",train,2018,2018/MIDI-Unprocessed_Schubert7-9_MID--AUDIO_16_R2_2018_wav.midi,1758.36229078,204.38215204470745,A- major
+"Sonata in D Major, D. 850 (Complete)",train,2014,2014/MIDI-UNPROCESSED_04-07-08-10-12-15-17_R2_2014_MID--AUDIO_10_R2_2014_wav.midi,1974.04316484,197.45203376822136,D major
+"Sonata in D Major, D850",train,2004,2004/MIDI-Unprocessed_XP_15_R2_2004_01_ORIG_MID--AUDIO_15_R2_2004_01_Track01_wav.midi,396.018062513,225.388759020225,D major
+"Sonata in D Major, D850",train,2004,2004/MIDI-Unprocessed_XP_15_R2_2004_01_ORIG_MID--AUDIO_15_R2_2004_02_Track02_wav.midi,682.4018330619999,186.06654463228224,A major
+"Sonata in D Major, D850",train,2004,2004/MIDI-Unprocessed_XP_15_R2_2004_01_ORIG_MID--AUDIO_15_R2_2004_03_Track03_wav.midi,351.6399883,178.21782178217808,D major
+"Sonata in D Major, D850",train,2004,2004/MIDI-Unprocessed_XP_15_R2_2004_01_ORIG_MID--AUDIO_15_R2_2004_04_Track04_wav.midi,440.98053671,227.41116751269507,D major
+"Sonata in D Major, D850",train,2018,2018/MIDI-Unprocessed_Schubert10-12_MID--AUDIO_20_R2_2018_wav.midi,2346.84060188,222.53978081855564,D major
+Sonata in G Major D894,train,2018,2018/MIDI-Unprocessed_Schubert7-9_MID--AUDIO_15_R2_2018_wav.midi,2076.61384219,217.53485284358024,G major
+Sonata in G Major D894,train,2018,2018/MIDI-Unprocessed_Schubert10-12_MID--AUDIO_17_R2_2018_wav.midi,1898.29804828,192.61736334405188,G major
+Sonata in G Major D894,train,2018,2018/MIDI-Unprocessed_Schubert10-12_MID--AUDIO_18_R2_2018_wav.midi,1990.15425984,225.22349231375756,G major
+"Sonata in G Major, D 894",train,2004,2004/MIDI-Unprocessed_XP_17_R2_2004_01_ORIG_MID--AUDIO_17_R2_2004_01_Track01_wav.midi,749.2039864230002,205.12258594713424,G major
+"Sonata in G Major, D 894",train,2004,2004/MIDI-Unprocessed_XP_17_R2_2004_01_ORIG_MID--AUDIO_17_R2_2004_02_Track02_wav.midi,417.901544965,196.71404836625615,D major
+"Sonata in G Major, D 894",train,2004,2004/MIDI-Unprocessed_XP_17_R2_2004_01_ORIG_MID--AUDIO_17_R2_2004_03_Track03_wav.midi,224.28886826,212.9980586114482,b minor
+"Sonata in G Major, D 894",train,2004,2004/MIDI-Unprocessed_XP_17_R2_2004_01_ORIG_MID--AUDIO_17_R2_2004_04_Track04_wav.midi,506.77628278300006,220.60068534569993,G major
+"Sonata in G Major, D. 894",train,2009,2009/MIDI-Unprocessed_08_R2_2009_01_ORIG_MID--AUDIO_08_R2_2009_08_R2_2009_01_WAV.midi,774.434321719,185.8187347127649,G major
+"Sonata in G Major, D. 894",train,2009,2009/MIDI-Unprocessed_19_R2_2009_01_ORIG_MID--AUDIO_19_R2_2009_19_R2_2009_01_WAV.midi,928.51402875,196.18946248003695,G major
+"Sonata in G Major, D. 895",train,2009,2009/MIDI-Unprocessed_08_R2_2009_01_ORIG_MID--AUDIO_08_R2_2009_08_R2_2009_02_WAV.midi,410.555145,172.81963859529407,D major
+"Sonata in G Major, D. 895",train,2009,2009/MIDI-Unprocessed_19_R2_2009_01_ORIG_MID--AUDIO_19_R2_2009_19_R2_2009_02_WAV.midi,459.31578,194.05023311775483,D major
+"Sonata in G Major, D. 896",train,2009,2009/MIDI-Unprocessed_08_R2_2009_01_ORIG_MID--AUDIO_08_R2_2009_08_R2_2009_03_WAV.midi,227.10447375,201.71598669234714,b minor
+"Sonata in G Major, D. 896",train,2009,2009/MIDI-Unprocessed_19_R2_2009_01_ORIG_MID--AUDIO_19_R2_2009_19_R2_2009_03_WAV.midi,241.47278203099998,193.3057903769157,b minor
+"Sonata in G Major, D. 897",train,2009,2009/MIDI-Unprocessed_08_R2_2009_01_ORIG_MID--AUDIO_08_R2_2009_08_R2_2009_04_WAV.midi,513.018984844,217.40510401029246,G major
+"Sonata in G Major, D. 897",train,2009,2009/MIDI-Unprocessed_19_R2_2009_01_ORIG_MID--AUDIO_19_R2_2009_19_R2_2009_04_WAV.midi,460.10237109400003,228.17134960847787,G major
+"Sonata in G Major, D894",train,2004,2004/MIDI-Unprocessed_XP_04_R2_2004_01_ORIG_MID--AUDIO_04_R2_2004_01_Track01_wav.midi,1025.03650605,164.0538776478966,G major
+"Sonata in G Major, D894",train,2004,2004/MIDI-Unprocessed_XP_04_R2_2004_01_ORIG_MID--AUDIO_04_R2_2004_02_Track02_wav.midi,1298.3273665,212.23012281833667,D major
+"Sonata in G Major, D894",train,2004,2004/MIDI-Unprocessed_XP_20_R2_2004_01_ORIG_MID--AUDIO_20_R1_2004_01_Track01_wav.midi,754.754183725,205.21376433784832,G major
+"Sonata in G Major, D894",train,2004,2004/MIDI-Unprocessed_XP_20_R2_2004_01_ORIG_MID--AUDIO_20_R1_2004_02_Track02_wav.midi,433.17820930000005,192.87980260839012,D major
+"Sonata in G Major, D894",train,2004,2004/MIDI-Unprocessed_XP_20_R2_2004_01_ORIG_MID--AUDIO_20_R1_2004_03_Track03_wav.midi,685.919985077,228.94050428517886,G major
+Die Forelle,train,2011,2011/MIDI-Unprocessed_03_R2_2011_MID--AUDIO_R2-D1_08_Track08_wav.midi,207.15657703099998,215.5285313376988,C# major
+"Fruelingsglaube, Die Junge Nonne",train,2006,2006/MIDI-Unprocessed_11_R1_2006_01-06_ORIG_MID--AUDIO_11_R1_2006_04_Track04_wav.midi,503.913758906,217.0551290997984,A- major
+"Song Transcriptions: Aufenthalt, Gretchen am Spinnrade, Standchen von Shakespeare, Der Erlkonig",train,2004,2004/MIDI-Unprocessed_XP_18_R1_2004_01-02_ORIG_MID--AUDIO_18_R1_2004_02_Track02_wav.midi,209.410707023,206.5256364288269,e minor
+"Song Transcriptions: Aufenthalt, Gretchen am Spinnrade, Standchen von Shakespeare, Der Erlkonig",train,2004,2004/MIDI-Unprocessed_XP_18_R1_2004_01-02_ORIG_MID--AUDIO_18_R1_2004_04_Track04_wav.midi,141.831846552,213.58313817330188,B- major
+"Staendchen from Schwannengesang, R245/7",train,2011,2011/MIDI-Unprocessed_25_R2_2011_MID--AUDIO_R2-D6_08_Track08_wav.midi,332.408855625,169.78060626360738,d minor
+"Standchen, S. 558, NO. 9, ""Horch, horch! Die Lerch""",train,2011,2011/MIDI-Unprocessed_12_R2_2011_MID--AUDIO_R2-D4_05_Track05_wav.midi,157.473133125,210.52819255627324,B- major
+Moment Musical Op. 94 No. 3 in F-sharp Minor,train,2015,2015/MIDI-Unprocessed_R1_D2-21-22_mid--AUDIO-from_mp3_21_R1_2015_wav--4.midi,126.815625,192.98183741844403,f# minor
+Liebesfreud,train,2011,2011/MIDI-Unprocessed_17_R2_2011_MID--AUDIO_R2-D5_06_Track06_wav.midi,369.954224062,213.0046224961467,F major
+"12 Etudes, Op. 25",train,2004,2004/MIDI-Unprocessed_SMF_05_R1_2004_01_ORIG_MID--AUDIO_05_R1_2004_02_Track02_wav.midi,1409.28857763,207.7279752704861,c# minor
+"12 Etudes, Op. 25",train,2004,2004/MIDI-Unprocessed_SMF_05_R1_2004_01_ORIG_MID--AUDIO_05_R1_2004_03_Track03_wav.midi,327.327025835,207.94223826715046,C major
+"24 Preludes, Op. 28",train,2004,2004/MIDI-Unprocessed_XP_06_R1_2004_01_ORIG_MID--AUDIO_06_R1_2004_01_Track01_wav.midi,2398.64035989,198.39265212405502,g# minor
+"Andante Spianato and Grand Polonaise Brilliante, Op. 22",train,2008,2008/MIDI-Unprocessed_10_R3_2008_01-05_ORIG_MID--AUDIO_10_R3_2008_wav--5.midi,809.8042115630002,212.24543510447216,g minor
+"Andante Spianato and Grand Polonaise Brilliante, Op. 22",train,2008,2008/MIDI-Unprocessed_11_R3_2008_01-04_ORIG_MID--AUDIO_11_R3_2008_wav--4.midi,819.8749814060001,196.43876045253742,c minor
+"Andante Spianato and Grande Polonaise Brillante, Op. 22",train,2009,2009/MIDI-Unprocessed_13_R1_2009_01-03_ORIG_MID--AUDIO_13_R1_2009_13_R1_2009_03_WAV.midi,779.574540938,208.09959721714765,c minor
+"Andante Spianato and Grande Polonaise Brillante, Op. 22",train,2009,2009/MIDI-Unprocessed_21_R1_2009_01-03_ORIG_MID--AUDIO_21_R1_2009_21_R1_2009_03_WAV.midi,794.2513425,204.91751542102315,g minor
+"Andante Spianato et Grande Polonaise Brillante, Op. 22",train,2011,2011/MIDI-Unprocessed_04_R3_2011_MID--AUDIO_R3-D2_06_Track06_wav.midi,802.590009375,204.39445544554542,c minor
+"Andante Spianato et Grande Polonaise Brillante, Op. 22",train,2011,2011/MIDI-Unprocessed_06_R1_2011_MID--AUDIO_R1-D2_17_Track17_wav.midi,761.1397303130002,190.17746595129964,c minor
+"Andante spianato e grande polonaise, Op. 22",train,2017,2017/MIDI-Unprocessed_071_PIANO071_MID--AUDIO-split_07-08-17_Piano-e_1-04_wav--3.midi,829.8474294539999,199.3846153846153,g minor
+"Andante spianato e grande polonaise, Op. 22",train,2017,2017/MIDI-Unprocessed_082_PIANO082_MID--AUDIO-split_07-09-17_Piano-e_2_-04_wav--2.midi,824.448951633,223.7762237762026,c minor
+"Andante spianato et grande polonaise brillante, Op. 22",train,2014,2014/MIDI-UNPROCESSED_04-05_R1_2014_MID--AUDIO_05_R1_2014_wav--7.midi,780.15947625,200.1916007574915,c minor
+"Andante spianato et grande polonaise brillante, Op. 22",train,2015,2015/MIDI-Unprocessed_R2_D1-2-3-6-7-8-11_mid--AUDIO-from_mp3_11_R2_2015_wav--4.midi,826.469791667,206.46557554444385,c minor
+"Andante spianato et grande polonaise brillante, Op. 22",train,2015,2015/MIDI-Unprocessed_R2_D2-19-21-22_mid--AUDIO-from_mp3_22_R2_2015_wav--4.midi,818.453125,205.8017864738396,g minor
+"Andante spianato et grande polonaise brillante, Op. 22",train,2013,2013/ORIG-MIDI_01_7_7_13_Group__MID--AUDIO_14_R1_2013_wav--4.midi,769.0176604689999,204.8387401872707,c minor
+Ballade 4 Op. 52,train,2006,2006/MIDI-Unprocessed_04_R1_2006_01-04_ORIG_MID--AUDIO_04_R1_2006_01_Track01_wav.midi,603.939032813,201.74477055294116,b- minor
+"Ballade No. 1 in G Minor, Op. 23",train,2004,2004/MIDI-Unprocessed_SMF_12_01_2004_01-05_ORIG_MID--AUDIO_12_R1_2004_07_Track07_wav.midi,551.649013656,207.2663958212386,g minor
+"Ballade No. 1 in G Minor, Op. 23",train,2004,2004/MIDI-Unprocessed_SMF_17_R1_2004_01-03_ORIG_MID--AUDIO_17_R1_2004_06_Track06_wav.midi,544.937494994,202.47592847317372,g minor
+"Ballade No. 1 in G Minor, Op. 23",train,2004,2004/MIDI-Unprocessed_SMF_17_R1_2004_03-06_ORIG_MID--AUDIO_20_R2_2004_12_Track12_wav--2.midi,516.9707574290001,206.8800383111173,g minor
+"Ballade No. 1 in G Minor, Op. 23",train,2015,2015/MIDI-Unprocessed_R2_D2-12-13-15_mid--AUDIO-from_mp3_12_R2_2015_wav--5.midi,511.25625,209.1912278251297,g minor
+"Ballade No. 1 in G Minor, Op. 23",train,2013,2013/ORIG-MIDI_02_7_8_13_Group__MID--AUDIO_12_R2_2013_wav--3.midi,590.019442031,206.52990863644456,g minor
+"Ballade No. 1 in G Minor, Op. 23",train,2013,2013/ORIG-MIDI_01_7_10_13_Group_MID--AUDIO_08_R3_2013_wav--3.midi,511.01177531300004,207.96905222437726,g minor
+"Ballade No. 1 in G Minor, Op. 23",train,2011,2011/MIDI-Unprocessed_04_R2_2011_MID--AUDIO_R2-D2_03_Track03_wav.midi,538.139152031,213.9202200825385,g minor
+"Ballade No. 1 in G Minor, Op. 23",train,2011,2011/MIDI-Unprocessed_17_R1_2011_MID--AUDIO_R1-D7_05_Track05_wav.midi,527.426021719,206.9222797927565,g minor
+"Ballade No. 1 in G Minor, Op. 23",train,2011,2011/MIDI-Unprocessed_18_R1_2011_MID--AUDIO_R1-D7_10_Track10_wav.midi,502.698482344,212.25557206538625,g minor
+"Ballade No. 1 in G Minor, Op. 23",train,2017,2017/MIDI-Unprocessed_046_PIANO046_MID--AUDIO-split_07-06-17_Piano-e_2-02_wav--4.midi,558.778244879,223.59128474829976,g minor
+Ballade No. 2 in F Major,train,2008,2008/MIDI-Unprocessed_02_R3_2008_01-03_ORIG_MID--AUDIO_02_R3_2008_wav--2.midi,340.642020469,214.63933989884632,F major
+"Ballade No. 2 in F Major, Op. 38",train,2009,2009/MIDI-Unprocessed_03_R1_2009_03-08_ORIG_MID--AUDIO_03_R1_2009_03_R1_2009_04_WAV.midi,426.929327344,217.01726844582782,F major
+"Ballade No. 2 in F Major, Op. 38",train,2008,2008/MIDI-Unprocessed_15_R1_2008_01-04_ORIG_MID--AUDIO_15_R1_2008_wav--3.midi,411.467270156,178.33138331383395,F major
+"Ballade No. 2 in F Major, Op. 38",train,2017,2017/MIDI-Unprocessed_050_PIANO050_MID--AUDIO-split_07-06-17_Piano-e_3-01_wav--4.midi,459.913344704,162.39075274880025,F major
+"Ballade No. 3 in A-flat Major, Op. 47",train,2008,2008/MIDI-Unprocessed_07_R2_2008_01-05_ORIG_MID--AUDIO_07_R2_2008_wav--4.midi,418.390340156,218.73417721518535,A- major
+"Ballade No. 3 in A-flat Major, Op. 47",train,2011,2011/MIDI-Unprocessed_10_R2_2011_MID--AUDIO_R2-D3_11_Track11_wav.midi,424.21966125,215.9437646446321,A- major
+"Ballade No. 4 in F Minor, Op. 52",train,2008,2008/MIDI-Unprocessed_08_R1_2008_01-05_ORIG_MID--AUDIO_08_R1_2008_wav--4.midi,647.477985,154.39254841519755,f minor
+"Ballade No. 4 in F Minor, Op. 52",train,2008,2008/MIDI-Unprocessed_12_R3_2008_01-04_ORIG_MID--AUDIO_12_R3_2008_wav--2.midi,616.031702344,195.49668874172173,f minor
+"Ballade No. 4 in F Minor, Op. 52",train,2014,2014/MIDI-UNPROCESSED_01-03_R1_2014_MID--AUDIO_03_R1_2014_wav--5.midi,611.620649062,175.2697095435676,f minor
+"Ballade No. 4 in F Minor, Op. 52",train,2013,2013/ORIG-MIDI_02_7_7_13_Group__MID--AUDIO_17_R1_2013_wav--4.midi,657.425891719,158.3400515429854,b- minor
+"Ballade No. 4 in F Minor, Op. 52",train,2011,2011/MIDI-Unprocessed_12_R1_2011_MID--AUDIO_R1-D4_14_Track14_wav.midi,653.658534375,163.05934939160687,f minor
+"Ballade No. 4 in F Minor, Op. 52",train,2017,2017/MIDI-Unprocessed_051_PIANO051_MID--AUDIO-split_07-06-17_Piano-e_3-02_wav--4.midi,641.490446425,164.05421331761892,b- minor
+"Ballade No. 4 in F minor, Op. 52",train,2008,2008/MIDI-Unprocessed_09_R3_2008_01-07_ORIG_MID--AUDIO_09_R3_2008_wav--5.midi,628.508986875,159.36977615525018,b- minor
+Barcarolle in F#,train,2006,2006/MIDI-Unprocessed_13_R1_2006_01-06_ORIG_MID--AUDIO_13_R1_2006_06_Track06_wav.midi,486.925260938,199.4362445899457,F# major
+"Barcarolle in F-sharp Major, Op. 60",train,2013,2013/ORIG-MIDI_03_7_10_13_Group_MID--AUDIO_18_R3_2013_wav--1.midi,499.187535,211.34921646069245,F# major
+"Barcarolle, Op. 60",train,2009,2009/MIDI-Unprocessed_10_R1_2009_03-05_ORIG_MID--AUDIO_10_R1_2009_10_R1_2009_03_WAV.midi,553.574499844,205.0603941512932,F# major
+"Barcarolle, Op. 60",train,2008,2008/MIDI-Unprocessed_08_R3_2008_01-05_ORIG_MID--AUDIO_08_R3_2008_wav--1.midi,476.111970469,206.123260437376,F# major
+"Barcarolle, Op. 60",train,2013,2013/ORIG-MIDI_01_7_10_13_Group_MID--AUDIO_07_R3_2013_wav--3.midi,536.125265156,197.11260827718738,F# major
+"Barcarolle, Op. 60",train,2017,2017/MIDI-Unprocessed_049_PIANO049_MID--AUDIO-split_07-06-17_Piano-e_2-06_wav--5.midi,519.593607825,196.8905061197479,F# major
+"Complete Etudes, Opus 25",train,2004,2004/MIDI-Unprocessed_SMF_17_R1_2004_04_ORIG_MID--AUDIO_17_R1_2004_09_Track09_wav.midi,1203.88854254,235.21994555094057,c# minor
+"Complete Etudes, Opus 25",train,2004,2004/MIDI-Unprocessed_SMF_17_R1_2004_04_ORIG_MID--AUDIO_17_R1_2004_11_Track11_wav.midi,604.44159296,210.12768175106262,C major
+Etude Op. 10 No. 1,train,2015,2015/MIDI-Unprocessed_R1_D1-1-8_mid--AUDIO-from_mp3_03_R1_2015_wav--2.midi,115.228125,204.93358633776012,C major
+Etude Op. 10 No. 1,train,2015,2015/MIDI-Unprocessed_R1_D1-9-12_mid--AUDIO-from_mp3_10_R1_2015_wav--2.midi,115.634375,201.9120458891006,C major
+Etude Op. 10 No. 1,train,2015,2015/MIDI-Unprocessed_R1_D1-9-12_mid--AUDIO-from_mp3_12_R1_2015_wav--4.midi,104.165625,202.7894380501028,C major
+Etude Op. 10 No. 1,train,2015,2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_20_R1_2015_wav--3.midi,116.70208333299999,198.85920144100845,C major
+Etude Op. 10 No. 1,train,2013,2013/ORIG-MIDI_02_7_7_13_Group__MID--AUDIO_19_R1_2013_wav--3.midi,114.585889687,203.29411764705875,C major
+Etude Op. 10 No. 1 in C Major,train,2017,2017/MIDI-Unprocessed_042_PIANO042_MID--AUDIO-split_07-06-17_Piano-e_1-02_wav--2.midi,116.213105767,209.15032679738312,C major
+Etude Op. 10 No. 1 in C Major,train,2017,2017/MIDI-Unprocessed_043_PIANO043_MID--AUDIO-split_07-06-17_Piano-e_1-03_wav--3.midi,121.811368933,191.4727561786386,C major
+Etude Op. 10 No. 1 in C Major,train,2017,2017/MIDI-Unprocessed_059_PIANO059_MID--AUDIO-split_07-07-17_Piano-e_2-03_wav--3.midi,114.474866421,193.77249256767382,C major
+Etude Op. 10 No. 10 in A-flat Major,train,2017,2017/MIDI-Unprocessed_053_PIANO053_MID--AUDIO-split_07-06-17_Piano-e_3-04_wav--2.midi,124.78143985,207.9779917469049,C# major
+Etude Op. 10 No. 2,train,2015,2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_15_R1_2015_wav--2.midi,81.2895833333,207.42382271467883,a minor
+Etude Op. 10 No. 2,train,2013,2013/ORIG-MIDI_02_7_6_13_Group__MID--AUDIO_06_R1_2013_wav--3.midi,70.726425,205.9078080903094,a minor
+Etude Op. 10 No. 2 in A Minor,train,2017,2017/MIDI-Unprocessed_070_PIANO070_MID--AUDIO-split_07-08-17_Piano-e_1-02_wav--2.midi,79.48679,195.12195121951174,a minor
+Etude Op. 10 No. 4,train,2013,2013/ORIG-MIDI_02_7_6_13_Group__MID--AUDIO_08_R1_2013_wav--3.midi,119.150521875,203.69664318275792,c# minor
+Etude Op. 10 No. 4,train,2013,2013/ORIG-MIDI_01_7_7_13_Group__MID--AUDIO_14_R1_2013_wav--3.midi,111.881565469,206.9643328930024,c# minor
+Etude Op. 10 No. 4 in C-Sharp Minor,train,2011,2011/MIDI-Unprocessed_01_R1_2011_MID--AUDIO_R1-D1_05_Track05_wav.midi,122.391704531,198.13267813267768,c# minor
+Etude Op. 10 No. 4 in C-Sharp Minor,train,2011,2011/MIDI-Unprocessed_18_R1_2011_MID--AUDIO_R1-D7_09_Track09_wav.midi,113.671093594,220.93150684931618,c# minor
+Etude Op. 10 No. 4 in C-Sharp Minor,train,2011,2011/MIDI-Unprocessed_21_R1_2011_MID--AUDIO_R1-D8_09_Track09_wav.midi,123.15292171899999,221.00719424460755,c# minor
+Etude Op. 10 No. 4 in C-sharp Minor,train,2008,2008/MIDI-Unprocessed_03_R1_2008_01-04_ORIG_MID--AUDIO_03_R1_2008_wav--3.midi,124.61526,199.48051948051886,c# minor
+Etude Op. 10 No. 4 in C-sharp Minor,train,2017,2017/MIDI-Unprocessed_044_PIANO044_MID--AUDIO-split_07-06-17_Piano-e_1-04_wav--3.midi,123.041063763,193.8242280285036,c# minor
+Etude Op. 10 No. 4 in C-sharp Minor,train,2017,2017/MIDI-Unprocessed_049_PIANO049_MID--AUDIO-split_07-06-17_Piano-e_2-06_wav--3.midi,115.37657140399999,204.57774269928726,c# minor
+Etude Op. 10 No. 4 in C-sharp Minor,train,2017,2017/MIDI-Unprocessed_067_PIANO067_MID--AUDIO-split_07-07-17_Piano-e_3-03_wav--3.midi,112.612696058,207.16940414819013,c# minor
+Etude Op. 10 No. 8,train,2015,2015/MIDI-Unprocessed_R1_D1-9-12_mid--AUDIO-from_mp3_09_R1_2015_wav--3.midi,138.896875,203.50480497455632,F major
+Etude Op. 10 No. 8,train,2013,2013/ORIG-MIDI_02_7_7_13_Group__MID--AUDIO_17_R1_2013_wav--3.midi,125.043945469,209.1376701966746,F major
+Etude Op. 10 No. 8 in F Major,train,2008,2008/MIDI-Unprocessed_15_R1_2008_01-04_ORIG_MID--AUDIO_15_R1_2008_wav--4.midi,135.18148875,214.1121805509473,F major
+Etude Op. 10 No. 8 in F Major,train,2011,2011/MIDI-Unprocessed_04_R1_2011_MID--AUDIO_R1-D2_04_Track04_wav.midi,131.45686640600002,207.71151178918151,F major
+Etude Op. 10 No. 8 in F Major,train,2011,2011/MIDI-Unprocessed_19_R1_2011_MID--AUDIO_R1-D7_14_Track14_wav.midi,149.950437656,217.35849056603297,F major
+Etude Op. 25 No. 1,train,2015,2015/MIDI-Unprocessed_R1_D1-1-8_mid--AUDIO-from_mp3_07_R1_2015_wav--3.midi,137.86875,220.05730659025573,A- major
+Etude Op. 25 No. 1,train,2013,2013/ORIG-MIDI_03_7_6_13_Group__MID--AUDIO_10_R1_2013_wav--3.midi,136.072246406,221.33577310155448,A- major
+Etude Op. 25 No. 1 in A-flat Major,train,2017,2017/MIDI-Unprocessed_056_PIANO056_MID--AUDIO-split_07-07-17_Piano-e_1-05_wav--2.midi,147.718293271,216.82242990654427,A- major
+Etude Op. 25 No. 1 in A-flat Major,train,2017,2017/MIDI-Unprocessed_057_PIANO057_MID--AUDIO-split_07-07-17_Piano-e_1-07_wav--4.midi,143.456562017,215.05207309884028,A- major
+Etude Op. 25 No. 10,train,2013,2013/ORIG-MIDI_02_7_7_13_Group__MID--AUDIO_18_R1_2013_wav--5.midi,250.193392969,212.18328840970452,B major
+Etude Op. 25 No. 10 in B Minor,train,2011,2011/MIDI-Unprocessed_20_R1_2011_MID--AUDIO_R1-D8_03_Track03_wav.midi,243.747085312,206.32835820895482,B major
+Etude Op. 25 No. 10 in B Minor,train,2011,2011/MIDI-Unprocessed_22_R1_2011_MID--AUDIO_R1-D8_11_Track11_wav.midi,237.826952344,212.59515570934317,B major
+Etude Op. 25 No. 10 in B Minor,train,2017,2017/MIDI-Unprocessed_041_PIANO041_MID--AUDIO-split_07-06-17_Piano-e_1-01_wav--3.midi,237.363153154,212.46926081295976,B major
+Etude Op. 25 No. 11,train,2015,2015/MIDI-Unprocessed_R1_D1-1-8_mid--AUDIO-from_mp3_08_R1_2015_wav--3.midi,217.53645833299998,204.93358633776427,a minor
+Etude Op. 25 No. 11,train,2015,2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_18_R1_2015_wav--2.midi,210.821875,200.5909666525948,a minor
+Etude Op. 25 No. 11,train,2013,2013/ORIG-MIDI_02_7_8_13_Group__MID--AUDIO_08_R2_2013_wav--2.midi,193.874004844,217.7693761814688,a minor
+Etude Op. 25 No. 11 in A Minor,train,2008,2008/MIDI-Unprocessed_11_R1_2008_01-04_ORIG_MID--AUDIO_11_R1_2008_wav--4.midi,238.691000625,212.08368200837268,a minor
+Etude Op. 25 No. 11 in A Minor,train,2011,2011/MIDI-Unprocessed_11_R1_2011_MID--AUDIO_R1-D4_09_Track09_wav.midi,200.596754531,211.4880847308023,a minor
+Etude Op. 25 No. 11 in A Minor,train,2011,2011/MIDI-Unprocessed_13_R1_2011_MID--AUDIO_R1-D5_03_Track03_wav.midi,221.514201563,208.74292185730644,a minor
+Etude Op. 25 No. 11 in A Minor,train,2011,2011/MIDI-Unprocessed_16_R1_2011_MID--AUDIO_R1-D6_13_Track13_wav.midi,213.302404219,204.77064220183263,a minor
+Etude Op. 25 No. 11 in A Minor,train,2011,2011/MIDI-Unprocessed_17_R1_2011_MID--AUDIO_R1-D7_04_Track04_wav.midi,193.44131296900002,213.80846325166956,a minor
+Etude Op. 25 No. 11 in A Minor,train,2017,2017/MIDI-Unprocessed_051_PIANO051_MID--AUDIO-split_07-06-17_Piano-e_3-02_wav--3.midi,219.96473413299998,190.1560624249802,a minor
+Etude Op. 25 No. 12,train,2015,2015/MIDI-Unprocessed_R1_D1-1-8_mid--AUDIO-from_mp3_04_R1_2015_wav--4.midi,136.69270833299998,213.07028360049344,c minor
+Etude Op. 25 No. 12,train,2015,2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_14_R1_2015_wav--4.midi,156.28125,221.46439317953903,c minor
+Etude Op. 25 No. 12 in C Minor,train,2011,2011/MIDI-Unprocessed_09_R1_2011_MID--AUDIO_R1-D3_14_Track14_wav.midi,137.845748906,220.6368206847012,c minor
+Etude Op. 25 No. 5 in E Minor,train,2008,2008/MIDI-Unprocessed_09_R2_2008_01-05_ORIG_MID--AUDIO_09_R2_2008_wav--2.midi,181.853450625,213.85587211550862,E major
+Etude Op. 25 No. 6,train,2015,2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_19_R1_2015_wav--3.midi,127.005208333,201.7052375152265,g# minor
+Etude Op. 25 No. 6,train,2013,2013/ORIG-MIDI_01_7_6_13_Group__MID--AUDIO_03_R1_2013_wav--3.midi,120.675627187,199.59970126960343,g# minor
+Etude Op. 25 No. 6 in G-sharp Minor,train,2011,2011/MIDI-Unprocessed_03_R1_2011_MID--AUDIO_R1-D1_17_Track17_wav.midi,116.065589062,207.78028284484586,c# minor
+Etude Op. 25 No. 6 in G-sharp Minor,train,2011,2011/MIDI-Unprocessed_06_R1_2011_MID--AUDIO_R1-D2_16_Track16_wav.midi,110.45528484399999,209.31359353970402,g# minor
+"Etude in A Minor, Op. 25, No. 11",train,2014,2014/MIDI-UNPROCESSED_16-18_R1_2014_MID--AUDIO_18_R1_2014_wav--4.midi,221.73722484400002,201.76490400808171,a minor
+"Etude in F Major, Op. 10, No. 8",train,2014,2014/MIDI-UNPROCESSED_16-18_R1_2014_MID--AUDIO_18_R1_2014_wav--3.midi,150.433877344,207.56756756757028,F major
+Etudes Op. 10 Nos. 8,train,2011,2011/MIDI-Unprocessed_24_R1_2011_MID--AUDIO_R1-D9_10_Track10_wav.midi,143.59761281299998,208.46186988367145,F major
+Etudes Op. 25 Nos. 1-5,train,2013,2013/ORIG-MIDI_01_7_8_13_Group__MID--AUDIO_03_R2_2013_wav--1.midi,656.746138125,211.2270803949214,A- major
+Mazurka Op. 50 No. 3 in C-sharp Minor,train,2013,2013/ORIG-MIDI_01_7_7_13_Group__MID--AUDIO_11_R1_2013_wav--3.midi,265.483174688,203.318037416166,c# minor
+"Mazurka in C-sharp Minor, Op. 50 No. 3",train,2013,2013/ORIG-MIDI_02_7_7_13_Group__MID--AUDIO_16_R1_2013_wav--3.midi,235.21477546900002,183.9361332870526,c# minor
+"Nocturne in C-Sharp Minor, Op. Posth.",train,2014,2014/MIDI-UNPROCESSED_04-05_R1_2014_MID--AUDIO_05_R1_2014_wav--6.midi,230.862482812,174.6434587310496,c# minor
+"Preludes, Book II, L 123, VI. Général Lavine - eccentric",train,2015,2015/MIDI-Unprocessed_R1_D1-1-8_mid--AUDIO-from_mp3_02_R1_2015_wav--5.midi,151.232291667,201.9281332164759,g minor
+"Preludes, Op.28",train,2009,2009/MIDI-Unprocessed_17_R1_2009_04_ORIG_MID--AUDIO_17_R1_2009_17_R1_2009_04_WAV.midi,2622.72440719,171.45692078716118,c# minor
+"Scherzo No. 2 in B-Flat Minor, Op.31",train,2014,2014/MIDI-UNPROCESSED_06-08_R1_2014_MID--AUDIO_07_R1_2014_wav--3.midi,578.37549,206.53927813163585,c# minor
+"Scherzo No. 2 in B-flat Major, Op. 31",train,2015,2015/MIDI-Unprocessed_R1_D1-1-8_mid--AUDIO-from_mp3_07_R1_2015_wav--4.midi,581.9885416669999,209.57178841308902,C# major
+"Scherzo No. 2 in B-flat Major, Op. 31",train,2017,2017/MIDI-Unprocessed_056_PIANO056_MID--AUDIO-split_07-07-17_Piano-e_1-05_wav--4.midi,558.0485476,207.49833222147296,C# major
+"Scherzo No. 2 in B-flat Major, Op. 31",train,2017,2017/MIDI-Unprocessed_057_PIANO057_MID--AUDIO-split_07-07-17_Piano-e_1-07_wav--5.midi,581.174502658,202.89933613332317,c# minor
+"Scherzo No. 2 in B-flat Minor, Op. 31",train,2008,2008/MIDI-Unprocessed_10_R1_2008_01-04_ORIG_MID--AUDIO_10_R1_2008_wav--3.midi,549.705646875,206.3360573155711,c# minor
+"Scherzo No. 2 in B-flat Minor, Op. 31",train,2015,2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_16_R1_2015_wav--4.midi,533.733333333,195.07789568751065,c# minor
+"Scherzo No. 2 in B-flat Minor, Op. 31",train,2015,2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_20_R1_2015_wav--4.midi,622.2833333330001,202.55538623842514,C# major
+"Scherzo No. 2 in B-flat Minor, Op. 31",train,2015,2015/MIDI-Unprocessed_R2_D1-2-3-6-7-8-11_mid--AUDIO-from_mp3_06_R2_2015_wav--4.midi,536.088541667,202.3945861530468,C# major
+"Scherzo No. 2 in B-flat Minor, Op. 31",train,2015,2015/MIDI-Unprocessed_R2_D2-19-21-22_mid--AUDIO-from_mp3_22_R2_2015_wav--3.midi,580.788541667,186.91510520255096,c# minor
+"Scherzo No. 2 in B-flat Minor, Op. 31",train,2017,2017/MIDI-Unprocessed_062_PIANO062_MID--AUDIO-split_07-07-17_Piano-e_2-07_wav--4.midi,577.134992537,205.5831739961809,C# major
+"Scherzo No. 2 in B-flat Minor, Op.31",train,2009,2009/MIDI-Unprocessed_06_R1_2009_03-07_ORIG_MID--AUDIO_06_R1_2009_06_R1_2009_07_WAV.midi,565.314605625,200.4723430702351,f# minor
+Scherzo No. 3,train,2006,2006/MIDI-Unprocessed_01_R1_2006_01-09_ORIG_MID--AUDIO_01_R1_2006_05_Track05_wav.midi,433.202024063,198.9174829819042,c# minor
+"Scherzo No. 3 in C-sharp Minor, Op. 39",train,2015,2015/MIDI-Unprocessed_R1_D1-1-8_mid--AUDIO-from_mp3_05_R1_2015_wav--5.midi,418.92916666699995,194.06505118569618,c# minor
+"Scherzo No. 4  in E Major, Op. 54",train,2011,2011/MIDI-Unprocessed_23_R1_2011_MID--AUDIO_R1-D9_04_Track04_wav.midi,688.7199309380002,194.78260869565048,E major
+"Scherzo No. 4 in E Major, Op. 54",train,2004,2004/MIDI-Unprocessed_XP_10_R1_2004_03-04_ORIG_MID--AUDIO_10_R1_2004_03_Track03_wav.midi,637.803674029,199.45799457994445,E major
+"Scherzo No. 4 in E Major, Op. 54",train,2009,2009/MIDI-Unprocessed_16_R1_2009_01-02_ORIG_MID--AUDIO_16_R1_2009_16_R1_2009_02_WAV.midi,691.635259219,197.0132844709129,E major
+"Scherzo No. 4 in E Major, Op. 54",train,2008,2008/MIDI-Unprocessed_08_R2_2008_01-04_ORIG_MID--AUDIO_08_R2_2008_wav--1.midi,623.886929531,198.72776280323603,E major
+"Scherzo No. 4 in E Major, Op. 54",train,2014,2014/MIDI-UNPROCESSED_06-08_R1_2014_MID--AUDIO_07_R1_2014_wav--4.midi,624.909898594,204.75863461926673,E major
+"Scherzo No. 4 in E Major, Op. 54",train,2015,2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_15_R1_2015_wav--5.midi,665.485416667,192.4276169265066,E major
+"Scherzo No. 4 in E Major, Op. 54",train,2013,2013/ORIG-MIDI_03_7_6_13_Group__MID--AUDIO_09_R1_2013_wav--4.midi,650.51217,191.92730026505112,E major
+"Scherzo No. 4 in E Major, Op. 54",train,2017,2017/MIDI-Unprocessed_041_PIANO041_MID--AUDIO-split_07-06-17_Piano-e_1-01_wav--4.midi,656.379262358,192.61529887140625,E major
+"Scherzo No. 4 in E Major, Op. 54",train,2017,2017/MIDI-Unprocessed_044_PIANO044_MID--AUDIO-split_07-06-17_Piano-e_1-04_wav--4.midi,631.082377767,206.8965517241382,E major
+"Scherzo No. 4 in E Major, Op. 54",train,2017,2017/MIDI-Unprocessed_048_PIANO048_MID--AUDIO-split_07-06-17_Piano-e_2-05_wav--4.midi,624.929630137,198.95444361464038,E major
+"Scherzo No. 4 in E Major, Op. 54",train,2017,2017/MIDI-Unprocessed_053_PIANO053_MID--AUDIO-split_07-06-17_Piano-e_3-04_wav--4.midi,655.006405837,182.81249999999957,E major
+Sonata 3 Op. 58,train,2006,2006/MIDI-Unprocessed_07_R1_2006_01-04_ORIG_MID--AUDIO_07_R1_2006_03_Track03_wav.midi,1442.79636703,206.56115634433567,B major
+Sonata No. 3,train,2006,2006/MIDI-Unprocessed_20_R1_2006_01-04_ORIG_MID--AUDIO_20_R1_2006_04_Track04_wav.midi,1611.38460656,201.69979937990772,B major
+"Sonata No. 3 in B Minor, Op. 58",train,2004,2004/MIDI-Unprocessed_XP_09_R1_2004_05_ORIG_MID--AUDIO_09_R1_2004_06_Track06_wav.midi,493.14277599400003,209.51938704434428,b minor
+"Sonata No. 3 in B Minor, Op. 58",train,2004,2004/MIDI-Unprocessed_XP_09_R1_2004_05_ORIG_MID--AUDIO_09_R1_2004_07_Track07_wav.midi,154.986722275,197.55344689607867,E major
+"Sonata No. 3 in B Minor, Op. 58",train,2004,2004/MIDI-Unprocessed_XP_09_R1_2004_05_ORIG_MID--AUDIO_09_R1_2004_08_Track08_wav.midi,768.1355545060001,201.28369704749144,B major
+"Sonata No. 3 in B Minor, Op. 58",train,2018,2018/MIDI-Unprocessed_Recital13-15_MID--AUDIO_13_R1_2018_wav--3.midi,1639.91556094,201.19481599556354,B major
+"Sonata No. 3 in B Minor, Op. 58",train,2018,2018/MIDI-Unprocessed_Chamber5_MID--AUDIO_18_R3_2018_wav--1.midi,1607.37152297,201.68307967770372,B major
+"Sonata No. 3 in B Minor, Op. 58 (Complete)",train,2014,2014/MIDI-UNPROCESSED_06-08_R1_2014_MID--AUDIO_06_R1_2014_wav--2.midi,1551.77061703,207.72683675427018,B major
+"Sonata No. 3 in B Minor, Op. 58 (Complete)",train,2014,2014/MIDI-UNPROCESSED_21-22_R1_2014_MID--AUDIO_22_R1_2014_wav--5.midi,1458.97557094,204.19497784342903,E major
+"Sonata No. 3 in B Minor, Op. 58, 1st mov.",train,2013,2013/ORIG-MIDI_03_7_8_13_Group__MID--AUDIO_18_R2_2013_wav--4.midi,528.9951975,210.59794337945797,b minor
+"Sonata No. 3 in B Minor, Op. 58, I. Allegro maestoso",train,2017,2017/MIDI-Unprocessed_052_PIANO052_MID--AUDIO-split_07-06-17_Piano-e_3-03_wav--5.midi,507.502855104,214.69090909089883,b minor
+"Sonata in B Minor, Op. 58",train,2004,2004/MIDI-Unprocessed_XP_18_R1_2004_04_ORIG_MID--AUDIO_18_R1_2004_07_Track07_wav.midi,1442.05450661,200.1737619461332,B major
+"Two Preludes from Op. 28, Nos. 15 and 24",train,2011,2011/MIDI-Unprocessed_11_R1_2011_MID--AUDIO_R1-D4_10_Track10_wav.midi,282.30741,177.74349083895817,C# major
+"Two Preludes from Op. 28, Nos. 15 and 24",train,2011,2011/MIDI-Unprocessed_11_R1_2011_MID--AUDIO_R1-D4_11_Track11_wav.midi,117.120609375,224.71197805547214,d minor
+Suite Op. 10,train,2006,2006/MIDI-Unprocessed_06_R1_2006_01-04_ORIG_MID--AUDIO_06_R1_2006_04_Track04_wav.midi,1364.70483188,211.00741386832829,D major
+Chaconne in G,train,2009,2009/MIDI-Unprocessed_18_R1_2009_01-03_ORIG_MID--AUDIO_18_R1_2009_18_R1_2009_01_WAV.midi,329.032790625,202.59397669817497,G major
+"Chaconne in G Major, HWV 435",train,2018,2018/MIDI-Unprocessed_Recital1-3_MID--AUDIO_01_R1_2018_wav--1.midi,328.904585625,206.78459937565037,G major
+"Suite No. 2 in F Major, HWV 427 (Complete)",train,2017,2017/MIDI-Unprocessed_079_PIANO079_MID--AUDIO-split_07-09-17_Piano-e_1-04_wav--1.midi,453.091796933,209.44608298654697,d minor
+Suite No. 3 in D Minor,train,2004,2004/MIDI-Unprocessed_XP_08_R1_2004_01-02_ORIG_MID--AUDIO_08_R1_2004_01_Track01_wav.midi,720.089756071,208.89702212610104,d minor
+Suite No. 3 in D Minor,train,2009,2009/MIDI-Unprocessed_12_R1_2009_01-02_ORIG_MID--AUDIO_12_R1_2009_12_R1_2009_01_WAV.midi,856.080874687,226.14015065053496,d minor
+"Sonatina No. 6, BV284 “Fantasia da Camera super Carmen”",train,2014,2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_12_R1_2014_wav--2.midi,524.5974989059999,207.28027681660961,C# major
+"Chanson Boheme de l'Opera ""Carmen"" by Georges Bizet",train,2017,2017/MIDI-Unprocessed_058_PIANO058_MID--AUDIO-split_07-07-17_Piano-e_2-02_wav--5.midi,336.530402275,208.58369098711879,E major
+Carmen Variations,train,2017,2017/MIDI-Unprocessed_051_PIANO051_MID--AUDIO-split_07-06-17_Piano-e_3-02_wav--5.midi,231.48711357099998,221.85844968704947,E major
+Rigoletto Parap.,train,2006,2006/MIDI-Unprocessed_15_R1_2006_01-05_ORIG_MID--AUDIO_15_R1_2006_04_Track04_wav.midi,423.49049531300005,197.87782241307738,C# major
+"Suite in C Major, Z. 666 (Complete)",train,2014,2014/MIDI-UNPROCESSED_21-22_R1_2014_MID--AUDIO_21_R1_2014_wav--7.midi,538.800209063,172.9563967417318,C major
+Asturias,train,2009,2009/MIDI-Unprocessed_03_R1_2009_03-08_ORIG_MID--AUDIO_03_R1_2009_03_R1_2009_06_WAV.midi,308.694937031,213.14664333041583,g minor
+"Evocacion from ""Iberia""",train,2009,2009/MIDI-Unprocessed_14_R1_2009_01-05_ORIG_MID--AUDIO_14_R1_2009_14_R1_2009_02_WAV.midi,316.343166563,200.59202507400173,g# minor
+Iberia Book II,train,2006,2006/MIDI-Unprocessed_05_R1_2006_01-05_ORIG_MID--AUDIO_05_R1_2006_03_Track03_wav.midi,1245.62375438,195.7668623800662,C major
+"Iberia, Evocation, Triana",train,2004,2004/MIDI-Unprocessed_XP_04_R1_2004_03-05_ORIG_MID--AUDIO_04_R1_2004_04_Track04_wav.midi,361.027781119,197.28440366972347,g# minor
+"Iberia, Evocation, Triana",train,2004,2004/MIDI-Unprocessed_XP_04_R1_2004_03-05_ORIG_MID--AUDIO_04_R1_2004_05_Track05_wav.midi,291.849566392,214.60074514147684,f# minor
+Navarra,train,2009,2009/MIDI-Unprocessed_03_R1_2009_03-08_ORIG_MID--AUDIO_03_R1_2009_03_R1_2009_08_WAV.midi,336.871992188,199.44454463480315,A- major
+Triana from 'Iberia',train,2004,2004/MIDI-Unprocessed_SMF_17_R1_2004_03-06_ORIG_MID--AUDIO_20_R2_2004_08_Track08_wav.midi,259.816541231,215.0807034449524,f# minor
+Tango,train,2009,2009/MIDI-Unprocessed_03_R1_2009_03-08_ORIG_MID--AUDIO_03_R1_2009_03_R1_2009_07_WAV.midi,171.362008125,189.57761930883237,D major
+RameauSelections,train,2006,2006/MIDI-Unprocessed_11_R1_2006_01-06_ORIG_MID--AUDIO_11_R1_2006_01_Track01_wav.midi,334.854098906,208.21439700841853,d minor
+12 Variations on a Theme from a Menuet by Fischer,train,2004,2004/MIDI-Unprocessed_XP_11_R1_2004_01-02_ORIG_MID--AUDIO_11_R1_2004_01_Track01_wav.midi,688.3986102439999,214.1107871720105,C major
+Chaconne in F Minor,train,2008,2008/MIDI-Unprocessed_06_R2_2008_01-05_ORIG_MID--AUDIO_06_R2_2008_wav--1.midi,172.9699125,187.1480144404301,f minor
+"Chromatic Fantasy and Fugue in D Minor, BWV 903",train,2018,2018/MIDI-Unprocessed_Recital17-19_MID--AUDIO_19_R1_2018_wav--1.midi,636.4563614059999,212.00131449227763,d minor
+"Chromatic Fantasy and Fugue in D Minor, BWV 903",train,2014,2014/MIDI-UNPROCESSED_04-05_R1_2014_MID--AUDIO_05_R1_2014_wav--1.midi,738.034785469,194.32602361600883,d minor
+"Chromatic Fantasy and Fugue in D Minor, BWV 903",train,2015,2015/MIDI-Unprocessed_R2_D2-19-21-22_mid--AUDIO-from_mp3_19_R2_2015_wav--1.midi,711.303125,209.0557505801126,d minor
+"Duet in E Minor, BWV 802",train,2009,2009/MIDI-Unprocessed_06_R1_2009_03-07_ORIG_MID--AUDIO_06_R1_2009_06_R1_2009_03_WAV.midi,131.83480406299998,216.77149577489325,e minor
+"Duet in G, BWV 804",train,2009,2009/MIDI-Unprocessed_06_R1_2009_03-07_ORIG_MID--AUDIO_06_R1_2009_06_R1_2009_04_WAV.midi,125.185505156,234.59932797067586,G major
+"English Suite No. 2  in A Minor, BWV 807, I. Prelude",train,2015,2015/MIDI-Unprocessed_R1_D1-1-8_mid--AUDIO-from_mp3_08_R1_2015_wav--1.midi,285.801041667,218.01960121662708,a minor
+"English Suite in A Minor, BWV 807",train,2018,2018/MIDI-Unprocessed_Recital5-7_MID--AUDIO_06_R1_2018_wav--1.midi,1324.77832266,203.79933448465118,a minor
+"English Suite in A Minor, BWV 807",train,2013,2013/ORIG-MIDI_01_7_10_13_Group_MID--AUDIO_08_R3_2013_wav--2.midi,821.342661563,223.2527012896519,a minor
+"English Suite no. 3 in G Minor, Prelude",train,2008,2008/MIDI-Unprocessed_08_R1_2008_01-05_ORIG_MID--AUDIO_08_R1_2008_wav--1.midi,168.862010625,234.8684722042249,g minor
+French Suite No. 5 in G Major,train,2004,2004/MIDI-Unprocessed_SMF_02_R1_2004_01-05_ORIG_MID--AUDIO_02_R1_2004_05_Track05_wav.midi,968.2567590189999,198.2591428098644,G major
+French Suite No. 5 in G Major,train,2004,2004/MIDI-Unprocessed_SMF_22_R1_2004_01-04_ORIG_MID--AUDIO_22_R1_2004_03_Track03_wav.midi,792.5200979560001,202.03917838352243,G major
+French Suite No. 5 in G Major,train,2004,2004/MIDI-Unprocessed_SMF_22_R1_2004_01-04_ORIG_MID--AUDIO_22_R1_2004_05_Track05_wav.midi,130.60752069,232.97283038776084,G major
+"Italian Concerto in F Major, BWV 971 (Complete)",train,2014,2014/MIDI-UNPROCESSED_16-18_R1_2014_MID--AUDIO_18_R1_2014_wav--1.midi,784.8589907810001,228.85120898966932,d minor
+"Italian Concerto, BWV 971",train,2018,2018/MIDI-Unprocessed_Recital13-15_MID--AUDIO_14_R1_2018_wav--1.midi,732.7890642189999,233.2342388518726,d minor
+"Italian Concerto, BWV 971 (Complete)",train,2015,2015/MIDI-Unprocessed_R2_D1-2-3-6-7-8-11_mid--AUDIO-from_mp3_07_R2_2015_wav--1.midi,771.034375,238.40034401204747,d minor
+"Partita No. 1 in B-Flat Major, BWV 825 (Complete)",train,2014,2014/MIDI-UNPROCESSED_14-15_R1_2014_MID--AUDIO_14_R1_2014_wav--1.midi,951.542851875,197.4746077273475,B- major
+"Partita No. 2 in C Minor, I. Sinfonia",train,2013,2013/ORIG-MIDI_02_7_8_13_Group__MID--AUDIO_12_R2_2013_wav--1.midi,265.774306875,238.37644249899827,c minor
+"Partita No. 4 in D Major, BWV 828",train,2018,2018/MIDI-Unprocessed_Chamber4_MID--AUDIO_11_R3_2018_wav--1.midi,1091.69094891,210.76740640352418,D major
+Partita No. 6 in E Minor,train,2009,2009/MIDI-Unprocessed_10_R1_2009_01-02_ORIG_MID--AUDIO_10_R1_2009_10_R1_2009_01_WAV.midi,1286.67739922,204.5792377681116,e minor
+"Partita in C Minor, BWV 826",train,2014,2014/MIDI-UNPROCESSED_06-08_R1_2014_MID--AUDIO_07_R1_2014_wav--2.midi,1133.65805437,224.5200858632357,c minor
+Prelude & Fugue,train,2006,2006/MIDI-Unprocessed_17_R1_2006_01-06_ORIG_MID--AUDIO_17_R1_2006_01_Track01_wav.midi,452.432774063,227.3378977043956,E major
+Prelude & Fugue,train,2006,2006/MIDI-Unprocessed_19_R1_2006_01-07_ORIG_MID--AUDIO_19_R1_2006_01_Track01_wav.midi,290.666108906,208.98714392837482,C major
+"Prelude & Fugue in B flat minor, Book I, BWV 867",train,2013,2013/ORIG-MIDI_01_7_6_13_Group__MID--AUDIO_02_R1_2013_wav--1.midi,323.019174844,150.10629786261387,b- minor
+"Prelude & Fugue in G Minor, WTK II",train,2004,2004/MIDI-Unprocessed_SMF_17_R1_2004_01-02_ORIG_MID--AUDIO_20_R2_2004_02_Track02_wav.midi,311.725576133,223.08663803991016,g minor
+"Prelude and Fugue in A Major, WTC I, BWV 864",train,2015,2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_16_R1_2015_wav--1.midi,211.63541666700002,211.79749187180767,A major
+"Prelude and Fugue in A Major, WTC II, BWV 888",train,2015,2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_13_R1_2015_wav--1.midi,173.611458333,238.71953792346923,A major
+"Prelude and Fugue in A Minor, WTC I, BWV 865",train,2011,2011/MIDI-Unprocessed_19_R1_2011_MID--AUDIO_R1-D7_12_Track12_wav.midi,316.24968375,199.87165775401024,a minor
+"Prelude and Fugue in A Minor, WTC I, BWV 865",train,2011,2011/MIDI-Unprocessed_25_R1_2011_MID--AUDIO_R1-D9_14_Track14_wav.midi,303.235540781,200.97798280561923,a minor
+"Prelude and Fugue in A Minor, WTC I, BWV 865",train,2017,2017/MIDI-Unprocessed_067_PIANO067_MID--AUDIO-split_07-07-17_Piano-e_3-03_wav--1.midi,309.229254,199.98541189514071,a minor
+"Prelude and Fugue in A Minor, WTC II,  BWV 889",train,2011,2011/MIDI-Unprocessed_06_R1_2011_MID--AUDIO_R1-D2_14_Track14_wav.midi,241.37796375,210.2878539667677,a minor
+"Prelude and Fugue in A Minor, WTC II, BWV 847",train,2013,2013/ORIG-MIDI_03_7_6_13_Group__MID--AUDIO_09_R1_2013_wav--1.midi,220.77301640599998,211.43676512761544,a minor
+"Prelude and Fugue in A Minor, WTC II, BWV 889",train,2015,2015/MIDI-Unprocessed_R1_D1-9-12_mid--AUDIO-from_mp3_12_R1_2015_wav--1.midi,236.185416667,221.34927412468068,a minor
+"Prelude and Fugue in A Minor, WTC II, BWV 889",train,2011,2011/MIDI-Unprocessed_15_R1_2011_MID--AUDIO_R1-D6_07_Track07_wav.midi,244.37342015599998,210.74777040933026,a minor
+"Prelude and Fugue in A Minor, WTC II, BWV 889",train,2017,2017/MIDI-Unprocessed_052_PIANO052_MID--AUDIO-split_07-06-17_Piano-e_3-03_wav--2.midi,241.077878542,227.57803239825958,a minor
+"Prelude and Fugue in A Minor, WTC II, BWV 889",train,2017,2017/MIDI-Unprocessed_054_PIANO054_MID--AUDIO-split_07-07-17_Piano-e_1-02_wav--1.midi,225.74034685799998,213.77112168711122,a minor
+"Prelude and Fugue in A Minor, WTC II, BWV 889",train,2017,2017/MIDI-Unprocessed_062_PIANO062_MID--AUDIO-split_07-07-17_Piano-e_2-07_wav--2.midi,215.636763887,216.04154645124228,a minor
+"Prelude and Fugue in B Major, WTC II, BWV 892",train,2011,2011/MIDI-Unprocessed_09_R1_2011_MID--AUDIO_R1-D3_12_Track12_wav.midi,347.649225,219.59027266028008,g# minor
+"Prelude and Fugue in B Major, WTC II, BWV 892",train,2017,2017/MIDI-Unprocessed_055_PIANO055_MID--AUDIO-split_07-07-17_Piano-e_1-04_wav--1.midi,347.093384704,226.18726224076462,g# minor
+"Prelude and Fugue in B Minor, WTC II",train,2008,2008/MIDI-Unprocessed_06_R1_2008_01-04_ORIG_MID--AUDIO_06_R1_2008_wav--1.midi,223.90068421900003,224.68654221231654,b minor
+"Prelude and Fugue in B Minor, WTC II",train,2008,2008/MIDI-Unprocessed_09_R1_2008_01-05_ORIG_MID--AUDIO_09_R1_2008_wav--1.midi,224.95036265599998,226.55928076418786,b minor
+"Prelude and Fugue in B Minor, WTC II, BWV 893",train,2013,2013/ORIG-MIDI_03_7_6_13_Group__MID--AUDIO_10_R1_2013_wav--1.midi,254.6792325,208.62366333218307,b minor
+"Prelude and Fugue in B-flat Minor, WTC I, BWV 867",train,2015,2015/MIDI-Unprocessed_R1_D2-21-22_mid--AUDIO-from_mp3_22_R1_2015_wav--1.midi,313.167708333,159.5567867035931,b- minor
+"Prelude and Fugue in B-flat Minor, WTC I, BWV 867",train,2013,2013/ORIG-MIDI_02_7_7_13_Group__MID--AUDIO_15_R1_2013_wav--1.midi,316.22831625,148.95405218194662,b- minor
+"Prelude and Fugue in B-flat Minor, WTC I, BWV 867",train,2013,2013/ORIG-MIDI_02_7_7_13_Group__MID--AUDIO_18_R1_2013_wav--1.midi,352.80947625,143.74085182963586,b- minor
+"Prelude and Fugue in B-flat Minor, WTC I, BWV 867",train,2011,2011/MIDI-Unprocessed_16_R1_2011_MID--AUDIO_R1-D6_12_Track12_wav.midi,337.989779531,147.2566371681404,b- minor
+"Prelude and Fugue in C Major, WTC  II, BWV 870",train,2015,2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_17_R1_2015_wav--1.midi,233.179166667,232.2775770814081,C major
+"Prelude and Fugue in C Major, WTC II, BWV 846",train,2014,2014/MIDI-UNPROCESSED_16-18_R1_2014_MID--AUDIO_16_R1_2014_wav--1.midi,239.887580625,229.42811700435618,C major
+"Prelude and Fugue in C Major, WTC II, BWV 870",train,2015,2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_20_R1_2015_wav--1.midi,258.54375,222.19863656774302,C major
+"Prelude and Fugue in C Minor, WTC II, BWV 871",train,2011,2011/MIDI-Unprocessed_21_R1_2011_MID--AUDIO_R1-D8_07_Track07_wav.midi,238.729729219,182.12503849707412,c minor
+"Prelude and Fugue in C sharp major, WTC I, BWV 848",train,2011,2011/MIDI-Unprocessed_24_R1_2011_MID--AUDIO_R1-D9_08_Track08_wav.midi,202.54920984400002,228.38097974429184,C# major
+"Prelude and Fugue in C-Sharp Major, WTC I, BWV 848",train,2011,2011/MIDI-Unprocessed_04_R1_2011_MID--AUDIO_R1-D2_02_Track02_wav.midi,208.378530937,208.24889396318073,C# major
+"Prelude and Fugue in C-Sharp Major, WTC I, BWV 848",train,2011,2011/MIDI-Unprocessed_12_R1_2011_MID--AUDIO_R1-D4_15_Track15_wav.midi,202.95919875,221.93155893536857,C# major
+"Prelude and Fugue in C-sharp Major, BWV 848",train,2013,2013/ORIG-MIDI_01_7_7_13_Group__MID--AUDIO_13_R1_2013_wav--1.midi,208.53745171900002,229.21621886965283,C# major
+"Prelude and Fugue in C-sharp Major, WTC I",train,2008,2008/MIDI-Unprocessed_02_R1_2008_01-05_ORIG_MID--AUDIO_02_R1_2008_wav--1.midi,180.01985203099997,227.08829568788468,C# major
+"Prelude and Fugue in C-sharp Major, WTC I",train,2008,2008/MIDI-Unprocessed_10_R1_2008_01-04_ORIG_MID--AUDIO_10_R1_2008_wav--1.midi,195.688906875,231.53404429860612,C# major
+"Prelude and Fugue in C-sharp Major, WTC I, BWV 848",train,2015,2015/MIDI-Unprocessed_R1_D1-9-12_mid--AUDIO-from_mp3_09_R1_2015_wav--1.midi,217.73020833299998,217.29182640699293,C# major
+"Prelude and Fugue in C-sharp Major, WTC I, BWV 848",train,2013,2013/ORIG-MIDI_01_7_7_13_Group__MID--AUDIO_12_R1_2013_wav--1.midi,211.061487656,216.3244867300956,C# major
+"Prelude and Fugue in C-sharp Major, WTC I, BWV 848",train,2017,2017/MIDI-Unprocessed_059_PIANO059_MID--AUDIO-split_07-07-17_Piano-e_2-03_wav--1.midi,194.047126088,229.85670233992298,C# major
+"Prelude and Fugue in D Major, Book II",train,2018,2018/MIDI-Unprocessed_Recital17-19_MID--AUDIO_17_R1_2018_wav--1.midi,313.28894953099996,184.94296577946784,D major
+"Prelude and Fugue in D Major, WTC II, BWV 874",train,2015,2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_19_R1_2015_wav--1.midi,373.19270833300004,192.57288708343643,D major
+"Prelude and Fugue in D Major, WTC II, BWV 874",train,2013,2013/ORIG-MIDI_02_7_6_13_Group__MID--AUDIO_05_R1_2013_wav--1.midi,352.83351468800004,190.41322314049614,D major
+"Prelude and Fugue in D Major, WTC II, BWV 874",train,2011,2011/MIDI-Unprocessed_01_R1_2011_MID--AUDIO_R1-D1_02_Track02_wav.midi,153.460049531,223.71345344697465,D major
+"Prelude and Fugue in D Major, WTC II, BWV 874",train,2011,2011/MIDI-Unprocessed_01_R1_2011_MID--AUDIO_R1-D1_03_Track03_wav.midi,171.83075765599997,152.8970251716245,D major
+"Prelude and Fugue in D Minor, WTC I, BWV 851",train,2011,2011/MIDI-Unprocessed_23_R1_2011_MID--AUDIO_R1-D9_02_Track02_wav.midi,220.760997188,227.6648596719964,d minor
+"Prelude and Fugue in D-flat Major, WTC I, BWV 848",train,2011,2011/MIDI-Unprocessed_08_R1_2011_MID--AUDIO_R1-D3_07_Track07_wav.midi,200.214810469,227.57929883138604,C# major
+"Prelude and Fugue in D-flat Major, WTC I, BWV 848",train,2017,2017/MIDI-Unprocessed_049_PIANO049_MID--AUDIO-split_07-06-17_Piano-e_2-06_wav--1.midi,229.831138779,210.13435314245478,C# major
+"Prelude and Fugue in E Major, WTC I, BWV 854",train,2013,2013/ORIG-MIDI_02_7_6_13_Group__MID--AUDIO_08_R1_2013_wav--1.midi,157.071157031,232.68530207393985,E major
+"Prelude and Fugue in E Major, WTC I, BWV 854",train,2013,2013/ORIG-MIDI_02_7_7_13_Group__MID--AUDIO_17_R1_2013_wav--1.midi,141.199110937,230.0932090545937,E major
+"Prelude and Fugue in E Major, WTC I, BWV 854",train,2011,2011/MIDI-Unprocessed_03_R1_2011_MID--AUDIO_R1-D1_15_Track15_wav.midi,144.941094375,209.0613266583234,E major
+"Prelude and Fugue in E Major, WTC I, BWV 854",train,2017,2017/MIDI-Unprocessed_041_PIANO041_MID--AUDIO-split_07-06-17_Piano-e_1-01_wav--1.midi,151.017422404,220.3800535645965,E major
+"Prelude and Fugue in E Major, WTC I, BWV 854",train,2017,2017/MIDI-Unprocessed_051_PIANO051_MID--AUDIO-split_07-06-17_Piano-e_3-02_wav--1.midi,150.834730992,216.95710161070446,E major
+"Prelude and Fugue in E Major, WTC I, BWV 854  ",train,2015,2015/MIDI-Unprocessed_R1_D1-1-8_mid--AUDIO-from_mp3_04_R1_2015_wav--1.midi,159.4875,211.6833964127026,E major
+"Prelude and Fugue in E-flat Major, WTC I",train,2008,2008/MIDI-Unprocessed_01_R1_2008_01-04_ORIG_MID--AUDIO_01_R1_2008_wav--1.midi,342.303343594,172.18741017533748,E- major
+"Prelude and Fugue in E-flat Major, WTC II, BWV 876",train,2011,2011/MIDI-Unprocessed_13_R1_2011_MID--AUDIO_R1-D5_02_Track02_wav.midi,226.341921094,205.05517977928352,E- major
+"Prelude and Fugue in E-flat Major, WTC II, BWV 876",train,2017,2017/MIDI-Unprocessed_061_PIANO061_MID--AUDIO-split_07-07-17_Piano-e_2-05_wav--1.midi,246.290459838,184.10398465799904,E- major
+"Prelude and Fugue in E-flat Minor WTC I, BWV 853",train,2017,2017/MIDI-Unprocessed_058_PIANO058_MID--AUDIO-split_07-07-17_Piano-e_2-02_wav--1.midi,511.42377606199994,160.13224134044677,e- minor
+"Prelude and Fugue in E-flat Minor, WTC I, BWV 853",train,2015,2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_14_R1_2015_wav--1.midi,545.822916667,162.21967247314169,e- minor
+"Prelude and Fugue in E-flat Minor, WTC I, BWV 853",train,2017,2017/MIDI-Unprocessed_045_PIANO045_MID--AUDIO-split_07-06-17_Piano-e_2-01_wav--1.midi,513.906669879,165.8459094519484,e- minor
+"Prelude and Fugue in E-flat Minor, WTC I, BWV 853",train,2017,2017/MIDI-Unprocessed_046_PIANO046_MID--AUDIO-split_07-06-17_Piano-e_2-02_wav--1.midi,524.592514954,161.06882087929284,e- minor
+"Prelude and Fugue in E-flat Minor, WTC I, BWV 853",train,2017,2017/MIDI-Unprocessed_047_PIANO047_MID--AUDIO-split_07-06-17_Piano-e_2-04_wav--3.midi,483.48908388300003,163.9274279615787,e- minor
+"Prelude and Fugue in F Major, WTC I, BWV 856",train,2015,2015/MIDI-Unprocessed_R1_D1-1-8_mid--AUDIO-from_mp3_06_R1_2015_wav--1.midi,127.63958333299999,220.2120753083746,F major
+"Prelude and Fugue in F Major, WTC II",train,2008,2008/MIDI-Unprocessed_16_R1_2008_01-04_ORIG_MID--AUDIO_16_R1_2008_wav--1.midi,269.760681094,186.99252234178383,F major
+"Prelude and Fugue in F Major, WTC II, BWV 880",train,2017,2017/MIDI-Unprocessed_066_PIANO066_MID--AUDIO-split_07-07-17_Piano-e_3-02_wav--1.midi,302.413048083,227.96946837477068,F major
+"Prelude and Fugue in F Minor, WTC I",train,2008,2008/MIDI-Unprocessed_11_R1_2008_01-04_ORIG_MID--AUDIO_11_R1_2008_wav--1.midi,336.69437484400004,227.18614718614543,f minor
+"Prelude and Fugue in F Minor, WTC I, BWV 857",train,2015,2015/MIDI-Unprocessed_R1_D1-1-8_mid--AUDIO-from_mp3_05_R1_2015_wav--2.midi,312.713541667,205.09168595335566,f minor
+"Prelude and Fugue in F Minor, WTC I, BWV 857",train,2015,2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_18_R1_2015_wav--1.midi,355.02604166699996,228.1901584653864,f minor
+"Prelude and Fugue in F Minor, WTC I, BWV 857",train,2011,2011/MIDI-Unprocessed_05_R1_2011_MID--AUDIO_R1-D2_08_Track08_wav.midi,113.862065625,193.05676497165868,f minor
+"Prelude and Fugue in F Minor, WTC I, BWV 857",train,2011,2011/MIDI-Unprocessed_05_R1_2011_MID--AUDIO_R1-D2_09_Track09_wav.midi,192.887093437,201.1251212415113,f minor
+"Prelude and Fugue in F Minor, WTC I, BWV 857",train,2017,2017/MIDI-Unprocessed_042_PIANO042_MID--AUDIO-split_07-06-17_Piano-e_1-02_wav--1.midi,331.603075992,231.87307601231643,f minor
+"Prelude and Fugue in F Minor, WTC I, BWV 857",train,2017,2017/MIDI-Unprocessed_048_PIANO048_MID--AUDIO-split_07-06-17_Piano-e_2-05_wav--1.midi,348.25897728300004,175.9843200553413,f minor
+"Prelude and Fugue in G Major, WTC I",train,2008,2008/MIDI-Unprocessed_07_R1_2008_01-04_ORIG_MID--AUDIO_07_R1_2008_wav--1.midi,218.721736406,204.38865177002182,G major
+"Prelude and Fugue in G Major, WTC I",train,2008,2008/MIDI-Unprocessed_12_R1_2008_01-04_ORIG_MID--AUDIO_12_R1_2008_wav--2.midi,220.11329484400002,205.66509922690716,G major
+"Prelude and Fugue in G Major, WTC I",train,2008,2008/MIDI-Unprocessed_15_R1_2008_01-04_ORIG_MID--AUDIO_15_R1_2008_wav--1.midi,214.034241094,215.0601618901768,G major
+"Prelude and Fugue in G Major, WTC I",train,2008,2008/MIDI-Unprocessed_18_R1_2008_01-04_ORIG_MID--AUDIO_18_R1_2008_wav--1.midi,215.842465781,211.4016660630201,G major
+"Prelude and Fugue in G Major, WTC I, BWV 860",train,2015,2015/MIDI-Unprocessed_R1_D2-21-22_mid--AUDIO-from_mp3_21_R1_2015_wav--1.midi,199.409375,226.5932336742721,G major
+"Prelude and Fugue in G Major, WTC I, BWV 860",train,2013,2013/ORIG-MIDI_02_7_6_13_Group__MID--AUDIO_07_R1_2013_wav--1.midi,220.686210937,206.60826377871268,G major
+"Prelude and Fugue in G Major, WTC I, BWV 860",train,2017,2017/MIDI-Unprocessed_057_PIANO057_MID--AUDIO-split_07-07-17_Piano-e_1-07_wav--1.midi,223.30552972900003,205.19214498819997,G major
+"Prelude and Fugue in G Major, WTC II, BWV 884",train,2017,2017/MIDI-Unprocessed_060_PIANO060_MID--AUDIO-split_07-07-17_Piano-e_2-04_wav--1.midi,137.286720454,227.33762841720414,G major
+"Prelude and Fugue in G Minor, WTC II",train,2008,2008/MIDI-Unprocessed_04_R1_2008_01-04_ORIG_MID--AUDIO_04_R1_2008_wav--1.midi,349.715195156,178.0737217598086,g minor
+"Prelude and Fugue in G Minor, WTC II,  BWV 885",train,2011,2011/MIDI-Unprocessed_20_R1_2011_MID--AUDIO_R1-D8_02_Track02_wav.midi,303.6535425,212.2663858910229,g minor
+"Prelude and Fugue in G Minor, WTC II, BWV 885",train,2015,2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_15_R1_2015_wav--1.midi,330.161458333,209.45454545454731,g minor
+"Prelude and Fugue in G Minor, WTC II, BWV 885",train,2011,2011/MIDI-Unprocessed_22_R1_2011_MID--AUDIO_R1-D8_12_Track12_wav.midi,45.1695595313,139.98987341772101,g minor
+"Prelude and Fugue in G-sharp Minor, WTC II, BWV 887",train,2015,2015/MIDI-Unprocessed_R1_D1-1-8_mid--AUDIO-from_mp3_03_R1_2015_wav--1.midi,472.30208333300004,183.09159387771342,g# minor
+Prelude from English Suite No. 3 in G Major,train,2013,2013/ORIG-MIDI_02_7_7_13_Group__MID--AUDIO_16_R1_2013_wav--1.midi,182.58128109400002,217.64169381107675,g minor
+"Prelude from English Suite No. 6 in D Minor, BWV 811",train,2013,2013/ORIG-MIDI_01_7_6_13_Group__MID--AUDIO_01_R1_2013_wav--1.midi,444.07674609400004,243.0231443141702,d minor
+"Prelude from the English Suite No. 1 in A Major, BWV 806",train,2011,2011/MIDI-Unprocessed_02_R1_2011_MID--AUDIO_R1-D1_08_Track08_wav.midi,246.539550469,239.7692438210516,a minor
+"Prelude from the English Suite No. 2 in A Minor, BWV 807",train,2011,2011/MIDI-Unprocessed_17_R1_2011_MID--AUDIO_R1-D7_02_Track02_wav.midi,156.930932813,248.0788847330837,a minor
+Prelude from the English Suite No. 6,train,2013,2013/ORIG-MIDI_02_7_7_13_Group__MID--AUDIO_19_R1_2013_wav--1.midi,468.700118906,237.5257731958817,d minor
+"Prelude from the English Suite No. 6 in D Minor, BWV 811",train,2011,2011/MIDI-Unprocessed_10_R1_2011_MID--AUDIO_R1-D4_02_Track02_wav.midi,460.567114219,171.526948429624,d minor
+"Toccata from Partita No. 6 in E Minor, Missing Opening!!!!",train,2014,2014/MIDI-UNPROCESSED_06-08_R1_2014_MID--AUDIO_06_R1_2014_wav--1.midi,342.48897375,231.44312393888146,e minor
+"Toccata in C Minor, BWV 911",train,2018,2018/MIDI-Unprocessed_Recital8_MID--AUDIO_08_R1_2018_wav--3.midi,621.090457969,164.70214455917434,c minor
+"Toccata in C Minor, BWV 911",train,2014,2014/MIDI-UNPROCESSED_19-20_R1_2014_MID--AUDIO_19_R1_2014_wav--1.midi,601.358907187,197.4661631804496,c minor
+"Toccata in E Minor, BWV 914",train,2008,2008/MIDI-Unprocessed_12_R2_2008_01-04_ORIG_MID--AUDIO_12_R2_2008_wav--1.midi,419.617635937,243.5485381681931,e minor
+"Toccata in E Minor, BWV 914",train,2015,2015/MIDI-Unprocessed_R1_D1-1-8_mid--AUDIO-from_mp3_01_R1_2015_wav--1.midi,365.110416667,237.11615487316638,e minor
+"""Sheep May Safely Graze""",train,2013,2013/ORIG-MIDI_02_7_7_13_Group__MID--AUDIO_18_R1_2013_wav--4.midi,262.753476562,154.6780592004892,B- major
+"Sheep May Safely Graze, from Bach's Birthday Cantata",train,2004,2004/MIDI-Unprocessed_XP_14_R1_2004_01-03_ORIG_MID--AUDIO_14_R1_2004_01_Track01_wav.midi,273.688295181,150.59458547693288,B- major
+"""Wachet  auf, ruft uns die Stimme' BWV 645",train,2004,2004/MIDI-Unprocessed_XP_10_R1_2004_01-02_ORIG_MID--AUDIO_10_R1_2004_01_Track01_wav.midi,202.363719265,159.20398009950262,E- major
+Chaconne BWV1004,train,2006,2006/MIDI-Unprocessed_07_R1_2006_01-04_ORIG_MID--AUDIO_07_R1_2006_01_Track01_wav.midi,839.4716498439999,203.29411764705776,d minor
+Chaconne in D Minor,train,2014,2014/MIDI-UNPROCESSED_06-08_R1_2014_MID--AUDIO_07_R1_2014_wav--7.midi,801.396100313,191.50129870130817,d minor
+"Chaconne in D Minor, BWV 1004",train,2004,2004/MIDI-Unprocessed_SMF_13_01_2004_01-05_ORIG_MID--AUDIO_13_R1_2004_02_Track02_wav.midi,832.292416525,203.78146386730012,d minor
+Toccata in DMin.,train,2006,2006/MIDI-Unprocessed_21_R1_2006_01-04_ORIG_MID--AUDIO_21_R1_2006_01_Track01_wav.midi,530.895569531,196.7956516112341,d minor
+"Prelude and Fugue in A Minor, S.462/1",train,2011,2011/MIDI-Unprocessed_25_R3_2011_MID--AUDIO_R3-D9_02_Track02_wav.midi,183.70975218700002,205.52845528455362,a minor
+"Prelude and Fugue in A Minor, S.462/1",train,2011,2011/MIDI-Unprocessed_25_R3_2011_MID--AUDIO_R3-D9_03_Track03_wav.midi,362.185802344,186.76492262343456,a minor
+Var. on BACH,train,2006,2006/MIDI-Unprocessed_20_R1_2006_01-04_ORIG_MID--AUDIO_20_R1_2006_01_Track01_wav.midi,871.552280156,201.2227074235829,f minor
+"Jesu, Joy of Man’s Desiring, BWV 147",train,2014,2014/MIDI-UNPROCESSED_04-05_R1_2014_MID--AUDIO_05_R1_2014_wav--2.midi,204.798139219,205.0629011553271,G major
+"Soiree de Vienne, Op. 56 (Concert Paraphrase on the overture from Die Fledermaus)",train,2015,2015/MIDI-Unprocessed_R1_D2-21-22_mid--AUDIO-from_mp3_21_R1_2015_wav--5.midi,373.027083333,209.42734709778333,C# major
+Fantasias Op. 116 (Selections),train,2017,2017/MIDI-Unprocessed_074_PIANO074_MID--AUDIO-split_07-08-17_Piano-e_2-04_wav--3.midi,982.801808179,192.99826689774687,a minor
+Fantasien Op.116,train,2006,2006/MIDI-Unprocessed_02_R1_2006_01-04_ORIG_MID--AUDIO_02_R1_2006_02_Track02_wav.midi,1357.78443281,191.7602996254576,a minor
+"Fantasies, Op. 116 No. 7 (Complete)",train,2014,2014/MIDI-UNPROCESSED_01-03_R1_2014_MID--AUDIO_01_R1_2014_wav--3.midi,1278.59914875,184.92520977744272,E major
+Intermezzo Op. 118 No. 6 in E-flat Minor,train,2008,2008/MIDI-Unprocessed_11_R1_2008_01-04_ORIG_MID--AUDIO_11_R1_2008_wav--3.midi,322.240596563,188.4387322915128,e- minor
+"Paganini Variations, Op. 35 Book 2",train,2017,2017/MIDI-Unprocessed_054_PIANO054_MID--AUDIO-split_07-07-17_Piano-e_1-02_wav--4.midi,611.940377546,212.0724735975109,a minor
+"Paganini Variations, Op. 35 Book II",train,2008,2008/MIDI-Unprocessed_13_R1_2008_01-04_ORIG_MID--AUDIO_13_R1_2008_wav--4.midi,667.405849687,207.97636632200366,a minor
+"Paganini Variations, Op. 35 Books I and II",train,2009,2009/MIDI-Unprocessed_20_R1_2009_06-07_ORIG_MID--AUDIO_20_R1_2009_20_R1_2009_06_WAV.midi,1275.88948266,208.935372710233,a minor
+"Six Pieces for Piano, Op. 118",train,2013,2013/ORIG-MIDI_03_7_10_13_Group_MID--AUDIO_17_R3_2013_wav--3.midi,1335.99759563,187.48038360943013,d minor
+"Sonata No. 3 in F Minor, Op. 5",train,2009,2009/MIDI-Unprocessed_18_R1_2009_04_ORIG_MID--AUDIO_18_R1_2009_18_R1_2009_04_WAV.midi,1998.331335,186.32521421006825,C# major
+Sonata Op. 5,train,2006,2006/MIDI-Unprocessed_12_R1_2006_01-08_ORIG_MID--AUDIO_12_R1_2006_01_Track01_wav.midi,2008.69323703,192.26035256075463,b- minor
+"Sonata in F Minor, Op. 5",train,2004,2004/MIDI-Unprocessed_SMF_07_R1_2004_01_ORIG_MID--AUDIO_07_R1_2004_02_Track02_wav.midi,477.49538625599996,203.00411177309536,b- minor
+"Sonata in F Minor, Op. 5",train,2004,2004/MIDI-Unprocessed_SMF_07_R1_2004_01_ORIG_MID--AUDIO_07_R1_2004_04_Track04_wav.midi,994.140229671,199.86291980808917,C# major
+"Sonata in F Minor, Op. 5",train,2004,2004/MIDI-Unprocessed_SMF_07_R1_2004_01_ORIG_MID--AUDIO_07_R1_2004_06_Track06_wav.midi,662.274755685,214.04037360650008,b- minor
+"Variations and Fugue on the Theme of Händel, Op. 24",train,2014,2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_11_R1_2014_wav--3.midi,1476.86016844,200.67052436914682,B- major
+"Variations and Fugue on the theme of Handel, Op. 24",train,2018,2018/MIDI-Unprocessed_Recital5-7_MID--AUDIO_05_R1_2018_wav--2.midi,1556.83337906,204.4471247038496,B- major
+"Variations on a Theme by Paganini, Op. 35 Book II",train,2015,2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_13_R1_2015_wav--5.midi,630.978125,207.6031923109953,a minor
+"Variations on a Theme by Paganini, Op. 35 Book II",train,2015,2015/MIDI-Unprocessed_R2_D2-19-21-22_mid--AUDIO-from_mp3_21_R2_2015_wav--3.midi,636.1989583330001,210.37968232396327,a minor
+"Variations on a Theme by Paganini, Op. 35, Book II",train,2013,2013/ORIG-MIDI_01_7_8_13_Group__MID--AUDIO_07_R2_2013_wav--1.midi,678.292590937,219.1676575505351,a minor
+"Variations on a Theme by Paganini, Op. 35, Volumes 1 & 2",train,2004,2004/MIDI-Unprocessed_XP_04_R1_2004_01-02_ORIG_MID--AUDIO_04_R1_2004_01_Track01_wav.midi,1479.74136125,219.2114477089645,a minor
+Variations on a theme by Paganini (Books I & II),train,2004,2004/MIDI-Unprocessed_XP_15_R1_2004_01-02_ORIG_MID--AUDIO_15_R1_2004_02_Track02_wav.midi,1449.01922965,214.8066298342714,a minor
+"Piano Sonata in C major, Hob. XVI:50 (Complete)",train,2014,2014/MIDI-UNPROCESSED_19-20_R1_2014_MID--AUDIO_20_R1_2014_wav--1.midi,790.4906625,207.56756756756818,F major
+Son. Hob. XVI:32,train,2006,2006/MIDI-Unprocessed_19_R1_2006_01-07_ORIG_MID--AUDIO_19_R1_2006_02_Track02_wav.midi,507.451415625,192.84848839591632,b minor
+Son. Hob. XVI:52,train,2006,2006/MIDI-Unprocessed_02_R1_2006_01-04_ORIG_MID--AUDIO_02_R1_2006_01_Track01_wav.midi,960.6200329689999,188.73160117753145,E- major
+Son. Hob. XVI:52,train,2006,2006/MIDI-Unprocessed_22_R1_2006_01-04_ORIG_MID--AUDIO_22_R1_2006_01_Track01_wav.midi,1030.59325359,196.3816332142001,E- major
+"Sonata in A-Flat Major, Hob. XVI:46, I. Allegro moderato",train,2017,2017/MIDI-Unprocessed_042_PIANO042_MID--AUDIO-split_07-06-17_Piano-e_1-02_wav--3.midi,349.392518737,216.48984252343084,A- major
+"Sonata in A-flat Major, Hob. XVI: 46, I. Allegro moderato",train,2015,2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_19_R1_2015_wav--2.midi,362.353125,221.72452407614793,A- major
+"Sonata in A-flat Major, No. 31 Hob. XVI:46, 1st mov.",train,2013,2013/ORIG-MIDI_03_7_6_13_Group__MID--AUDIO_10_R1_2013_wav--2.midi,276.880065,209.10680686220226,A- major
+"Sonata in B-flat Major, Hob.XVI:41",train,2011,2011/MIDI-Unprocessed_03_R3_2011_MID--AUDIO_R3-D1_02_Track02_wav.midi,240.84377625,223.94816014811389,B- major
+"Sonata in C Major, Hob. XVI/50",train,2009,2009/MIDI-Unprocessed_12_R1_2009_03-05_ORIG_MID--AUDIO_12_R1_2009_12_R1_2009_03_WAV.midi,885.9806845310001,200.19160075749267,F major
+"Sonata in C Major, Hob. XVI: 50, I. Allegro",train,2015,2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_15_R1_2015_wav--3.midi,325.622916667,228.7312285019161,C major
+"Sonata in C Major, Hob. XVI: 50, I. Allegro",train,2015,2015/MIDI-Unprocessed_R1_D2-21-22_mid--AUDIO-from_mp3_21_R1_2015_wav--2.midi,314.383333333,231.23501533314803,C major
+"Sonata in C Major, Hob. XVI:48 (Complete)",train,2014,2014/MIDI-UNPROCESSED_06-08_R1_2014_MID--AUDIO_08_R1_2014_wav--1.midi,655.070124844,194.49350649351103,C major
+"Sonata in C Major, Hob. XVI:48 (Complete)",train,2014,2014/MIDI-UNPROCESSED_21-22_R1_2014_MID--AUDIO_22_R1_2014_wav--1.midi,705.326484844,195.10392609698812,C major
+"Sonata in C Major, Hob. XVI:50",train,2004,2004/MIDI-Unprocessed_SMF_13_01_2004_01-05_ORIG_MID--AUDIO_13_R1_2004_08_Track08_wav.midi,301.09847073099996,228.89582741981312,C major
+"Sonata in C Major, Hob. XVI:50",train,2004,2004/MIDI-Unprocessed_SMF_13_01_2004_01-05_ORIG_MID--AUDIO_13_R1_2004_09_Track09_wav.midi,347.301325885,165.96086839989314,F major
+"Sonata in C Major, Hob. XVI:50",train,2004,2004/MIDI-Unprocessed_SMF_13_01_2004_01-05_ORIG_MID--AUDIO_13_R1_2004_10_Track10_wav.midi,136.290196233,213.00848379377948,C major
+"Sonata in C Major, Hob. XVI:50, 1st mov.",train,2013,2013/ORIG-MIDI_01_7_6_13_Group__MID--AUDIO_04_R1_2013_wav--2.midi,290.9612475,230.79946060489345,C major
+"Sonata in C Major, Hob. XVI:50, 1st mov.",train,2013,2013/ORIG-MIDI_02_7_7_13_Group__MID--AUDIO_17_R1_2013_wav--2.midi,320.065117969,228.67984189723245,C major
+"Sonata in C Major, Hob. XVI:50, First Movement",train,2008,2008/MIDI-Unprocessed_04_R1_2008_01-04_ORIG_MID--AUDIO_04_R1_2008_wav--2.midi,325.782259688,228.5514223194775,C major
+"Sonata in C major, Hob. XVI: 50",train,2018,2018/MIDI-Unprocessed_Recital8_MID--AUDIO_08_R1_2018_wav--1.midi,809.5945429689999,207.83788076104736,F major
+"Sonata in E Major, Hob. XVI:31, First Movement",train,2008,2008/MIDI-Unprocessed_13_R1_2008_01-04_ORIG_MID--AUDIO_13_R1_2008_wav--2.midi,190.07192531299998,216.92558392178375,E major
+"Sonata in E-flat Major, Hob. XVI: 52, I. Allegro",train,2015,2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_14_R1_2015_wav--2.midi,339.421875,189.5984200131662,E- major
+"Sonata in E-flat Major, Hob. XVI:52, 1st mov.",train,2013,2013/ORIG-MIDI_02_7_7_13_Group__MID--AUDIO_15_R1_2013_wav--2.midi,334.62439828099997,187.08201077729225,E- major
+"Sonata in E-flat Major, Hob. XVI:52, First Movement",train,2008,2008/MIDI-Unprocessed_16_R1_2008_01-04_ORIG_MID--AUDIO_16_R1_2008_wav--2.midi,330.8971049999999,188.60238353195976,E- major
+"Sonata in E-flat Major, Hob. XVI:52, First Movement",train,2011,2011/MIDI-Unprocessed_01_R1_2011_MID--AUDIO_R1-D1_04_Track04_wav.midi,326.69839125,191.7503250975409,E- major
+"Sonata in E-flat Major, Hob. XVI:52, First Movement",train,2011,2011/MIDI-Unprocessed_12_R1_2011_MID--AUDIO_R1-D4_13_Track13_wav.midi,330.695449219,196.224272533708,E- major
+"Sonata in E-flat major, Hob. XVI:52, I. Allegro",train,2017,2017/MIDI-Unprocessed_054_PIANO054_MID--AUDIO-split_07-07-17_Piano-e_1-02_wav--2.midi,341.064568092,194.68594498169514,E- major
+"Sonata in F Major, Hob. XVI:23",train,2018,2018/MIDI-Unprocessed_Recital5-7_MID--AUDIO_07_R1_2018_wav--1.midi,945.389011875,183.95209580838778,f minor
+"Sonata in in F Major, Hob. XVI: 23, I. Allegro moderato",train,2015,2015/MIDI-Unprocessed_R1_D1-1-8_mid--AUDIO-from_mp3_02_R1_2015_wav--2.midi,207.125,200.34782608695733,F major
+In the Mists,train,2018,2018/MIDI-Unprocessed_Recital9-11_MID--AUDIO_10_R1_2018_wav--1.midi,855.3931082810001,194.276679841903,c# minor
+"In the Mists, I. Andante  ",train,2015,2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_19_R1_2015_wav--4.midi,217.77083333299998,209.20096852300318,c# minor
+"Piano Sonata 1. X. 1905 ""From the Street""",train,2018,2018/MIDI-Unprocessed_Recital13-15_MID--AUDIO_14_R1_2018_wav--4.midi,837.561929531,171.6201117318371,e- minor
+"Sonata 1.x.1905 ""On the Streets""",train,2009,2009/MIDI-Unprocessed_10_R1_2009_03-05_ORIG_MID--AUDIO_10_R1_2009_10_R1_2009_04_WAV.midi,891.9622490630002,181.18507681053063,e- minor
+Bagatelles Op126,train,2006,2006/MIDI-Unprocessed_11_R1_2006_01-06_ORIG_MID--AUDIO_11_R1_2006_02_Track02_wav.midi,1108.03708641,201.8030335398464,c minor
+"Bagatelles, Op. 126 (Complete)",train,2014,2014/MIDI-UNPROCESSED_04-08-12_R3_2014_MID--AUDIO_12_R3_2014_wav--1.midi,1158.83297578,199.15501653803884,G major
+"Bagtellen, Op.126",train,2009,2009/MIDI-Unprocessed_10_R1_2009_01-02_ORIG_MID--AUDIO_10_R1_2009_10_R1_2009_02_WAV.midi,1136.37306234,186.74772036474025,c minor
+"Fantasia, Op. 77",train,2014,2014/MIDI-UNPROCESSED_14-15_R1_2014_MID--AUDIO_15_R1_2014_wav--1.midi,527.932164375,212.2958791911866,B major
+"Piano Trio in D Major, Op. 70 No. 1",train,2018,2018/MIDI-Unprocessed_Chamber1_MID--AUDIO_07_R3_2018_wav--2.midi,1254.61145906,202.57288292458156,d minor
+"Piano Trio in D Major, Op. 70 No. 1",train,2018,2018/MIDI-Unprocessed_Chamber3_MID--AUDIO_10_R3_2018_wav--3.midi,1180.70928938,200.95944177932327,d minor
+"Sonata No. 17 in D Minor, Op. 31 No. 2, 1st Movement",train,2011,2011/MIDI-Unprocessed_19_R1_2011_MID--AUDIO_R1-D7_13_Track13_wav.midi,451.611460781,213.02393038433368,d minor
+"Sonata No. 17 in D Minor, Op. 31 No. 2, First Movement",train,2011,2011/MIDI-Unprocessed_08_R1_2011_MID--AUDIO_R1-D3_08_Track08_wav.midi,397.77470906199994,230.47202250704083,d minor
+"Sonata No. 17 in D Minor, Op. 31 No. 2, First Movement",train,2011,2011/MIDI-Unprocessed_15_R1_2011_MID--AUDIO_R1-D6_08_Track08_wav.midi,360.045045937,226.12567324955,d minor
+"Sonata No. 17 in D minor, Op. 31 No. 2, 1st mov.",train,2013,2013/ORIG-MIDI_02_7_6_13_Group__MID--AUDIO_08_R1_2013_wav--2.midi,340.150567969,205.4493213117987,d minor
+"Sonata No. 17, Op. 31 No. 2 in D Minor ""Tempest"", I. Largo-Allegro",train,2017,2017/MIDI-Unprocessed_050_PIANO050_MID--AUDIO-split_07-06-17_Piano-e_3-01_wav--2.midi,376.117815133,214.17776178481418,d minor
+"Sonata No. 17, Op. 31 No. 2 in D Minor ""Tempest"", I. Largo-Allegro",train,2017,2017/MIDI-Unprocessed_053_PIANO053_MID--AUDIO-split_07-06-17_Piano-e_3-04_wav--3.midi,380.419076108,216.52507330276143,d minor
+"Sonata No. 17, Op. 31 No. 2 in D Minor ""Tempest"", I. Largo-Allegro",train,2017,2017/MIDI-Unprocessed_055_PIANO055_MID--AUDIO-split_07-07-17_Piano-e_1-04_wav--2.midi,355.351891246,207.34048560135673,d minor
+"Sonata No. 17, Op. 31 No. 2 in D Minor ""Tempest"", I. Largo-Allegro",train,2017,2017/MIDI-Unprocessed_057_PIANO057_MID--AUDIO-split_07-07-17_Piano-e_1-07_wav--2.midi,384.55687634599997,212.60647359454896,d minor
+"Sonata No. 21 in  C Major, Op. 53",train,2009,2009/MIDI-Unprocessed_11_R1_2009_01-05_ORIG_MID--AUDIO_11_R1_2009_11_R1_2009_01_WAV.midi,1344.34026891,200.0801603206393,C major
+"Sonata No. 21 in C Major, Op. 53",train,2018,2018/MIDI-Unprocessed_Recital17-19_MID--AUDIO_18_R1_2018_wav--1.midi,1306.74014625,215.42686265425502,C major
+"Sonata No. 21 in C Major, Op. 53, ""Waldstein"", First Movement",train,2011,2011/MIDI-Unprocessed_11_R1_2011_MID--AUDIO_R1-D4_08_Track08_wav.midi,519.5601107809999,204.53263707571716,C major
+"Sonata No. 21 in C Major, Op. 53, ""Waldstein"", First Movement",train,2011,2011/MIDI-Unprocessed_13_R1_2011_MID--AUDIO_R1-D5_04_Track04_wav.midi,521.564649375,206.87306763796013,C major
+"Sonata No. 21 in C Major, Op. 53, ""Waldstein"", First Movement",train,2011,2011/MIDI-Unprocessed_18_R1_2011_MID--AUDIO_R1-D7_08_Track08_wav.midi,489.6789975,206.49787138695882,C major
+"Sonata No. 21 in C Major, Op. 53, 1st mov.",train,2013,2013/ORIG-MIDI_01_7_6_13_Group__MID--AUDIO_03_R1_2013_wav--2.midi,534.701655469,206.33997972288108,C major
+"Sonata No. 21 in C Major, Op. 53, First Movement",train,2008,2008/MIDI-Unprocessed_15_R1_2008_01-04_ORIG_MID--AUDIO_15_R1_2008_wav--2.midi,481.751655,203.38758620689063,C major
+"Sonata No. 21 in C Major, Op. 53, I. Allegro con brio",train,2015,2015/MIDI-Unprocessed_R1_D1-1-8_mid--AUDIO-from_mp3_07_R1_2015_wav--2.midi,484.22604166699995,204.8140043763533,C major
+"Sonata No. 21 in C Major, Op. 53, I. Allegro con brio",train,2015,2015/MIDI-Unprocessed_R1_D1-1-8_mid--AUDIO-from_mp3_08_R1_2015_wav--2.midi,504.610416667,203.40088009995748,C major
+"Sonata No. 21 in C major, Op. 53, 1st mov.",train,2013,2013/ORIG-MIDI_02_7_6_13_Group__MID--AUDIO_05_R1_2013_wav--2.midi,506.99602078099997,207.02954898911446,C major
+"Sonata No. 21 in C major, Op. 53, “Waldstein,” I. Allegro con brio",train,2014,2014/MIDI-UNPROCESSED_01-03_R1_2014_MID--AUDIO_03_R1_2014_wav--3.midi,470.28932671900003,206.48394675019446,C major
+"Sonata No. 21, Op. 53, ""Waldstein"", I. Allegro con brio",train,2017,2017/MIDI-Unprocessed_041_PIANO041_MID--AUDIO-split_07-06-17_Piano-e_1-01_wav--2.midi,473.193194162,200.77459333849663,C major
+"Sonata No. 21, Op. 53, ""Waldstein"", I. Allegro con brio",train,2017,2017/MIDI-Unprocessed_043_PIANO043_MID--AUDIO-split_07-06-17_Piano-e_1-03_wav--2.midi,637.070596287,204.90846590455465,C major
+"Sonata No. 21, Op. 53, ""Waldstein"", I. Allegro con brio",train,2017,2017/MIDI-Unprocessed_048_PIANO048_MID--AUDIO-split_07-06-17_Piano-e_2-05_wav--2.midi,484.19100352099997,200.34041293569118,C major
+"Sonata No. 21, Op. 53, ""Waldstein"", I. Allegro con brio",train,2017,2017/MIDI-Unprocessed_056_PIANO056_MID--AUDIO-split_07-07-17_Piano-e_1-05_wav--3.midi,501.518910067,198.50401409829658,C major
+"Sonata No. 21, Op. 53, ""Waldstein"", I. Allegro con brio",train,2017,2017/MIDI-Unprocessed_059_PIANO059_MID--AUDIO-split_07-07-17_Piano-e_2-03_wav--2.midi,480.396150321,198.4527202681141,C major
+"Sonata No. 21, Op. 53, ""Waldstein"", I. Allegro con brio",train,2017,2017/MIDI-Unprocessed_062_PIANO062_MID--AUDIO-split_07-07-17_Piano-e_2-07_wav--1.midi,488.33307724199994,201.68508589561242,C major
+"Sonata No. 23 in F Minor, Op. 57 ""Appassionata"", First Movement",train,2008,2008/MIDI-Unprocessed_03_R1_2008_01-04_ORIG_MID--AUDIO_03_R1_2008_wav--2.midi,593.318049844,199.1860832894076,f minor
+"Sonata No. 23 in F Minor, Op. 57 (Complete)",train,2015,2015/MIDI-Unprocessed_R1_D1-9-12_mid--AUDIO-from_mp3_10_R1_2015_wav--3.midi,1251.28854167,212.0718509427752,C# major
+"Sonata No. 23 in F Minor, Op. 57, First Movement",train,2011,2011/MIDI-Unprocessed_12_R2_2011_MID--AUDIO_R2-D4_03_Track03_wav.midi,523.841623594,211.91246431970131,f minor
+"Sonata No. 23 in F Minor, Op. 57, First Movement",train,2011,2011/MIDI-Unprocessed_20_R1_2011_MID--AUDIO_R1-D8_04_Track04_wav.midi,572.423305781,192.0432529849067,f minor
+"Sonata No. 23 in F Minor, Op. 57, First Movement",train,2011,2011/MIDI-Unprocessed_25_R1_2011_MID--AUDIO_R1-D9_15_Track15_wav.midi,564.872565469,225.80467675376687,f minor
+"Sonata No. 23 in F Minor, Op. 57, First movement",train,2011,2011/MIDI-Unprocessed_21_R1_2011_MID--AUDIO_R1-D8_08_Track08_wav.midi,568.347455156,209.908893709319,f minor
+"Sonata No. 23, Op. 57 in F Minor, ""Appassionata"", I. Allegro assai",train,2017,2017/MIDI-Unprocessed_045_PIANO045_MID--AUDIO-split_07-06-17_Piano-e_2-01_wav--2.midi,515.413072754,207.54557015684884,f minor
+"Sonata No. 24 in F-Sharp Major, Op. 78",train,2008,2008/MIDI-Unprocessed_11_R1_2008_01-04_ORIG_MID--AUDIO_11_R1_2008_wav--2.midi,602.757142969,198.15480844409674,F# major
+"Sonata No. 24 in F-sharp Major, Op. 78",train,2011,2011/MIDI-Unprocessed_24_R1_2011_MID--AUDIO_R1-D9_09_Track09_wav.midi,397.69324546900003,218.94736842105175,F# major
+"Sonata No. 24 in F-sharp Major, Op. 78, First Movement",train,2008,2008/MIDI-Unprocessed_01_R1_2008_01-04_ORIG_MID--AUDIO_01_R1_2008_wav--2.midi,278.421195937,239.4244604316533,F# major
+"Sonata No. 26 in 3-flat Major, Op. 81a (2nd & 3rd Movements)",train,2004,2004/MIDI-Unprocessed_XP_09_R1_2004_01-02_ORIG_MID--AUDIO_09_R1_2004_02_Track02_wav.midi,316.572784056,204.33813095479528,E- major
+"Sonata No. 26 in 3-flat Major, Op. 81a (2nd & 3rd Movements)",train,2004,2004/MIDI-Unprocessed_XP_09_R1_2004_01-02_ORIG_MID--AUDIO_09_R1_2004_03_Track03_wav.midi,453.392893256,167.76699029126223,E- major
+"Sonata No. 26 in E-Flat Major, Op. 81a, ""Les Adiex"", First Movement",train,2011,2011/MIDI-Unprocessed_16_R1_2011_MID--AUDIO_R1-D6_14_Track14_wav.midi,399.448051406,223.56478167501945,E- major
+"Sonata No. 26 in E-Flat Major, Op. 81a, ""Les Adiex"", First Movement",train,2011,2011/MIDI-Unprocessed_17_R1_2011_MID--AUDIO_R1-D7_03_Track03_wav.midi,338.045869219,213.66306027820642,E- major
+"Sonata No. 26 in E-flat Major, Op. 81a, I. Das Lebewohl. Adagio - Allegro",train,2015,2015/MIDI-Unprocessed_R1_D2-21-22_mid--AUDIO-from_mp3_22_R1_2015_wav--2.midi,407.45520833300003,214.278929871776,E- major
+"Sonata No. 28 in A Major, Op. 101 (Complete)",train,2014,2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_13_R1_2014_wav--3.midi,1201.07919422,222.16151064686738,A major
+"Sonata No. 28 in A Major, Op. 101 (Complete)",train,2014,2014/MIDI-UNPROCESSED_16-18_R1_2014_MID--AUDIO_17_R1_2014_wav--1.midi,1162.39066453,212.4301439457946,a minor
+"Sonata No. 28 in A Major, Op. 101 (Complete)",train,2014,2014/MIDI-UNPROCESSED_16-18_R1_2014_MID--AUDIO_18_R1_2014_wav--2.midi,1098.92518313,207.52941176470267,A major
+"Sonata No. 30 in E Major, Op. 109",train,2018,2018/MIDI-Unprocessed_Recital13-15_MID--AUDIO_14_R1_2018_wav--2.midi,1176.40240266,206.89588221017516,E major
+"Sonata No. 31 In A-flat Major, Op. 110",train,2018,2018/MIDI-Unprocessed_Recital17-19_MID--AUDIO_19_R1_2018_wav--2.midi,1022.54438344,201.907004120074,A- major
+"Sonata No. 31 in A-Flat Major, Op. 110 (Complete)",train,2014,2014/MIDI-UNPROCESSED_06-08_R1_2014_MID--AUDIO_06_R1_2014_wav--3.midi,1137.43743094,190.24908125765637,A- major
+"Sonata No. 31 in A-flat Major, Op. 110",train,2018,2018/MIDI-Unprocessed_Recital9-11_MID--AUDIO_10_R1_2018_wav--2.midi,1060.72142859,197.559984956752,A- major
+"Sonata No. 31 in A-flat Major, Op. 110 (Complete)",train,2014,2014/MIDI-UNPROCESSED_01-03_R1_2014_MID--AUDIO_02_R1_2014_wav--2.midi,1063.92121172,196.6989186112607,A- major
+"Sonata No. 31 in A-flat Major, Op. 110, First movement",train,2011,2011/MIDI-Unprocessed_14_R1_2011_MID--AUDIO_R1-D6_03_Track03_wav.midi,397.215147656,224.93826372714713,A- major
+"Sonata No. 32 in C Minor, Op. 111",train,2009,2009/MIDI-Unprocessed_06_R1_2009_01-02_ORIG_MID--AUDIO_06_R1_2009_06_R1_2009_02_WAV.midi,1603.11404859,209.6367163979182,C major
+"Sonata No. 32 in C Minor, Op. 111 (Complete)",train,2014,2014/MIDI-UNPROCESSED_19-20_R1_2014_MID--AUDIO_19_R1_2014_wav--2.midi,1585.96930078,193.8830780171246,C major
+"Sonata No. 32 in C minor, Op. 111",train,2018,2018/MIDI-Unprocessed_Recital13-15_MID--AUDIO_15_R1_2018_wav--3.midi,1590.10257656,200.87183958159275,C major
+"Sonata No. 4 in E-flat Major, Op. 7, 1st mov.",train,2013,2013/ORIG-MIDI_01_7_6_13_Group__MID--AUDIO_01_R1_2013_wav--2.midi,330.763558125,206.77787532923438,E- major
+"Sonata No. 4 in E-flat Major, Op. 7, 1st mov.",train,2013,2013/ORIG-MIDI_01_7_6_13_Group__MID--AUDIO_02_R1_2013_wav--2.midi,325.30950375,212.29781982723517,E- major
+"Sonata No. 4 in E-flat Major, Op. 7, First Movement",train,2011,2011/MIDI-Unprocessed_22_R1_2011_MID--AUDIO_R1-D8_13_Track13_wav.midi,332.583802031,201.75542205477888,E- major
+"Sonata No. 4 in E-flat Major, Op. 7, I. Allegro molto e con brio",train,2015,2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_17_R1_2015_wav--2.midi,338.472916667,204.2216358839054,E- major
+"Sonata No. 4 in E-flat Major, Op. 7, I. Allegro molto e con brio",train,2017,2017/MIDI-Unprocessed_060_PIANO060_MID--AUDIO-split_07-07-17_Piano-e_2-04_wav--4.midi,325.877676696,210.2036347711848,E- major
+"Sonata No. 4 in E-flat Major, Op. 7, I. Allegro molto e con brio",train,2017,2017/MIDI-Unprocessed_061_PIANO061_MID--AUDIO-split_07-07-17_Piano-e_2-05_wav--2.midi,333.37122972099996,209.583354686618,E- major
+"Sonata No. 7 in D Major, Op. 10 No. 3",train,2018,2018/MIDI-Unprocessed_Recital1-3_MID--AUDIO_03_R1_2018_wav--1.midi,1254.06391687,194.92068656958884,d minor
+"Sonata No. 7 in D Major, Op. 10 No. 3, 1st mov.",train,2013,2013/ORIG-MIDI_02_7_6_13_Group__MID--AUDIO_06_R1_2013_wav--1.midi,283.606821094,200.5346596207656,D major
+"Sonata No. 7 in D Major, Op. 10 No. 3, 1st mov.",train,2013,2013/ORIG-MIDI_01_7_7_13_Group__MID--AUDIO_13_R1_2013_wav--2.midi,397.789399219,209.6451319381192,D major
+"Sonata No. 7 in D Major, Op. 10 No. 3, First Movement",train,2011,2011/MIDI-Unprocessed_06_R1_2011_MID--AUDIO_R1-D2_15_Track15_wav.midi,278.13273468799997,198.7277628032306,D major
+"Sonata No. 7, Op. 10 No. 3 in D Major, I. Presto",train,2017,2017/MIDI-Unprocessed_047_PIANO047_MID--AUDIO-split_07-06-17_Piano-e_2-04_wav--1.midi,304.532695817,213.74565133358863,D major
+"Sonata No. 7, Op. 10 No. 3 in D Major, I. Presto",train,2017,2017/MIDI-Unprocessed_067_PIANO067_MID--AUDIO-split_07-07-17_Piano-e_3-03_wav--2.midi,289.1011475,202.0006898930665,D major
+Sonata Op. 10/3,train,2006,2006/MIDI-Unprocessed_10_R1_2006_01-04_ORIG_MID--AUDIO_10_R1_2006_02_Track02_wav.midi,1405.96413891,189.7411764705887,d minor
+Sonata Op. 101,train,2006,2006/MIDI-Unprocessed_21_R1_2006_01-04_ORIG_MID--AUDIO_21_R1_2006_02_Track02_wav.midi,1256.10718406,206.09399403662601,A major
+Sonata Op. 110,train,2006,2006/MIDI-Unprocessed_13_R1_2006_01-06_ORIG_MID--AUDIO_13_R1_2006_02_Track02_wav.midi,1075.70805891,199.70030850595197,A- major
+Sonata Op. 54 in F Major,train,2004,2004/MIDI-Unprocessed_XP_15_R1_2004_01-02_ORIG_MID--AUDIO_15_R1_2004_01_Track01_wav.midi,534.516585565,234.20201635914043,F major
+Sonata Op. 78,train,2006,2006/MIDI-Unprocessed_05_R1_2006_01-05_ORIG_MID--AUDIO_05_R1_2006_01_Track01_wav.midi,470.60983921900004,200.30534351145062,F# major
+"Sonata Op. 81 No. 26, 'Les Adieux'",train,2004,2004/MIDI-Unprocessed_SMF_17_R1_2004_01-03_ORIG_MID--AUDIO_17_R1_2004_02_Track02_wav--2.midi,370.49284269599997,218.44952593418412,E- major
+"Sonata Op. 81 No. 26, 'Les Adieux'",train,2004,2004/MIDI-Unprocessed_SMF_17_R1_2004_01-03_ORIG_MID--AUDIO_17_R1_2004_03_Track03_wav.midi,563.933165452,196.5497630331757,E- major
+"Sonata in A-flat, Op. 110",train,2004,2004/MIDI-Unprocessed_XP_01_R1_2004_01-02_ORIG_MID--AUDIO_01_R1_2004_02_Track02_wav.midi,362.762818735,228.75297855440826,A- major
+"Sonata in A-flat, Op. 110",train,2004,2004/MIDI-Unprocessed_XP_01_R1_2004_01-02_ORIG_MID--AUDIO_01_R1_2004_03_Track03_wav.midi,732.784163067,193.34883832450367,A- major
+"Sonata in A-flat, Op. 110",train,2009,2009/MIDI-Unprocessed_21_R1_2009_01-03_ORIG_MID--AUDIO_21_R1_2009_21_R1_2009_01_WAV.midi,1183.00228922,199.52029625409497,A- major
+"Sonata in C Major, Op. 53 'Waldstein'",train,2004,2004/MIDI-Unprocessed_SMF_22_R1_2004_01-04_ORIG_MID--AUDIO_22_R1_2004_10_Track10_wav.midi,804.745489242,203.91099123397427,C major
+"Sonata in D Minor, Op. 31 No. 2 ""Tempest""",train,2018,2018/MIDI-Unprocessed_Recital5-7_MID--AUDIO_06_R1_2018_wav--2.midi,1451.39945672,190.0652639273203,F major
+"Sonata in D minor, Op. 31, No. 2",train,2004,2004/MIDI-Unprocessed_XP_21_R1_2004_02_ORIG_MID--AUDIO_21_R1_2004_02_Track02_wav.midi,497.066909717,214.28841667191693,d minor
+"Sonata in D minor, Op. 31, No. 2",train,2004,2004/MIDI-Unprocessed_XP_21_R1_2004_02_ORIG_MID--AUDIO_21_R1_2004_03_Track03_wav.midi,781.777608279,219.99024865920376,B- major
+"Sonata in E Major, Op. 109",train,2018,2018/MIDI-Unprocessed_Recital5-7_MID--AUDIO_05_R1_2018_wav--1.midi,1114.77319078,191.8317265556517,E major
+"Sonata in E-flat Major, Op. 81a",train,2009,2009/MIDI-Unprocessed_20_R1_2009_01-05_ORIG_MID--AUDIO_20_R1_2009_20_R1_2009_01_WAV.midi,934.4181360939999,204.07143894293492,E- major
+"Thirty-Two Variaions in C Minor, WoO80",train,2011,2011/MIDI-Unprocessed_12_R3_2011_MID--AUDIO_R3-D4_03_Track03_wav.midi,628.812138281,207.40148029606172,c minor
+"Thirty-Two Variaions in C Minor, WoO80",train,2011,2011/MIDI-Unprocessed_17_R3_2011_MID--AUDIO_R3-D6_02_Track02_wav.midi,582.602248594,205.34946114319482,c minor
+"Thirty-Two Variaions in C Minor, WoO80",train,2011,2011/MIDI-Unprocessed_22_R3_2011_MID--AUDIO_R3-D7_03_Track03_wav.midi,615.112899844,206.32563299916583,c minor
+"Thirty-Two Variaions in C Minor, WoO80",train,2011,2011/MIDI-Unprocessed_25_R3_2011_MID--AUDIO_R3-D9_04_Track04_wav.midi,630.735213281,203.53901753446584,c minor
+"Thirty-Two Variations  in C Minor, WoO 80",train,2015,2015/MIDI-Unprocessed_R2_D2-19-21-22_mid--AUDIO-from_mp3_19_R2_2015_wav--2.midi,649.6739583330001,197.20399429386632,c minor
+"Thirty-Two Variations in C Minor, WoO 80",train,2008,2008/MIDI-Unprocessed_02_R3_2008_01-03_ORIG_MID--AUDIO_02_R3_2008_wav--1.midi,544.017885469,211.02702702702763,c minor
+"Thirty-Two Variations in C Minor, WoO 80",train,2008,2008/MIDI-Unprocessed_03_R3_2008_01-03_ORIG_MID--AUDIO_03_R3_2008_wav--1.midi,638.0976525,201.10979487499245,c minor
+"Thirty-Two Variations in C Minor, WoO 80",train,2008,2008/MIDI-Unprocessed_04_R3_2008_01-07_ORIG_MID--AUDIO_04_R3_2008_wav--1.midi,644.729590313,203.3962534988796,c minor
+"Thirty-Two Variations in C Minor, WoO 80",train,2008,2008/MIDI-Unprocessed_09_R3_2008_01-07_ORIG_MID--AUDIO_09_R3_2008_wav--4.midi,652.961419687,196.85918234912543,c minor
+"Thirty-Two Variations in C Minor, WoO 80",train,2008,2008/MIDI-Unprocessed_12_R3_2008_01-04_ORIG_MID--AUDIO_12_R3_2008_wav--1.midi,618.502319531,206.00280504908866,c minor
+"Thirty-Two Variations in C Minor, WoO 80",train,2015,2015/MIDI-Unprocessed_R2_D2-12-13-15_mid--AUDIO-from_mp3_12_R2_2015_wav--1.midi,578.2010416669999,202.99559471365876,c minor
+"Thirty-Two Variations in C Minor, WoO 80",train,2015,2015/MIDI-Unprocessed_R2_D2-19-21-22_mid--AUDIO-from_mp3_21_R2_2015_wav--2.midi,673.126041667,197.9207048458147,c minor
+"Thirty-Two Variations in C Minor, WoO 80",train,2015,2015/MIDI-Unprocessed_R2_D2-19-21-22_mid--AUDIO-from_mp3_22_R2_2015_wav--2.midi,669.2854166669999,208.67308316211887,c minor
+"Thirty-Two Variations in C Minor, WoO 80",train,2013,2013/ORIG-MIDI_01_7_10_13_Group_MID--AUDIO_07_R3_2013_wav--2.midi,802.034454375,198.72080649678296,c minor
+"Thirty-Two Variations in C Minor, WoO 80",train,2013,2013/ORIG-MIDI_01_7_10_13_Group_MID--AUDIO_08_R3_2013_wav--1.midi,602.1575174999998,205.02407002188042,c minor
+"Thirty-Two Variations in C Minor, WoO 80",train,2013,2013/ORIG-MIDI_02_7_10_13_Group_MID--AUDIO_12_R3_2013_wav--1.midi,663.106975781,202.97990726429316,c minor
+"Thirty-Two Variations in C Minor, WoO 80",train,2017,2017/MIDI-Unprocessed_071_PIANO071_MID--AUDIO-split_07-08-17_Piano-e_1-04_wav--1.midi,604.837848246,202.3080782739571,c minor
+"Thirty-Two Variations in C Minor, WoO 80",train,2017,2017/MIDI-Unprocessed_073_PIANO073_MID--AUDIO-split_07-08-17_Piano-e_2-02_wav--1.midi,665.632422146,205.03084954912117,c minor
+"Thirty-Two Variations in C Minor, WoO 80",train,2017,2017/MIDI-Unprocessed_075_PIANO075_MID--AUDIO-split_07-08-17_Piano-e_2-06_wav--2.midi,607.6433900540001,206.13257421716256,c minor
+"Thirty-Two Variations in C Minor, WoO 80",train,2017,2017/MIDI-Unprocessed_078_PIANO078_MID--AUDIO-split_07-09-17_Piano-e_1-02_wav--1.midi,599.888086175,205.13679976536739,c minor
+"Thirty-Two Variations in C Minor, WoO 80",train,2017,2017/MIDI-Unprocessed_079_PIANO079_MID--AUDIO-split_07-09-17_Piano-e_1-04_wav--3.midi,679.707139504,199.33174224343682,c minor
+"Thirty-Two Variations in C Minor, WoO 80",train,2017,2017/MIDI-Unprocessed_080_PIANO080_MID--AUDIO-split_07-09-17_Piano-e_1-06_wav--2.midi,630.186014637,198.37795800466736,c minor
+"Thirty-Two Variations in C Minor, WoO 80",train,2017,2017/MIDI-Unprocessed_082_PIANO082_MID--AUDIO-split_07-09-17_Piano-e_2_-04_wav--1.midi,598.049419971,200.81246589462032,c minor
+"Thirty-Two Variations in C minor, WoO 80",train,2013,2013/ORIG-MIDI_02_7_10_13_Group_MID--AUDIO_14_R3_2013_wav--1.midi,590.600370937,202.42811501597416,c minor
+"Thirty-Two Variations in C minor, WoO 80    ",train,2015,2015/MIDI-Unprocessed_R2_D1-2-3-6-7-8-11_mid--AUDIO-from_mp3_08_R2_2015_wav--1.midi,658.1875,209.4941193141573,c minor
+"Thirty-Two Variations in C minor, WoO 80    ",train,2015,2015/MIDI-Unprocessed_R2_D1-2-3-6-7-8-11_mid--AUDIO-from_mp3_11_R2_2015_wav--1.midi,687.135416667,214.6949912297747,c minor
+Lark,train,2008,2008/MIDI-Unprocessed_02_R1_2008_01-05_ORIG_MID--AUDIO_02_R1_2008_wav--5.midi,326.59155375,149.00177323458868,b- minor
+Lark,train,2008,2008/MIDI-Unprocessed_06_R1_2008_01-04_ORIG_MID--AUDIO_06_R1_2008_wav--4.midi,294.372034687,211.00741386830012,b- minor
+"In the Garden, Etude-Idyll",train,2011,2011/MIDI-Unprocessed_03_R3_2011_MID--AUDIO_R3-D1_06_Track06_wav.midi,255.60871875,203.30711682332833,C# major
+Pictures at an E,train,2006,2006/MIDI-Unprocessed_04_R1_2006_01-04_ORIG_MID--AUDIO_04_R1_2006_04_Track04_wav.midi,1749.46940438,207.06389862497932,e- minor
+Pictures at an E,train,2006,2006/MIDI-Unprocessed_18_R1_2006_01-05_ORIG_MID--AUDIO_18_R1_2006_05_Track05_wav.midi,2009.46246703,196.72088624697943,e- minor
+Pictures at an Exhibition,train,2004,2004/MIDI-Unprocessed_XP_03_R1_2004_01-02_ORIG_MID--AUDIO_03_R1_2004_02_Track02_wav.midi,1958.31687252,201.17323929331548,e- minor
+Pictures at an Exhibition,train,2004,2004/MIDI-Unprocessed_XP_21_R1_2004_03_ORIG_MID--AUDIO_21_R1_2004_04_Track04_wav.midi,1976.93006547,204.393376140586,e- minor
+Pictures at an Exhibition,train,2018,2018/MIDI-Unprocessed_Recital5-7_MID--AUDIO_07_R1_2018_wav--4.midi,1823.15789906,196.0350548796159,e- minor
+Pictures at an Exhibition,train,2018,2018/MIDI-Unprocessed_Recital8_MID--AUDIO_08_R1_2018_wav--4.midi,1906.30017703,204.3941109852573,e- minor
+"Sonata Bb, Op. 24, No. 2",train,2009,2009/MIDI-Unprocessed_18_R1_2009_01-03_ORIG_MID--AUDIO_18_R1_2009_18_R1_2009_02_WAV.midi,668.431489688,191.21158417981547,F major
+Sonata Op. 24/2,train,2006,2006/MIDI-Unprocessed_18_R1_2006_01-05_ORIG_MID--AUDIO_18_R1_2006_01_Track01_wav.midi,653.231184375,195.77158519871884,F major
+"Sonata Op. 25 No. 5 in F-sharp Minor, First Movement",train,2011,2011/MIDI-Unprocessed_10_R1_2011_MID--AUDIO_R1-D4_04_Track04_wav.midi,245.819732813,196.79182403910232,f# minor
+"Sonata in B-flat Major, Op.24, No. 2",train,2009,2009/MIDI-Unprocessed_15_R1_2009_01-02_ORIG_MID--AUDIO_15_R1_2009_15_R1_2009_01_WAV.midi,642.4793254690001,192.38997968855801,F major
+Sonata in F# Min,train,2006,2006/MIDI-Unprocessed_15_R1_2006_01-05_ORIG_MID--AUDIO_15_R1_2006_01_Track01_wav.midi,649.095237656,191.40981972252246,b minor
+"Sonata in F-sharp minor, op. 25 no. 5, 1st mov.",train,2013,2013/ORIG-MIDI_02_7_6_13_Group__MID--AUDIO_07_R1_2013_wav--2.midi,273.19016484400004,211.6064757160645,f# minor
+Etude No. 6 in A Minor,train,2008,2008/MIDI-Unprocessed_16_R1_2008_01-04_ORIG_MID--AUDIO_16_R1_2008_wav--4.midi,278.921996719,220.59257342476647,a minor
+"Fairy Tale in D Minor, Op. 54",train,2009,2009/MIDI-Unprocessed_03_R1_2009_03-08_ORIG_MID--AUDIO_03_R1_2009_03_R1_2009_05_WAV.midi,365.333502188,199.94214636968448,d minor
+"Fairy Tales Op. 51 No. 1, 2 and No. 3",train,2017,2017/MIDI-Unprocessed_078_PIANO078_MID--AUDIO-split_07-09-17_Piano-e_1-02_wav--3.midi,671.685811287,206.17080678645408,a minor
+"Sonata Tragica, Op. 39, No. 5",train,2014,2014/MIDI-UNPROCESSED_09-10_R1_2014_MID--AUDIO_10_R1_2014_wav--5.midi,609.916590938,214.23216620659105,c minor
+"Three Fairy Tales ""Skazki"" from Op. 34",train,2018,2018/MIDI-Unprocessed_Recital16_MID--AUDIO_16_R1_2018_wav--2.midi,727.8331396880002,214.54462866227712,e minor
+Two Fairy Tales,train,2006,2006/MIDI-Unprocessed_13_R1_2006_01-06_ORIG_MID--AUDIO_13_R1_2006_01_Track01_wav.midi,412.67319843800004,222.67323861988416,e- minor
+The Flight of the Bunble-Bee,train,2008,2008/MIDI-Unprocessed_08_R1_2008_01-05_ORIG_MID--AUDIO_08_R1_2008_wav--5.midi,63.3786759375,211.93166885676575,d minor
+Pavan,train,2018,2018/MIDI-Unprocessed_Recital13-15_MID--AUDIO_15_R1_2018_wav--2.midi,247.900393125,220.36863604662958,g minor
+Ramble on the Last Love - Duet,train,2018,2018/MIDI-Unprocessed_Recital1-3_MID--AUDIO_02_R1_2018_wav--3.midi,441.12135375,195.17547398144612,A- major
+Dumka,train,2006,2006/MIDI-Unprocessed_18_R1_2006_01-05_ORIG_MID--AUDIO_18_R1_2006_03_Track03_wav.midi,513.645319687,187.8516102731344,c minor
+"Dumka, Op. 59",train,2008,2008/MIDI-Unprocessed_17_R2_2008_01-04_ORIG_MID--AUDIO_17_R2_2008_wav--2.midi,474.076716094,198.48906560636183,c minor
+"Dumka, Op.59",train,2009,2009/MIDI-Unprocessed_13_R1_2009_01-03_ORIG_MID--AUDIO_13_R1_2009_13_R1_2009_01_WAV.midi,499.677652031,195.160265665612,c minor
+Meditation,train,2006,2006/MIDI-Unprocessed_24_R1_2006_01-05_ORIG_MID--AUDIO_24_R1_2006_04_Track04_wav.midi,218.688349687,203.76500315856296,D major
+Russian Scherzo Op. 1,train,2008,2008/MIDI-Unprocessed_09_R1_2008_01-05_ORIG_MID--AUDIO_09_R1_2008_wav--5.midi,366.701022187,218.10866778424247,B- major
+"The Seasons, Op. 37a (Selections)",train,2014,2014/MIDI-UNPROCESSED_16-18_R1_2014_MID--AUDIO_18_R1_2014_wav--5.midi,469.876666875,201.085173501577,g minor
+"Andante Maestoso from ""Nutcracker Suite""",train,2008,2008/MIDI-Unprocessed_02_R2_2008_01-05_ORIG_MID--AUDIO_02_R2_2008_wav--5.midi,272.686693125,222.250803858523,e minor
+Concert Suite from the Ballet Nutcracker,train,2004,2004/MIDI-Unprocessed_SMF_16_R1_2004_01-08_ORIG_MID--AUDIO_16_R1_2004_13_Track13_wav.midi,969.764233204,211.67823601470784,e minor
+Concert Suite from the Nutcracker,train,2004,2004/MIDI-Unprocessed_XP_11_R1_2004_03-04_ORIG_MID--AUDIO_11_R1_2004_03_Track03_wav.midi,310.470237956,207.81176470586723,e minor
+"Intermezzo from ""Nutcracker Suite""",train,2008,2008/MIDI-Unprocessed_02_R2_2008_01-05_ORIG_MID--AUDIO_02_R2_2008_wav--3.midi,241.51284609400003,210.7690671205207,C major
+"March from ""Nutcracker Suite",train,2008,2008/MIDI-Unprocessed_02_R2_2008_01-05_ORIG_MID--AUDIO_02_R2_2008_wav--4.midi,108.673769531,220.37302725968263,e minor
+Nutcracker Suite,train,2006,2006/MIDI-Unprocessed_09_R1_2006_01-04_ORIG_MID--AUDIO_09_R1_2006_04_Track04_wav.midi,976.011310312,203.10947267190136,e minor
+Lullaby,train,2006,2006/MIDI-Unprocessed_13_R1_2006_01-06_ORIG_MID--AUDIO_13_R1_2006_04_Track04_wav.midi,236.329891875,206.70297981416252,g# minor
+"Lullaby Op. 16, No. 1",train,2004,2004/MIDI-Unprocessed_SMF_16_R1_2004_01-08_ORIG_MID--AUDIO_16_R1_2004_05_Track05_wav.midi,295.250197385,186.8874468561182,g# minor
+ABEGG Op. 1,train,2015,2015/MIDI-Unprocessed_R2_D1-2-3-6-7-8-11_mid--AUDIO-from_mp3_08_R2_2015_wav--3.midi,419.332291667,207.96054948925155,F major
+ABEGG Variations Op. 1,train,2011,2011/MIDI-Unprocessed_04_R1_2011_MID--AUDIO_R1-D2_06_Track06_wav.midi,456.623475,210.61495844875432,F major
+"ABEGG Variations, Op. 1",train,2008,2008/MIDI-Unprocessed_12_R2_2008_01-04_ORIG_MID--AUDIO_12_R2_2008_wav--3.midi,451.479249375,209.58686039166247,F major
+"ABEGG Variations, Op. 1",train,2013,2013/ORIG-MIDI_01_7_7_13_Group__MID--AUDIO_12_R1_2013_wav--5.midi,450.517711875,209.6133434419992,F major
+"ABEGG Variations, Op. 1",train,2013,2013/ORIG-MIDI_01_7_7_13_Group__MID--AUDIO_13_R1_2013_wav--4.midi,451.658202188,213.3607717041761,F major
+"ABEGG Variations, Op. 1",train,2013,2013/ORIG-MIDI_02_7_8_13_Group__MID--AUDIO_08_R2_2013_wav--3.midi,389.577601875,211.06251209599168,F major
+"ABEGG Variations, Op. 1",train,2011,2011/MIDI-Unprocessed_08_R1_2011_MID--AUDIO_R1-D3_09_Track09_wav.midi,493.855008281,197.84207578869385,F major
+"Carnaval, Op. 9",train,2004,2004/MIDI-Unprocessed_XP_01_R1_2004_03_ORIG_MID--AUDIO_01_R1_2004_04_Track04_wav.midi,1703.20758236,207.50756093222037,A- major
+"Carnaval, Op. 9",train,2004,2004/MIDI-Unprocessed_XP_10_R1_2004_05_ORIG_MID--AUDIO_10_R1_2004_05_Track05_wav.midi,1443.84723636,206.4194453100733,A- major
+"Carnaval, Op. 9",train,2018,2018/MIDI-Unprocessed_Recital13-15_MID--AUDIO_15_R1_2018_wav--4.midi,1522.04575359,205.09090909091083,A- major
+"Carnaval, Op. 9",train,2014,2014/MIDI-UNPROCESSED_01-03_R1_2014_MID--AUDIO_03_R1_2014_wav--6.midi,1286.41030547,213.31317902692962,A- major
+Fantasie Op. 17,train,2018,2018/MIDI-Unprocessed_Recital9-11_MID--AUDIO_11_R1_2018_wav--5.midi,1885.56836016,202.53803674067458,c minor
+Fantasie Op. 17,train,2018,2018/MIDI-Unprocessed_Recital17-19_MID--AUDIO_17_R1_2018_wav--4.midi,1894.08063797,202.2373704361203,c minor
+"Fantasy Pieces, Op. 12",train,2004,2004/MIDI-Unprocessed_XP_08_R1_2004_01-02_ORIG_MID--AUDIO_08_R1_2004_02_Track02_wav.midi,1255.95783337,212.5096525096804,f minor
+"Fantasy in C Major, Op. 17",train,2018,2018/MIDI-Unprocessed_Recital1-3_MID--AUDIO_03_R1_2018_wav--2.midi,2028.95630437,192.76163000360782,c minor
+Kreisleriana,train,2006,2006/MIDI-Unprocessed_23_R1_2006_01-05_ORIG_MID--AUDIO_23_R1_2006_04_Track04_wav.midi,1888.42492781,200.9510954210369,B- major
+"Kreisleriana, Op. 16",train,2004,2004/MIDI-Unprocessed_SMF_17_R1_2004_01-02_ORIG_MID--AUDIO_20_R2_2004_04_Track04_wav.midi,700.849428215,199.88186650915574,B- major
+"Kreisleriana, Op. 16",train,2004,2004/MIDI-Unprocessed_SMF_17_R1_2004_01-02_ORIG_MID--AUDIO_20_R2_2004_06_Track06_wav.midi,705.86223394,202.3486901535691,B- major
+"Kreisleriana, Op. 16",train,2009,2009/MIDI-Unprocessed_05_R1_2009_03-05_ORIG_MID--AUDIO_05_R1_2009_05_R1_2009_03_WAV.midi,1893.88432406,196.52784746613,B- major
+"Kreisleriana, Op. 16 (1st edition) (Complete)",train,2014,2014/MIDI-UNPROCESSED_11-13_R1_2014_MID--AUDIO_12_R1_2014_wav--1.midi,1873.31276344,196.41594885001996,B- major
+"Kreisleriana, Op. 16 (Complete)",train,2014,2014/MIDI-UNPROCESSED_09-10_R1_2014_MID--AUDIO_10_R1_2014_wav--3.midi,2014.85909625,200.0830658863584,B- major
+Sonata F# Minor,train,2006,2006/MIDI-Unprocessed_01_R1_2006_01-09_ORIG_MID--AUDIO_01_R1_2006_01_Track01_wav.midi,1793.33421094,194.1653240798144,f# minor
+"Sonata No. 1 in F-Sharp Minor, Op. 11 (Complete)",train,2014,2014/MIDI-UNPROCESSED_04-08-12_R3_2014_MID--AUDIO_08_R3_2014_wav.midi,1913.92303266,199.77638334284157,f# minor
+"Sonata No. 1 in F-sharp Minor, Op. 11",train,2009,2009/MIDI-Unprocessed_13_R1_2009_04_ORIG_MID--AUDIO_13_R1_2009_13_R1_2009_04_WAV.midi,1582.88703891,203.5465673230373,f# minor
+Symphonic Etudes,train,2006,2006/MIDI-Unprocessed_08_R1_2006_01-04_ORIG_MID--AUDIO_08_R1_2006_Disk1_03_Track03_wav.midi,1577.65333688,204.4916395910952,c# minor
+Symphonic Etudes,train,2006,2006/MIDI-Unprocessed_14_R1_2006_01-05_ORIG_MID--AUDIO_14_R1_2006_01_Track01_wav.midi,1623.70831219,219.9397693050771,c# minor
+Symphonic Etudes,train,2006,2006/MIDI-Unprocessed_16_R1_2006_01-04_ORIG_MID--AUDIO_16_R1_2006_03_Track03_wav.midi,1634.54564109,196.32379793061702,c# minor
+Symphonic Etudes Op. 13,train,2018,2018/MIDI-Unprocessed_Recital13-15_MID--AUDIO_13_R1_2018_wav--2.midi,1526.65579172,212.9254302103281,c# minor
+Symphonic Etudes Op. 13 (with Posthumous variations),train,2018,2018/MIDI-Unprocessed_Recital20_MID--AUDIO_20_R1_2018_wav--4.midi,2096.39614078,210.88426931430286,c# minor
+"Symphonic Etudes, Op. 13",train,2009,2009/MIDI-Unprocessed_02_R1_2009_01-02_ORIG_MID--AUDIO_02_R1_2009_02_R1_2009_02_WAV.midi,1317.43591547,216.07756162473459,c# minor
+"Symphonic Etudes, Op. 13",train,2014,2014/MIDI-UNPROCESSED_14-15_R1_2014_MID--AUDIO_15_R1_2014_wav--6.midi,1650.67409719,217.21877008782374,c# minor
+"Symphonic Etudes, Op. 13",train,2015,2015/MIDI-Unprocessed_R2_D2-12-13-15_mid--AUDIO-from_mp3_15_R2_2015_wav--3.midi,1058.59166667,202.65832681782692,c# minor
+"Symphonic Etudes, Op. 13 (with Posthumous Etudes)",train,2014,2014/MIDI-UNPROCESSED_21-22_R1_2014_MID--AUDIO_21_R1_2014_wav--8.midi,1634.97165563,214.69347719471543,c# minor
+Widmung,train,2008,2008/MIDI-Unprocessed_15_R2_2008_01-04_ORIG_MID--AUDIO_15_R2_2008_wav--3.midi,205.54333078099998,215.54293351152972,A- major
+"Moment Musical, Op. 16, No.4",train,2004,2004/MIDI-Unprocessed_XP_08_R1_2004_04-06_ORIG_MID--AUDIO_08_R1_2004_05_Track05_wav--2.midi,158.014182992,220.29401219074575,e minor
+Moment Musicaux Op. 16 No. 4 in E Minor,train,2017,2017/MIDI-Unprocessed_060_PIANO060_MID--AUDIO-split_07-07-17_Piano-e_2-04_wav--2.midi,164.29299837899998,215.57506837484144,e minor
+"Moment Musicaux, Op. 16 No. 3 in B Minor",train,2018,2018/MIDI-Unprocessed_Recital1-3_MID--AUDIO_03_R1_2018_wav--4.midi,256.500811875,153.19685039370387,b minor
+"Moment Musicaux, Op. 16 No. 4 in E Minor",train,2018,2018/MIDI-Unprocessed_Recital1-3_MID--AUDIO_03_R1_2018_wav--5.midi,164.338777969,215.62564991334298,e minor
+"Moment Musicaux, Op. 16 No. 5",train,2013,2013/ORIG-MIDI_01_7_6_13_Group__MID--AUDIO_02_R1_2013_wav--4.midi,207.710796563,209.66632962588662,C# major
+Moments Musicaux,train,2006,2006/MIDI-Unprocessed_22_R1_2006_01-04_ORIG_MID--AUDIO_22_R1_2006_04_Track04_wav.midi,1750.78350563,200.0300525920536,F# major
+"Moments Musicaux, Op. 16",train,2011,2011/MIDI-Unprocessed_17_R3_2011_MID--AUDIO_R3-D6_03_Track03_wav.midi,380.37755765599996,199.23085675276826,b- minor
+"Moments Musicaux, Op. 16",train,2011,2011/MIDI-Unprocessed_17_R3_2011_MID--AUDIO_R3-D6_04_Track04_wav.midi,177.222045,216.7079948696021,e- minor
+"Moments Musicaux, Op. 16",train,2011,2011/MIDI-Unprocessed_17_R3_2011_MID--AUDIO_R3-D6_05_Track05_wav.midi,224.7861,156.96350364963337,b minor
+"Moments Musicaux, Op. 16",train,2011,2011/MIDI-Unprocessed_17_R3_2011_MID--AUDIO_R3-D6_06_Track06_wav.midi,162.591984844,211.0534351145061,e minor
+"Moments Musicaux, Op. 16",train,2011,2011/MIDI-Unprocessed_17_R3_2011_MID--AUDIO_R3-D6_07_Track07_wav.midi,209.21586984400003,209.54383970441967,C# major
+"Moments Musicaux, Op. 16",train,2011,2011/MIDI-Unprocessed_17_R3_2011_MID--AUDIO_R3-D6_08_Track08_wav.midi,276.94283203099997,209.27161572052296,C major
+Prelude Op. 23 No. 4 in D Major,train,2015,2015/MIDI-Unprocessed_R1_D1-9-12_mid--AUDIO-from_mp3_11_R1_2015_wav--4.midi,264.132291667,208.38323353293566,D major
+"Prelude Op. 23, No. 2",train,2004,2004/MIDI-Unprocessed_XP_08_R1_2004_04-06_ORIG_MID--AUDIO_08_R1_2004_04_Track04_wav.midi,168.511255027,214.6583850931708,B- major
+Prelude Op. 23/4,train,2006,2006/MIDI-Unprocessed_12_R1_2006_01-08_ORIG_MID--AUDIO_12_R1_2006_05_Track05_wav.midi,240.634107656,199.29564411492183,D major
+"Prelude in D Major, Op. 23, No. 4",train,2014,2014/MIDI-UNPROCESSED_04-05_R1_2014_MID--AUDIO_04_R1_2014_wav--4.midi,280.859761875,170.26960448884608,D major
+"Prelude in D Major, Op. 23, No. 4",train,2013,2013/ORIG-MIDI_02_7_6_13_Group__MID--AUDIO_05_R1_2013_wav--3.midi,263.720355938,200.98334655035683,D major
+"Preludes Op. 23, Nos. 2, 4 and 5",train,2018,2018/MIDI-Unprocessed_Recital17-19_MID--AUDIO_19_R1_2018_wav--6.midi,700.402611563,198.70225872689983,D major
+Sonata No. 2 in B-Flat Minor Op. 36 (1913),train,2011,2011/MIDI-Unprocessed_12_R3_2011_MID--AUDIO_R3-D4_04_Track04_wav.midi,582.148189219,207.8015783539976,b- minor
+Sonata No. 2 in B-Flat Minor Op. 36 (1913),train,2011,2011/MIDI-Unprocessed_12_R3_2011_MID--AUDIO_R3-D4_07_Track07_wav.midi,293.417174531,214.36546334201768,e minor
+Sonata No. 2 in B-Flat Minor Op. 36 (1913),train,2011,2011/MIDI-Unprocessed_12_R3_2011_MID--AUDIO_R3-D4_08_Track08_wav.midi,91.68393609379999,167.31311405382294,E major
+Sonata No. 2 in B-Flat Minor Op. 36 (1913),train,2011,2011/MIDI-Unprocessed_12_R3_2011_MID--AUDIO_R3-D4_09_Track09_wav.midi,344.883469219,212.6620516047751,g minor
+Sonata No. 2 in B-flat Minor,train,2004,2004/MIDI-Unprocessed_XP_15_R1_2004_04_ORIG_MID--AUDIO_15_R1_2004_04_Track04_wav.midi,1167.49976099,193.47708310758998,b- minor
+"Sonata No. 2 in B-flat Minor, Op. 36",train,2004,2004/MIDI-Unprocessed_XP_01_R1_2004_04-05_ORIG_MID--AUDIO_01_R1_2004_06_Track06_wav.midi,649.419024379,198.30508474576342,b- minor
+"Sonata No. 2 in B-flat Minor, Op. 36 (1913)",train,2009,2009/MIDI-Unprocessed_14_R1_2009_06-08_ORIG_MID--AUDIO_14_R1_2009_14_R1_2009_08_WAV.midi,1387.26089906,204.93860582036163,B- major
+"Sonata No. 2 in B-flat Minor, Op.36",train,2009,2009/MIDI-Unprocessed_08_R1_2009_05-06_ORIG_MID--AUDIO_08_R1_2009_08_R1_2009_06_WAV.midi,1227.78322734,194.70422535211603,b- minor
+"Sonata No. 2 in B-flat Minor, Opus 36",train,2004,2004/MIDI-Unprocessed_SMF_16_R1_2004_01-08_ORIG_MID--AUDIO_16_R1_2004_08_Track08_wav.midi,1195.73578881,192.21357063403588,A major
+Sonata Op. 36,train,2006,2006/MIDI-Unprocessed_03_R1_2006_01-05_ORIG_MID--AUDIO_03_R1_2006_05_Track05_wav.midi,1040.69473922,203.99191608122476,A major
+"Sonata in B-flat Minor, Op.36",train,2009,2009/MIDI-Unprocessed_07_R1_2009_04-05_ORIG_MID--AUDIO_07_R1_2009_07_R1_2009_05_WAV.midi,1168.36555172,191.40754806550868,A major
+Flight of B.B.,train,2006,2006/MIDI-Unprocessed_12_R1_2006_01-08_ORIG_MID--AUDIO_12_R1_2006_08_Track08_wav.midi,114.58321875,214.0411413404142,d minor
+Italian Polka,train,2009,2009/MIDI-Unprocessed_04_R1_2009_04-06_ORIG_MID--AUDIO_04_R1_2009_04_R1_2009_06_WAV.midi,182.654731875,218.05979780597858,e- minor
+Fantasy in C Min,train,2006,2006/MIDI-Unprocessed_07_R1_2006_01-04_ORIG_MID--AUDIO_07_R1_2006_02_Track02_wav.midi,691.770141563,179.64912280701537,B- major
+"Nine Variations, K. 264",train,2009,2009/MIDI-Unprocessed_04_R1_2009_01-03_ORIG_MID--AUDIO_04_R1_2009_04_R1_2009_02_WAV.midi,735.7471275,215.31857601077067,C major
+"Nine variations on a minuet by Duport, K537",train,2018,2018/MIDI-Unprocessed_Chamber2_MID--AUDIO_09_R3_2018_wav--1.midi,581.409675,206.65993945509533,D major
+Sonata K. 457,train,2006,2006/MIDI-Unprocessed_24_R1_2006_01-05_ORIG_MID--AUDIO_24_R1_2006_01_Track01_wav.midi,937.038325781,229.12707182320077,E- major
+"Sonata K. 457 in C minor, I. Allegro molto",train,2015,2015/MIDI-Unprocessed_R1_D1-1-8_mid--AUDIO-from_mp3_01_R1_2015_wav--3.midi,228.58333333299998,199.69409605383842,c minor
+"Sonata in B-flat Major, K. 281, First Movement",train,2011,2011/MIDI-Unprocessed_02_R1_2011_MID--AUDIO_R1-D1_09_Track09_wav.midi,183.08742375,218.20612813370448,B- major
+"Sonata in B-flat Major, K. 570, 1st mov.",train,2013,2013/ORIG-MIDI_02_7_7_13_Group__MID--AUDIO_18_R1_2013_wav--3.midi,261.801287344,194.50174343916248,B- major
+"Sonata in B-flat Major, K.281",train,2009,2009/MIDI-Unprocessed_08_R1_2009_01-04_ORIG_MID--AUDIO_08_R1_2009_08_R1_2009_01_WAV.midi,672.153441094,204.28372739916838,B- major
+"Sonata in C Major, K 330, I. Allegro moderato",train,2015,2015/MIDI-Unprocessed_R1_D2-13-20_mid--AUDIO-from_mp3_20_R1_2015_wav--2.midi,257.267708333,199.944459872254,C major
+"Sonata in C Minor K457, First Movement",train,2008,2008/MIDI-Unprocessed_02_R1_2008_01-05_ORIG_MID--AUDIO_02_R1_2008_wav--2.midi,230.63945953099997,205.35652173913013,c minor
+"Sonata in C Minor, K. 457",train,2018,2018/MIDI-Unprocessed_Recital13-15_MID--AUDIO_13_R1_2018_wav--1.midi,1070.4476475,190.22501308215547,E- major
+"Sonata in C Minor, K. 457, 1st mov.",train,2013,2013/ORIG-MIDI_01_7_7_13_Group__MID--AUDIO_11_R1_2013_wav--2.midi,239.54703609400002,211.67037861915432,c minor
+Sonata in D Major K576,train,2018,2018/MIDI-Unprocessed_Recital12_MID--AUDIO_12_R1_2018_wav--1.midi,803.47141875,196.7549103330473,A major
+"Sonata in D Major, K 284, First Movement",train,2008,2008/MIDI-Unprocessed_14_R1_2008_01-05_ORIG_MID--AUDIO_14_R1_2008_wav--2.midi,267.495726094,196.569375841932,D major
+"Sonata in D Major, K 576, First Movement",train,2008,2008/MIDI-Unprocessed_07_R3_2008_01-05_ORIG_MID--AUDIO_07_R3_2008_wav--1.midi,236.252434687,233.96344321199814,D major
+"Sonata in D Major, K. 284, First Movement",train,2011,2011/MIDI-Unprocessed_03_R1_2011_MID--AUDIO_R1-D1_16_Track16_wav.midi,205.23617296900002,200.68021567814426,D major
+"Sonata in D Major, K. 311",train,2009,2009/MIDI-Unprocessed_14_R1_2009_06-08_ORIG_MID--AUDIO_14_R1_2009_14_R1_2009_06_WAV.midi,910.278202969,196.6975533576233,D major
+"Sonata in D Major, K. 576 (Complete)",train,2014,2014/MIDI-UNPROCESSED_09-10_R1_2014_MID--AUDIO_09_R1_2014_wav--1.midi,790.8205232810001,201.16414435389854,D major
+"Sonata in D Major, K. 576, I - Allegro",train,2013,2013/ORIG-MIDI_01_7_7_13_Group__MID--AUDIO_12_R1_2013_wav--2.midi,214.958385469,217.63847144697056,D major
+"Sonata in D Major, K. 576, II - Adagio",train,2013,2013/ORIG-MIDI_01_7_7_13_Group__MID--AUDIO_12_R1_2013_wav--3.midi,285.3629625,177.06051873198894,A major
+"Sonata in D Major, K.311",train,2009,2009/MIDI-Unprocessed_05_R1_2009_01-02_ORIG_MID--AUDIO_05_R1_2009_05_R1_2009_01_WAV.midi,792.420414844,188.56541564363386,D major
+"Sonata in D-Major, K. 311, First Movement",train,2011,2011/MIDI-Unprocessed_07_R1_2011_MID--AUDIO_R1-D3_04_Track04_wav.midi,194.098363594,211.2880366819516,D major
+Sonata in F K332,train,2006,2006/MIDI-Unprocessed_06_R1_2006_01-04_ORIG_MID--AUDIO_06_R1_2006_01_Track01_wav.midi,901.959568125,204.92751045094155,F major
+"Sonata in F Major, K 332 (Complete)",train,2015,2015/MIDI-Unprocessed_R1_D1-9-12_mid--AUDIO-from_mp3_11_R1_2015_wav--1.midi,908.790625,202.05462290154028,F major
+"Sonata in F Major, K 332 (Complete)",train,2015,2015/MIDI-Unprocessed_R1_D1-9-12_mid--AUDIO-from_mp3_12_R1_2015_wav--2.midi,832.53125,183.79068283343247,F major
+"Sonata in F Major, K280",train,2004,2004/MIDI-Unprocessed_XP_14_R1_2004_04_ORIG_MID--AUDIO_14_R1_2004_06_Track06_wav.midi,114.696242842,195.60155239327045,F major
+"Twelve Variations, K179 (189a)",train,2004,2004/MIDI-Unprocessed_XP_04_R1_2004_01-02_ORIG_MID--AUDIO_04_R1_2004_02_Track02_wav.midi,630.2663031019999,212.2653316645704,C major

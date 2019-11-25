@@ -1,7 +1,13 @@
 __pycache__
-Data/
-Models/
-Sampled/
+*.png
+*.h5
+Data/maestro-v2.0.0/*
+!Data/maestro-v2.0.0/maestro-v2.0.0_edited.csv
+!Data/maestro-v2.0.0/maestro-v2.0.0_train.csv
+!Data/maestro-v2.0.0/maestro-v2.0.0_validation.csv
+!Data/maestro-v2.0.0/maestro-v2.0.0_test.csv
+*.tar
+Sampled/*.midi
 venv/
 .idea/
 .directory
