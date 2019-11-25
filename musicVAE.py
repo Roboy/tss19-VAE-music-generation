@@ -2,6 +2,7 @@
 
 import torch
 import argparse
+import random
 import model
 import data
 import training
@@ -52,57 +53,88 @@ def _parse_delete_dataset(args):
 
 def _parse_sample(args):
     vae = get_trained_vae(args.bars, args.pianoroll, args.transpose, args.verbose)
-
     sample = vae.sample()
     data.pianoroll_to_midi(sample, args.save_location)
 
 def _parse_interpolate(args):
     vae = get_trained_vae(args.bars, args.pianoroll, args.transpose, args.verbose)
-    z = torch.randn((1, model.latent_dimension), requires_grad=False)
-    z_end = torch.randn((1, model.latent_dimension), requires_grad=False)
-    step_vector = (z_end - z) / args.steps
+
+    if args.start_sequence:
+        path = args.start_sequence
+        if path[0] != '/' and path[0] != '~':
+            path = data.path_to_root + '/' + path
+        midi = data.midi_to_small_one_hot_pianoroll(path)
+        if args.verbose:
+            print("read the start sequence " + path)
+        if(midi.shape[0] != args.bars * 16):
+            print("The start sequence does not have the correct length as specified by the bars parameter!")
+        midi = midi.unsqueeze(dim=0)
+        m, v = vae.encode(midi)
+        z = vae.reparameterize(m, v)
+    else:
+        z = torch.randn((1, model.latent_dimension), requires_grad=False)
+        if args.verbose:
+            print("generated a random start sequence")
+
+    if args.end_sequence:
+        path = args.end_sequence
+        if path[0] != '/' and path[0] != '~':
+            path = data.path_to_root + '/' + path
+        midi = data.midi_to_small_one_hot_pianoroll(path)
+        if args.verbose:
+            print("read the end sequence " + path)
+        if (midi.shape[0] != args.bars * 16):
+            print("The end sequence does not have the correct length as specified by the bars parameter!")
+        midi = midi.unsqueeze(dim=0)
+        m, v = vae.encode(midi)
+        z_end = vae.reparameterize(m, v)
+    else:
+        z_end = torch.randn((1, model.latent_dimension), requires_grad=False)
+        if args.verbose:
+            print("generated a random end sequence")
+
+    step_vector = (z_end - z) / (args.steps + 1)
     for i in range(args.steps+2):
-        z = z + step_vector
         sample = vae.sample(z)
         filename = args.save_location + "/interpolate_" + str(i) + ".midi"
         data.pianoroll_to_midi(sample, filename)
-
-def interpolate_between_midis(path_1="/home/micaltu/tss19-VAE-music-generation/Sampled/bh.midi" , path_2="/home/micaltu/tss19-VAE-music-generation/Sampled/SotW.midi"):
-    vae = get_trained_vae(bars=2, pianoroll=True, transpose=True, verbose=True)
-    steps = 8
-    midi_1 = data.midi_to_small_one_hot_pianoroll(path_1)
-    midi_1 = midi_1.unsqueeze(dim=0)
-    m, v = vae.encode(midi_1)
-    z = vae.reparameterize(m, v)
-
-    midi_2 = data.midi_to_small_one_hot_pianoroll(path_2)
-    midi_2 = midi_2.unsqueeze(dim=0)
-    m, v = vae.encode(midi_2)
-    z_end = vae.reparameterize(m, v)
-
-    step_vector = (z_end - z) / steps
-    for i in range(steps + 2):
-        sample = vae.sample(z)
-        filename = "Sampled/interpolate_" + str(i) + ".midi"
-        data.pianoroll_to_midi(sample, filename)
         z = z + step_vector
 
-def _parse_reconstruct(bars=2, pianoroll=False, transpose=False, save_location="Sampled", i=1, verbose=True):
-    vae= get_trained_vae(bars, pianoroll, transpose, verbose)
-    ds = data.FinalDataset('train', bars=bars, pianoroll=pianoroll)
-    snippet_before = ds.__getitem__(i)
-    snippet_after, _, _ = vae(snippet_before.unsqueeze(dim=0))
+def _parse_reconstruct(args):#bars=2, pianoroll=False, transpose=False, save_location="Sampled", i=1, verbose=True):
+    vae= get_trained_vae(args.bars, args.pianoroll, args.transpose, args.verbose)
 
-    # for k in range(5):
-    #     snippet_after, _, _ = vae(snippet_after)
+    # read start sequence
+    if args.start_sequence:
+        path = args.start_sequence
+        if path[0] != '/' and path[0] != '~':
+            path = data.path_to_root + '/' + path
+        seq = data.midi_to_small_one_hot_pianoroll(path)
+        if(seq.shape[0] != args.bars * 16):
+            print("The start sequence does not have the correct length as specified by the bars parameter!")
 
-    snippet_before = data.monophonic_repr_to_pianoroll(snippet_before)
-    filename = save_location + "/reconstruct_before_" + str(i) + ".midi"
-    data.pianoroll_to_midi(snippet_before, filename)
+    # ..or generate a random one
+    else:
+        if args.verbose:
+            print("no start sequence given, a random one is generated")
+        ds = data.FinalDataset('train', bars=args.bars, pianoroll=args.pianoroll)
+        i = random.randint(0, len(ds))
+        seq = ds.__getitem__(i)
 
-    snippet_after = data.model_output_to_pianoroll(snippet_after, pianoroll)
-    filename = save_location + "/reconstruct_after_" + str(i) + ".midi"
-    data.pianoroll_to_midi(snippet_after, filename)
+    # save start sequence
+    start_seq = data.monophonic_repr_to_pianoroll(seq)
+    filename = args.save_location + "/reconstruct_before.midi"
+    data.pianoroll_to_midi(start_seq, filename)
+
+    seq = seq.unsqueeze(dim=0)
+
+    # reconstruct the sequence
+    for _ in range(args.number_reconstructions):
+        seq, _, _ = vae(seq)
+
+    # save end sequence
+    seq = data.model_output_to_pianoroll(seq, args.pianoroll)
+    filename = args.save_location + "/reconstruct_after.midi"
+    data.pianoroll_to_midi(seq, filename)
 
 
 
@@ -110,7 +142,7 @@ def get_trained_vae(bars, pianoroll=False, transpose=False, verbose=False):
     vae = model.VAE(bars, pianoroll)
     vae.eval()
 
-    location = "/home/micaltu/tss19-VAE-music-generation/Models/Final"
+    location = data.path_to_root + "Models/Final"
     stride = 1 if transpose else 3
     dset_name = data.get_dataset_name("train", bars, stride, pianoroll, transpose)
 
@@ -132,7 +164,7 @@ def get_pretrained_vae(bars, pianoroll=False, transpose=False, verbose=False):
     vae = model.VAE(bars, pianoroll)
     vae.train()
 
-    location = "/home/micaltu/tss19-VAE-music-generation/Models/Final"
+    location = data.path_to_root + "Models/Final"
     stride = 1 if transpose else 3
     dset_name = data.get_dataset_name("train", bars, stride, pianoroll, transpose)
     if pianoroll:
@@ -152,7 +184,7 @@ def get_pretrained_vae(bars, pianoroll=False, transpose=False, verbose=False):
 
 def main():
 
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description="For an explanation of the parameters of any specific command <command>, see its own help:\npython musicVAE.py <command> -h")
     subparsers = parser.add_subparsers()
 
     # train parser
@@ -371,6 +403,59 @@ def main():
 
     sample_parser.set_defaults(func=_parse_sample)
 
+    # reconstruct parser
+
+    recon_parser = subparsers.add_parser('reconstruct',
+                                          help="encode a sequence and decode it again, one or multiple times")
+
+    recon_parser.add_argument(
+        'bars',
+        type=int,
+        help='length of the generated sequences in bars'
+    )
+
+    recon_parser.add_argument(
+        '-f', '--start_sequence',
+        help='path (absolute or relative without leading /) to the MIDI file containing the sequence for the reconstruction; if no path is given, a random sequence is generated and saved as Sampled/reconstruction_start.midi',
+        required=False,
+        default=None
+    )
+
+    recon_parser.add_argument(
+        '-p', '--pianoroll',
+        action='store_true',
+        help='use a model trained with sequences in pianoroll representation instead of the default MIDI-like one'
+    )
+
+    recon_parser.add_argument(
+        '-t', '--transpose',
+        action='store_true',
+        help='use the model trained with sequences transposed to either C Major or a minor'
+    )
+
+    recon_parser.add_argument(
+        '-v', '--verbose',
+        action='store_true',
+        help='get more information during the reconstruction process'
+    )
+
+    recon_parser.add_argument(
+        '-s', '--save_location',
+        help='directory to store the initial and reconstructed sequence in. Default directory is Sampled',
+        required=False,
+        default='Sampled'
+    )
+
+    recon_parser.add_argument(
+        '-n', '--number_reconstructions',
+        type=int,
+        help='how often the sequence is encoded and decoded, default is 1',
+        required=False,
+        default=1
+    )
+
+    recon_parser.set_defaults(func=_parse_reconstruct)
+
 
 
     # interpolate parser
@@ -394,6 +479,20 @@ def main():
         help='directory to store the interpolations in. Default directory is Sampled',
         required=False,
         default='Sampled'
+    )
+
+    interpolate_parser.add_argument(
+        '-f', '--start_sequence',
+        help='path (absolute or relative without leading /) to the MIDI file containing the start sequence for the interpolation; if no path is given, a random sequence is generated',
+        required=False,
+        default=None
+    )
+
+    interpolate_parser.add_argument(
+        '-e', '--end_sequence',
+        help='path (absolute or relative without leading /) to the MIDI file containing the end sequence for the interpolation; if no path is given, a random sequence is generated',
+        required=False,
+        default=None
     )
 
     interpolate_parser.add_argument(

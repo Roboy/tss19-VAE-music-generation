@@ -1,13 +1,8 @@
-import numpy as np
 import torch
 import torch.utils.data
 import torch.nn as nn
-import torch.optim as optim
-import torch.nn.functional as F
 import random
 import data
-
-#input_size = 90
 
 lstm_1_hidden_size = 2048
 lstm_1_layers = 2
@@ -18,7 +13,9 @@ lstm_conductor_input_size = 1     # conductor gets only zeros as inputs anyway, 
 
 lstm_l2_decoder_hidden_size = 1024
 
+
 class VAE(nn.Module):
+
     def __init__(self, bars, pianoroll=False):
         super(VAE, self).__init__()
 
@@ -55,10 +52,9 @@ class VAE(nn.Module):
     def encode(self, t):
 
         # input of shape (batch, seq_len, input_size)
-
         # hidden of shape  (num_layers * num_directions, batch, hidden_size) only if batch_first == False!!
 
-        _, (h, _) = self.lstm_1(t)       # TODO input t, (initial hidden state, initial cell state) for better training?
+        _, (h, _) = self.lstm_1(t)
 
         h_t = h.view(lstm_1_layers, 2, self.batch_size, lstm_1_hidden_size)    # 2 = num_directions
         h_t_forward = h_t[1, 0, :, :]
@@ -72,11 +68,12 @@ class VAE(nn.Module):
 
         return z_mean, z_std_deviation
 
+
     def reparameterize(self, mean, std_deviation):
         return mean + torch.randn_like(mean) * std_deviation
 
-    def l2_decode(self, embedding, previous):
 
+    def l2_decode(self, embedding, previous):
         t = self.fc_3(embedding)
         t = torch.tanh(t)
 
@@ -88,11 +85,9 @@ class VAE(nn.Module):
         outputs = []
 
         for _ in range(self.seq_len//self.u):
-
             if self.training:
                 if self.counter > 0 and random.random() > self.scheduled_sampling_ratio:
                     previous = self.ground_truth[self.counter - 1]
-                    # TODO catch exception and print understable error message ("The provided ground truth did not have the correct dimensions" or if is None "Model is in training mode but no ground truth was provided for the forward pass")
                 else:
                     previous = previous.detach()        # needed?
 
@@ -104,8 +99,8 @@ class VAE(nn.Module):
 
         return outputs
 
-    def decode(self, z):
 
+    def decode(self, z):
         device = z.device
 
         # get initial states for conductor lstm
@@ -126,7 +121,6 @@ class VAE(nn.Module):
         conductor_input = torch.zeros(size=(self.batch_size, self.u, lstm_conductor_input_size), device=device)
 
         embeddings, _ = self.lstm_conductor(conductor_input, (h, c))
-        # embeddings = embeddings.permute(1, 0, 2)
         embeddings = torch.unbind(embeddings, dim=1)
 
         # decode embeddings
@@ -157,7 +151,6 @@ class VAE(nn.Module):
         return out, z_mean, z_std_deviation
 
 
-
     def sample(self, z=None):   # always returns a pianoroll representation
         if z is None:
             z = torch.randn((1, latent_dimension), requires_grad=False)
@@ -166,19 +159,12 @@ class VAE(nn.Module):
         sample = data.model_output_to_pianoroll(sample, self.pianoroll)
 
         return sample
-        # sample = sample.squeeze()
-        # sample = sample.argmax(dim=1)
-        # num_classes = 88 if self.pianoroll else 90
-        # sample = F.one_hot(sample, num_classes)
-        #
-        # if not self.pianoroll:
-        #     sample = data.monophonic_repr_to_pianoroll(sample)
-        #
-        # return sample
 
 
     def set_ground_truth(self, ground_truth):
         self.ground_truth = ground_truth
 
+
     def set_scheduled_sampling_ratio(self, ratio):      # ratio is the probability with which the model uses its own previous output instead of teacher forcing
+        raise Warning("Using scheduled sampling leads to decreased performance. You should not use it!")
         self.scheduled_sampling_ratio = ratio

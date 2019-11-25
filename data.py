@@ -71,7 +71,6 @@ class MaestroDataset(Dataset):
             raise ValueError("class MaestroDataset was initialized with invalid aruments, split has to be 'train', 'test' or 'validation'!")
 
         self.root_dir = root_dir
-        # TODO bars should be unnecessary
         self.bars = bars
 
         # check whether csv for this split already exists:
@@ -85,7 +84,7 @@ class MaestroDataset(Dataset):
         # if not, generate it
         if csv_file == maestro_csv_path:
             self.csv_data_frame = self.csv_data_frame.drop(labels=['canonical_composer', 'audio_filename'], axis=1)
-            #TODO maybe drop more if not all information is needed
+            # would also be possible to drop more information like title, but might be handy for debugging
 
             self.csv_data_frame = self.csv_data_frame[self.csv_data_frame['split'] == split]
             self.csv_data_frame.set_axis(range(len(self.csv_data_frame)), axis='index', inplace=True)
@@ -124,7 +123,7 @@ class MaestroDataset(Dataset):
 
         row = self.csv_data_frame.iloc[[index]]
         key = row['key']
-        key = key.item()        # TODO change to not deprecated function if possible?
+        key = key.item()        # TODO change to not deprecated function when the docs specify alternative
         key = key[0:2]
         return key
 
@@ -434,7 +433,7 @@ def model_output_to_pianoroll(sample, pianoroll=False):
     if not pianoroll:
         sample = monophonic_repr_to_pianoroll(sample)
     else:
-        sample = sample[:, 0:88]   #remove the pause tokens     #TODO check this
+        sample = sample[:, 0:88]   #remove the pause tokens
 
     return sample
 
@@ -473,7 +472,7 @@ def pianoroll_to_midi(snippet, filename="Sampled/sample.midi"):
 
     snippet = ppr.Track(pianoroll=snippet)
     snippet = ppr.Multitrack(tracks=[snippet], tempo=120, beat_resolution=4)
-    ppr.write(snippet, "/home/micaltu/tss19-VAE-music-generation/" + filename)
+    ppr.write(snippet, path_to_root + filename)
 
 
 def midi_to_small_one_hot_pianoroll(path, beat_resolution=4):

@@ -1,8 +1,9 @@
 import matplotlib.pyplot as plt
 import pypianoroll as ppr
 import numpy as np
-import musicVAE
 import math
+import data
+import musicVAE
 
 
 # tum colors:
@@ -22,6 +23,7 @@ survey_prof_musicians = np.array([0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0
 survey_by_question = np.array([15, 25, 15, 20, 18, 24, 17, 25, 14, 14, 26, 28, 19, 19, 21])
 x = np.array([i for i in range(16)])
 
+location = data.path_to_root + "Models/Final"
 
 def print_survey_info():
     texts = ["all participants", "professional musicians", "hobby musicians", "non-musicians"]
@@ -76,7 +78,7 @@ def plot_survey_by_question():
     plt.grid(True, axis="y")
     plt.savefig("survey_by_question.png")
 
-def plot_train_and_eval_loss(checkpoint_name, location="/home/micaltu/tss19-VAE-music-generation/Models/Checkpoints"):
+def plot_train_and_eval_loss(checkpoint_name):
     checkpoint = musicVAE.get_checkpoint(checkpoint_name, location)
     loss = checkpoint['last_loss_list']
     train_loss = [99] + [l[0] for l in loss]
@@ -84,7 +86,7 @@ def plot_train_and_eval_loss(checkpoint_name, location="/home/micaltu/tss19-VAE-
     loss = None
     x = range(1, len(train_loss)+1)
 
-    plt.plot(x, train_loss, '--', color=blue, label="training loss")
+    plt.plot(x, train_loss, '--', color=orange, label="training loss")
     plt.plot(x, eval_loss, color=blue, label="validation loss")
     plt.xlabel("epochs")
     plt.ylabel("loss")
@@ -93,17 +95,17 @@ def plot_train_and_eval_loss(checkpoint_name, location="/home/micaltu/tss19-VAE-
     plt.savefig(checkpoint_name + "_loss.png")
 
 
-def plot_all_2bar_losses(location="/home/micaltu/tss19-VAE-music-generation/Models/Checkpoints"):
-    names = ["2bars_3stride_after_epoch_8", "pianoroll_train_2bars_3stride_tempo_computed_after_epoch_6", "train_2bars_1stride_tempo_computed_transposed_after_epoch_35", "pianoroll_train_2bars_1stride_tempo_computed_transposed_after_epoch_28"]
+def plot_all_2bar_losses():
+    names = ["train_2bars_3stride_tempo_computed", "pianoroll_train_2bars_3stride_tempo_computed", "train_2bars_1stride_tempo_computed_transposed", "pianoroll_train_2bars_1stride_tempo_computed_transposed"]
     legend_texts = ["MIDI-like and all keys", "piano roll and all keys", "MIDI-like and one key", "piano roll and one key"]
-    colors = [blue, orange, green, grey]#['r', 'g', 'tab:purple', 'tab:cyan']   #
+    colors = [blue, orange, green, grey]    #['r', 'g', 'tab:purple', 'tab:cyan']
     losses = []
     for n in names:
         checkpoint = musicVAE.get_checkpoint(n, location)
         loss = checkpoint['last_loss_list']
         eval_loss = [99.] + [l[1] for l in loss]
 
-        if n == "2bars_3stride_after_epoch_8": # normalize first loss
+        if n == "train_2bars_3stride_tempo_computed": # normalize first loss
             factor = 24.090449431366114/eval_loss[-1]
 
             old_loss = eval_loss
@@ -140,9 +142,9 @@ def plot_all_2bar_losses(location="/home/micaltu/tss19-VAE-music-generation/Mode
     plt.savefig("2bar_losses.png")
 
 
-def plot_loss_all_lengths(location="/home/micaltu/tss19-VAE-music-generation/Models/Checkpoints"):
+def plot_loss_all_lengths():
     fig, axs = plt.subplots(1, 4, figsize=(8, 2.5), sharey=True, constrained_layout=True)
-    names = ["pianoroll_train_2bars_1stride_tempo_computed_transposed_after_epoch_94", "pianoroll_train_4bars_1stride_tempo_computed_transposed_after_e_21", "pianoroll_train_8bars_1stride_tempo_computed_transposed_after_e_11", "pianoroll_train_16bars_1stride_tempo_computed_transposed_after_epoch_9"]
+    names = ["pianoroll_train_2bars_1stride_tempo_computed_transposed", "pianoroll_train_4bars_1stride_tempo_computed_transposed", "pianoroll_train_8bars_1stride_tempo_computed_transposed", "pianoroll_train_16bars_1stride_tempo_computed_transposed"]
 
     bars = 2
     for ax, checkpoint_name in zip(axs.flat, names):
@@ -170,7 +172,7 @@ def plot_loss_all_lengths(location="/home/micaltu/tss19-VAE-music-generation/Mod
     fig.savefig("all_losses.png") # dpi=100
 
 
-def plot_pianoroll(path="Sampled/4_bar_samples/sample_4_0.midi"):
+def plot_pianoroll(path="Sampled/4bar_samples/sample_4_0.midi"):
     midi = ppr.parse(filepath=path, beat_resolution=4)  # get Multitrack object
     midi = midi.tracks[0]  # get first/only track
     pianoroll = midi.pianoroll
@@ -183,7 +185,7 @@ def plot_pianoroll(path="Sampled/4_bar_samples/sample_4_0.midi"):
 def plot_interpolation_sotw_to_lick():
     interpolations = []
     for i in range(0, 10, 3):
-        path = "Sampled/interpolation_SotW_to_lick/2/interpolate_" + str(i) + ".midi"
+        path = "Sampled/interpolation_examples/SotW_to_lick/1/interpolate_" + str(i) + ".midi"
         midi = ppr.parse(filepath=path, beat_resolution=4)  # get Multitrack object
         midi = midi.tracks[0]  # get first/only track
         midi.name = ""
@@ -238,13 +240,13 @@ def plot_interpolation_pianorolls(bars=16):
 
 
 
-# uncomment what you want to plot:
+# uncomment what you want to plot (and then execute this file):
 
 # plot_all_2bar_losses()
-# plot_train_and_eval_loss("pianoroll_train_8bars_1stride_tempo_computed_transposed_after_e_11")
+# plot_train_and_eval_loss("pianoroll_train_8bars_1stride_tempo_computed_transposed")
 # plot_loss_all_lengths()
 # plot_interpolation_pianorolls(4)
+# plot_interpolation_sotw_to_lick()
 # plot_survey()
 # plot_survey_by_question()
 # print_survey_info()
-

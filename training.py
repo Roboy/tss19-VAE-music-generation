@@ -50,9 +50,12 @@ def training(num_epochs, batch_size, bars, pianoroll, transpose, verbose, save_l
         vae.train()
         return avg_loss
 
+    if save_location[0] != '/' and save_location[0] != '~':
+        save_location = data.path_to_root + '/' + save_location
+
     stride = 1 if transpose else 3
     train_set = data.FinalDataset('train', bars, stride=stride, pianoroll=pianoroll, transpose=transpose)
-    train_loader = torch.utils.data.DataLoader(train_set, batch_size=batch_size, shuffle=True) # TODO change for 16 bars: , shuffle=True)
+    train_loader = torch.utils.data.DataLoader(train_set, batch_size=batch_size, shuffle=True)
     eval_set = data.FinalDataset('validation', bars, stride=stride, pianoroll=pianoroll, transpose=transpose)
     eval_loader = torch.utils.data.DataLoader(eval_set, batch_size=batch_size)
 
@@ -145,17 +148,17 @@ def training(num_epochs, batch_size, bars, pianoroll, transpose, verbose, save_l
         musicVAE.save(vae, optimizer, loss_list, epoch+1, str(train_set), best, save_location)
 
 
-
-def compute_correct_notes(seq_1, seq_2, pianoroll=False):       # only works for pianorollinputs!s
+# requires pianoroll inputs, convert before calling this function
+def compute_correct_notes(seq_1, seq_2, use_monophonic_for_comparison):
 
     if seq_1.shape != seq_2.shape:
         raise ValueError("Input mismatch: the input sequences don't have the same shape")
 
-    #TODO make this a parameter
-    seq_1 = data.small_to_full_pianoroll(seq_1)
-    seq_1 = data.pianoroll_to_monophonic_repr(seq_1)
-    seq_2 = data.small_to_full_pianoroll(seq_2)
-    seq_2 = data.pianoroll_to_monophonic_repr(seq_2)
+    if use_monophonic_for_comparison:
+        seq_1 = data.small_to_full_pianoroll(seq_1)
+        seq_1 = data.pianoroll_to_monophonic_repr(seq_1)
+        seq_2 = data.small_to_full_pianoroll(seq_2)
+        seq_2 = data.pianoroll_to_monophonic_repr(seq_2)
 
     correct_notes = 0
     for slice_1, slice_2 in zip(seq_1, seq_2):
@@ -167,10 +170,9 @@ def compute_correct_notes(seq_1, seq_2, pianoroll=False):       # only works for
     return correct_notes
 
 
-def evaluate_correct_notes(bars, comparisons=8000, pianoroll=True, transpose=True, verbose=False):
+def evaluate_correct_notes(bars, comparisons=8000, use_monophonic_for_comparison=False, pianoroll=True, transpose=True, verbose=False):
     vae = musicVAE.get_trained_vae(bars, pianoroll, transpose, verbose)
     dset = data.FinalDataset('validation', bars, stride=1, pianoroll=pianoroll, transpose=transpose)
-    #dloader = torch.utils.data.DataLoader(dset, batch_size=1)
 
     if verbose:
         print("Number of correct notes in the reconstruction of each clip:")
@@ -199,7 +201,7 @@ def evaluate_correct_notes(bars, comparisons=8000, pianoroll=True, transpose=Tru
             snippet = snippet[:, 0:88]     # remove pause tokens
 
         length = snippet.shape[0]
-        correct_notes = compute_correct_notes(snippet, reconstructed, pianoroll)
+        correct_notes = compute_correct_notes(snippet, reconstructed, use_monophonic_for_comparison)
         total_notes += length
         total_correct += correct_notes
 
