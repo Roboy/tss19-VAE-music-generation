@@ -153,7 +153,9 @@ class VAE(nn.Module):
 
     def sample(self, z=None):   # always returns a pianoroll representation
         if z is None:
-            z = torch.randn((1, latent_dimension), requires_grad=False)
+            device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+            z = torch.randn((1, latent_dimension), requires_grad=False, device=device)
+
 
         sample = self.decode(z)
         sample = data.model_output_to_pianoroll(sample, self.pianoroll)
