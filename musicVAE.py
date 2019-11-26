@@ -103,12 +103,13 @@ def _parse_interpolate(args):
     for i in range(args.steps+2):
         sample = vae.sample(z)
         filename = args.save_location + "/interpolate_" + str(i) + ".midi"
+        sample = sample.cpu()
         data.pianoroll_to_midi(sample, filename)
         z = z + step_vector
 
-#TODO add gpu support to reconstruct
 def _parse_reconstruct(args):
     vae = get_trained_vae(args.bars, args.pianoroll, args.transpose, args.verbose)
+    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
     # read start sequence
     if args.start_sequence:
@@ -133,12 +134,15 @@ def _parse_reconstruct(args):
     data.pianoroll_to_midi(start_seq, filename)
 
     seq = seq.unsqueeze(dim=0)
+    
+    seq = seq.to(device)
 
     # reconstruct the sequence
     for _ in range(args.number_reconstructions):
         seq, _, _ = vae(seq)
 
     # save end sequence
+    seq.cpu()
     seq = data.model_output_to_pianoroll(seq, args.pianoroll)
     filename = args.save_location + "/reconstruct_after.midi"
     data.pianoroll_to_midi(seq, filename)
