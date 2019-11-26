@@ -71,7 +71,7 @@ def _parse_interpolate(args):
         if(midi.shape[0] != args.bars * 16):
             print("The start sequence does not have the correct length as specified by the bars parameter!")
         midi = midi.unsqueeze(dim=0)
-        midi.to(device)
+        midi = midi.to(device)
         m, v = vae.encode(midi)
         z = vae.reparameterize(m, v)
     else:
@@ -89,7 +89,7 @@ def _parse_interpolate(args):
         if (midi.shape[0] != args.bars * 16):
             print("The end sequence does not have the correct length as specified by the bars parameter!")
         midi = midi.unsqueeze(dim=0)
-        midi.to(device)
+        midi = midi.to(device)
         m, v = vae.encode(midi)
         z_end = vae.reparameterize(m, v)
     else:
@@ -134,7 +134,7 @@ def _parse_reconstruct(args):
     data.pianoroll_to_midi(start_seq, filename)
 
     seq = seq.unsqueeze(dim=0)
-    
+
     seq = seq.to(device)
 
     # reconstruct the sequence
@@ -142,7 +142,7 @@ def _parse_reconstruct(args):
         seq, _, _ = vae(seq)
 
     # save end sequence
-    seq.cpu()
+    seq = seq.cpu()
     seq = data.model_output_to_pianoroll(seq, args.pianoroll)
     filename = args.save_location + "/reconstruct_after.midi"
     data.pianoroll_to_midi(seq, filename)
