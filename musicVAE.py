@@ -54,8 +54,7 @@ def _parse_delete_dataset(args):
 def _parse_sample(args):
     vae = get_trained_vae(args.bars, args.pianoroll, args.transpose, args.verbose)
     sample = vae.sample()
-    device = torch.device("cpu")
-    sample.to(device)
+    sample = sample.cpu()
     data.pianoroll_to_midi(sample, args.save_location)
 
 def _parse_interpolate(args):
