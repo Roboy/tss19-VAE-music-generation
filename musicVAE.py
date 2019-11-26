@@ -58,6 +58,7 @@ def _parse_sample(args):
 
 def _parse_interpolate(args):
     vae = get_trained_vae(args.bars, args.pianoroll, args.transpose, args.verbose)
+    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
     if args.start_sequence:
         path = args.start_sequence
@@ -69,10 +70,11 @@ def _parse_interpolate(args):
         if(midi.shape[0] != args.bars * 16):
             print("The start sequence does not have the correct length as specified by the bars parameter!")
         midi = midi.unsqueeze(dim=0)
+        midi.to(device)
         m, v = vae.encode(midi)
         z = vae.reparameterize(m, v)
     else:
-        z = torch.randn((1, model.latent_dimension), requires_grad=False)
+        z = torch.randn((1, model.latent_dimension), requires_grad=False, device=device)
         if args.verbose:
             print("generated a random start sequence")
 
@@ -86,22 +88,26 @@ def _parse_interpolate(args):
         if (midi.shape[0] != args.bars * 16):
             print("The end sequence does not have the correct length as specified by the bars parameter!")
         midi = midi.unsqueeze(dim=0)
+        midi.to(device)
         m, v = vae.encode(midi)
         z_end = vae.reparameterize(m, v)
     else:
-        z_end = torch.randn((1, model.latent_dimension), requires_grad=False)
+        z_end = torch.randn((1, model.latent_dimension), requires_grad=False, device=device)
         if args.verbose:
             print("generated a random end sequence")
 
     step_vector = (z_end - z) / (args.steps + 1)
+    step_vector.to(device)
+
     for i in range(args.steps+2):
         sample = vae.sample(z)
         filename = args.save_location + "/interpolate_" + str(i) + ".midi"
         data.pianoroll_to_midi(sample, filename)
         z = z + step_vector
 
-def _parse_reconstruct(args):#bars=2, pianoroll=False, transpose=False, save_location="Sampled", i=1, verbose=True):
-    vae= get_trained_vae(args.bars, args.pianoroll, args.transpose, args.verbose)
+#TODO add gpu support to reconstruct
+def _parse_reconstruct(args):
+    vae = get_trained_vae(args.bars, args.pianoroll, args.transpose, args.verbose)
 
     # read start sequence
     if args.start_sequence:
