@@ -86,7 +86,7 @@ python musicVAE.py sample 4 -p -t
 ```
 - Interpolating between a randomly generated 2-bar sequence and the 2-bar long sequence `Sampled/manually_created_sequences/smoke.midi` (the first few notes of the riff from Smoke on the Water by Deep Purple) and generating 3 in-between sequences.
 ```bash  
-python musicVAE.py interpolate 2 3 -ptv -e /home/micaltu/tss19-VAE-music-generation/Sampled/manually_created_sequences/smoke.midi 
+python musicVAE.py interpolate 2 3 -ptv -e Sampled/manually_created_sequences/smoke.midi 
 ```
 - Reconstructing the Smoke on the Water riff 5 times to get an imperfect reconstruction. This can be done to get a slightly different version of a music sequence.
 ```bash  
